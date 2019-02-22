@@ -1,43 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}?q={{rand()}}">
-    @stack('styles')
-</head>
-<body>
-    <header class="shadow">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse col-md-4 left" id="navbarSupportedContent">
-                {{menu('site', 'menu')}}
-            </div>
-            <div class="col-md-4 center">
-                <img class="logo d-block mx-auto" src="{{Voyager::image('images/logo.png')}}"/>
-            </div>
-            <div class="collapse navbar-collapse col-md-4 right">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/search')}}"><i class="fas fa-search"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('https://lk.ip-one.net/')}}"><i class="fas fa-user"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/search')}}">RU</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>@yield('title', 'IP ONE')</title>
+
+        <link href="{{asset('css/style.css')}}?q={{rand()}}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+
+    @include('menu')
+
     @yield('content')
 
+    <footer class="py-5" style="box-shadow: 0 0px 1rem rgba(0, 0, 0, 0.15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 info" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="with-icon" style="background-image: url('{{asset('img/phone-icon.png')}}')">
+                            <p>+7 (707) 777 77 77<br>+7 (707) 777 77 77</p>
+                        </div>
+                        <div class="with-icon" style="background-image: url('{{asset('img/email-icon.png')}}')">
+                            <p>info@ip-one.net</p>
+                        </div>
+                        <div class="with-icon" style="background-image: url('{{asset('img/skype-icon.png')}}')">
+                            <p>live:info_868489</p>
+                        </div>
+                        <div class="mt-4">
+                            <p>&#169; 2015-2019</p>
+                        </div>
+                </div>
+                <div class="col-md-5 ml-auto">
+                    <img class="mb-4" src="{{asset('img/logo.png')}}" style="display: block;margin: auto;width: 250px;padding: 10px 0;"/>
+                    <p class="mb-4 text-center" style="line-height: 1.5rem;">IMAGINE PEOPLE - это международная<br>интернет-компания,<br>которая дает возможность приобретать<br>продукт и вести<br>бизнес по всему миру!</p>
+                    <p class="mb-4 text-center" style="line-height: 1.5rem;position: relative;"><i class="fas fa-map-marker-alt" style="position: absolute;left: -1.5rem;top: 0.5rem;font-size: 2rem;"></i> Республика Казахстан, 050000, город Алматы,<br>Бухар Жырау 33, Бизнес центр "Jenis", офис 4</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{asset('js/script.js')}}?q={{rand()}}"></script>
+
+    @stack('styles')
     @stack('scripts')
-</body>
+    </body>
 </html>

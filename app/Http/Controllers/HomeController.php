@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Slider;
-use App\Translator;
 use Illuminate\Http\Request;
+use App\Slider;
+use App\Product;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $slides = Slider::where('slider_id', 1)->with('translations')->get();
-        $slides = Translator::t($slides);
+        $slides = Slider::get();
+        $products = Product::all();
 
-        return view('home.index', compact('slides'));
-
+        return view('home', compact('slides', 'products'));
     }
 }

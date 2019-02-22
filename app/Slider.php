@@ -10,4 +10,9 @@ class Slider extends Model
 {
     use Translatable, Resizable;
     protected $translatable = ['title', 'description'];
+
+    public function getUrlAttribute()
+    {
+        return $this->link ? url($this->link) : '#';
+    }
 }
