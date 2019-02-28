@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse col-md-4" id="header_menu" style="padding: 20px">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Главная</a>
+                <a class="nav-link" href="{{url('/')}}">Главная</a>
             </li>
             <li class="nav-item">
                 <span class="nav-link" href="#" id="drop_main_menu" style="cursor: pointer;">Меню <i class="fas fa-sort-down"></i></span>
@@ -33,7 +33,7 @@
     <ul class="navbar-nav mr-auto shadow-sm container-fluid">
         @foreach (menu('site', '_json') as $item)
             <li class="nav-item">
-                <span class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-sort-down"></i> @endif</span>
+                <a href="{{url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-sort-down"></i> @endif</a>
             </li>
         @endforeach
     </ul>
@@ -43,7 +43,7 @@
             <ul class="navbar-nav mr-auto p-4">
                 @foreach($item->children as $child)
                 <li class="nav-item">
-                    <span class="nav-link" href="#" style="cursor: pointer;">{{$child->title}}</span>
+                    <a href="{{url($child->link())}}" class="nav-link" href="#" style="cursor: pointer;">{{$child->title}}</a>
                 </li>
                 @endforeach
             </ul>

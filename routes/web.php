@@ -13,6 +13,13 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::resource('/news', 'NewsController');
+
+Route::resource('/stocks', 'StocksController');
+
+Route::resource('/products', 'ProductsController');
+
+require __DIR__.'/contents.php';
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
