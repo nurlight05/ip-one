@@ -60,7 +60,7 @@
             @endforeach
         </div>
         <div class="row my-5">
-            <button type="button" class="btn btn-light shadow-sm" style="background-color: #fff;font-weight: 600; color: #1d45a1;display: block;font-size: 1.5rem;margin: auto;">смотреть ещё</button>
+            <a href="{{route('products.index')}}" class="btn btn-light shadow-sm" style="background-color: #fff;font-weight: 600; color: #1d45a1;display: block;font-size: 1.5rem;margin: auto;">смотреть ещё</a>
         </div>
       </div>
       <div class="tab-pane fade" id="new-products" role="tabpanel">

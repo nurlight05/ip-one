@@ -12,7 +12,7 @@
         <div class="col-md-10 p-4 right-side">
             
             <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div>
-            <table class="table table-hover">
+            <table class="table table-hover" style="width: 100%;">
                 <thead>
                     <tr class="success">
                     <th>#</th>
