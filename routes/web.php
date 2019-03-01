@@ -19,6 +19,10 @@ Route::resource('/stocks', 'StocksController');
 
 Route::resource('/products', 'ProductsController');
 
+Route::resource('/bussiness', 'BussinessController');
+
+Route::get('/showrooms', 'ShowroomsController@index');
+
 require __DIR__.'/contents.php';
 
 Route::group(['prefix' => 'admin'], function () {

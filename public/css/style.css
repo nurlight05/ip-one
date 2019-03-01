@@ -7020,10 +7020,21 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("./FuturaBookC.ttf") format("truetype"); }
+
+body {
+  font-family: 'MyWebFont';
+  color: #31479d; }
+
 li {
   list-style: none;
   padding: 0px;
   margin: 0px; }
+
+.right-side {
+  font-size: 1.3rem; }
 
 #header_menu {
   z-index: 50;
@@ -7307,3 +7318,47 @@ footer > div p {
     font-size: 1.1rem;
     font-weight: 500;
     color: #425fa8; }
+
+.showrooms-left .accordion .card {
+  border: none; }
+  .showrooms-left .accordion .card .card-header {
+    background-color: #fff;
+    border: none; }
+    .showrooms-left .accordion .card .card-header span {
+      font-size: 1.3rem;
+      color: #31479d;
+      cursor: pointer; }
+
+.bussines * {
+  color: #31479d; }
+
+.packet .packet-header {
+  text-align: center;
+  border-bottom: solid 3px #31479d; }
+  .packet .packet-header .number {
+    font-size: 2rem;
+    font-weight: 600; }
+  .packet .packet-header .name {
+    font-size: 1.6rem;
+    text-transform: uppercase; }
+
+.packet .packet-body {
+  text-align: left; }
+
+.packet .packet-bottom {
+  text-align: center; }
+  .packet .packet-bottom .price {
+    font-size: 2rem; }
+  .packet .packet-bottom .add-price {
+    font-size: 1rem; }
+
+.center-number {
+  background-color: #31479d;
+  width: 5rem;
+  display: block;
+  height: 5rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-align: center;
+  font-size: 3.5rem;
+  margin: auto; }
