@@ -43,6 +43,8 @@ Route::get('/video', 'VideoController@index');
 
 Route::get('/about', 'AboutController@index');
 
+Route::get('/basket', 'BasketController@index');
+
 require __DIR__.'/contents.php';
 
 Route::group(['prefix' => 'admin'], function () {

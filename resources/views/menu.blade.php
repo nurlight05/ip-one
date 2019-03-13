@@ -22,7 +22,7 @@
     <div class="col-md-4">
         <div class="d-block right-menu ml-auto text-right">
             <a href=""><i class="fas fa-search"></i></a>
-            <a href=""><i class="fas fa-shopping-bag"></i></a>
+            <a href="{{url('/basket')}}"><i class="fas fa-shopping-bag"></i></a>
             <a href=""><i class="fas fa-user"></i></a>
             <a href="">RU</a>
         </div>

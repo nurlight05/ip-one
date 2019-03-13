@@ -51,7 +51,7 @@
                     <div class="gift_unit-info">
                         <h6>{{$item->name}}</h6>
                         {!!$item->description!!}
-                        <p class="price">цена: {{$item->price}} у.е <button class="unit_buy">купить</button></p>
+                        <p class="price">цена: {{$item->price}} у.е <a href="{{url('/basket')}}"><button class="unit_buy">купить</button></a></p>
                     </div>
                 </div>
                 @endforeach
