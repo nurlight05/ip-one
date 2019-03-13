@@ -33,7 +33,7 @@
     <ul class="navbar-nav mr-auto shadow-sm container-fluid">
         @foreach (menu('site', '_json') as $item)
             <li class="nav-item">
-                <a href="{{url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-sort-down"></i> @endif</a>
+                <a href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-sort-down"></i> @endif</a>
             </li>
         @endforeach
     </ul>
