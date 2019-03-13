@@ -41,21 +41,19 @@
                     @endforeach
                 </div>
             </div>
-            <div class="product-presents pb-5">
-                <h2 style="text-align: center; color: #31479d; text-transform: uppercase; font-weight: 400;">Подарочные наборы</h2>
+            <div class="gift_block">
+                <h5>ПОДАРОЧНЫЕ НАБОРЫ</h5>
                 @foreach ($presents as $item)
-                    <div class="row item mx-0 my-4">
-                        <div class="col-md-5">
-                            <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')"></div>
-                        </div>
-                        <div class="col-md-7 info">
-                            <h4 class="name">{{$item->name}}</h4>
-                            <p class="description">{{$item->name}}</p>
-                            <div class="buy">Цена: {{$item->price}} у.е.
-                                    <button type="button" class="btn btn-light shadow-sm ml-4" style="background-color: #fff; font-weight: 600; color: #1d45a1;">купить</button>
-                            </div>
-                        </div>
+                <div class="gift_unit">
+                    <div class="gift_unit-img">
+                        <img src="{{Voyager::image($item->img)}}" alt="">
                     </div>
+                    <div class="gift_unit-info">
+                        <h6>{{$item->name}}</h6>
+                        {!!$item->description!!}
+                        <p class="price">цена: {{$item->price}} у.е <button class="unit_buy">купить</button></p>
+                    </div>
+                </div>
                 @endforeach
             </div>
         </div>
