@@ -23,6 +23,26 @@ Route::resource('/bussiness', 'BussinessController');
 
 Route::get('/showrooms', 'ShowroomsController@index');
 
+Route::get('/science', 'ScienceController@index');
+
+Route::get('/reviews', 'ReviewsController@index');
+
+Route::get('/faq', 'FaqController@index');
+
+Route::get('/info', 'InfoController@index');
+
+Route::get('/how-to-buy', 'HowToBuyController@index');
+
+Route::get('/contacts', 'ContactsController@index');
+
+Route::get('/idea', 'IdeaController@index');
+
+Route::get('/documents', 'DocumentsController@index');
+
+Route::get('/video', 'VideoController@index');
+
+Route::get('/about', 'AboutController@index');
+
 require __DIR__.'/contents.php';
 
 Route::group(['prefix' => 'admin'], function () {
