@@ -7041,9 +7041,12 @@ li {
   background-color: #fff; }
 
 #header_menu > ul > li > .nav-link {
-  color: #31479d !important;
+  color: #31479d;
   font-weight: 700;
   text-transform: uppercase; }
+
+#header_menu > ul > li.active > span {
+  color: #9c9c9c; }
 
 .right-menu a {
   margin: 0 0.7rem;
@@ -7056,6 +7059,7 @@ li {
   width: 100%;
   left: 0;
   bottom: 0;
+  opacity: 0;
   transform: translateY(-100%); }
 
 .main_menu > ul {
@@ -7066,15 +7070,23 @@ li {
   justify-content: center !important; }
 
 .main_menu > ul > li {
-  padding: 5px 15px;
+  padding: 5px 0;
   border: 2px solid #31479d;
   border-radius: 4rem;
   margin: 0 5px;
   width: 210px;
-  text-align: center; }
+  text-align: center;
+  transition: border 0.3s; }
+  .main_menu > ul > li a {
+    transition: color 0.3s; }
+
+.main_menu > ul > li.active {
+  border: 2px solid #9c9c9c; }
+  .main_menu > ul > li.active a {
+    color: #9c9c9c; }
 
 .main_menu > ul > li > .nav-link {
-  color: #31479d !important;
+  color: #31479d;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -7086,9 +7098,13 @@ li {
   justify-content: center !important; }
 
 .second_menu > ul > li > .nav-link {
-  color: #31479d !important;
+  color: #284ea5 !important;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 20px; }
+  .second_menu > ul > li > .nav-link:hover {
+    background-color: #284ea5;
+    color: #fff !important; }
 
 .second_menu {
   z-index: 10;
@@ -7104,7 +7120,7 @@ li {
   background-position: center; }
   .hello-slider .item .container {
     color: #31479d;
-    height: 75vh; }
+    height: 400px; }
     .hello-slider .item .container .description {
       margin-bottom: 40px;
       font-weight: 600;
@@ -7118,9 +7134,12 @@ li {
       font-weight: 400;
       color: #31479d;
       border-radius: 50px;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      transition: background-color 0.2s; }
       .hello-slider .item .container .link a:hover {
-        text-decoration: none; }
+        text-decoration: none;
+        background-color: #31479d;
+        color: #fff; }
 
 .open-imagine-people {
   background-color: #264796;
@@ -7138,14 +7157,19 @@ li {
   .open-imagine-people p {
     font-size: 1.5rem; }
   .open-imagine-people img {
-    height: 270px;
+    max-width: 100%;
     display: block;
     margin: auto; }
 
-.products .selects > div {
+.products .selects {
   text-transform: uppercase;
   font-size: 2rem;
-  color: #31479d; }
+  color: #31479d;
+  text-transform: uppercase; }
+  .products .selects > a.active {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: #0056b3; }
 
 .slick-dots {
   transform: translateY(-40px); }
@@ -7168,7 +7192,7 @@ li {
   background-color: #fff; }
 
 .product-left .description {
-  background-color: #3e68cc;
+  background-color: #264796;
   z-index: 1;
   text-align: left;
   padding-left: 4rem; }
@@ -7191,7 +7215,7 @@ li {
   background-color: #fff; }
 
 .product-right .description {
-  background-color: #3e68cc;
+  background-color: #264796;
   z-index: 1;
   text-align: right;
   padding-right: 4rem; }
@@ -7953,3 +7977,51 @@ footer > div p {
 
 .table tbody + tbody {
   border-top: 2px solid #dee2e6; }
+
+.show_choice .left_title {
+  text-align: left !important;
+  padding-left: 30px;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 25px; }
+
+.show_choice h2 {
+  font-size: 46px;
+  margin-top: 70px;
+  margin-bottom: 50px; }
+
+.country_list {
+  padding-left: 30px; }
+
+.country_list li {
+  font-size: 26px;
+  margin: 10px 0; }
+
+.country_list li.active {
+  font-weight: bold; }
+
+.city_list {
+  padding-left: 20px; }
+
+.city_list li {
+  font-size: 20px;
+  font-weight: normal; }
+
+.city_list li.active {
+  text-decoration: underline;
+  font-weight: normal; }
+
+.contact_info p,
+.contact_info span {
+  display: inline-block;
+  vertical-align: top; }
+
+.contact_info.page_list li {
+  line-height: 22px;
+  margin: 3px 0; }
+
+.contact_info.page_list li.info_name {
+  margin-top: 30px; }
+
+.contact_info.page_list.angle li:before {
+  top: 0; }

@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $slides = Slider::get();
-        $products = Product::all();
+        $products = Product::where('is_present', '<>', 1)->get();
 
         return view('home', compact('slides', 'products'));
     }

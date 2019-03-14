@@ -1,390 +1,415 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss'
 
 @font-face
-    font-family: 'MyWebFont'
-    src: url('./FuturaBookC.ttf') format('truetype')
+	font-family: 'MyWebFont'
+	src: url('./FuturaBookC.ttf') format('truetype')
 
 body
-    font-family: 'MyWebFont'
-    color: #31479d
+	font-family: 'MyWebFont'
+	color: #31479d
 
 li
-    list-style: none
-    padding: 0px
-    margin: 0px
+	list-style: none
+	padding: 0px
+	margin: 0px
 
 .right-side
-    font-size: 1.3rem
+	font-size: 1.3rem
 
 #header_menu
-    z-index: 50
-    background-color: #fff
+	z-index: 50
+	background-color: #fff
 
 #header_menu>ul>li>.nav-link
-    color: #31479d !important
-    font-weight: 700
-    text-transform: uppercase
+	color: #31479d
+	font-weight: 700
+	text-transform: uppercase
+
+#header_menu>ul>li.active>span
+	color: #9c9c9c
 
 
 .right-menu a
-    margin: 0 0.7rem
-    color: #31479d
+	margin: 0 0.7rem
+	color: #31479d
 
 
 .main_menu
-    z-index: 25
-    background-color: #fff
-    position: absolute
-    width: 100%
-    left: 0
-    bottom: 0
-    transform: translateY(-100%)
+	z-index: 25
+	background-color: #fff
+	position: absolute
+	width: 100%
+	left: 0
+	bottom: 0
+	opacity: 0
+	transform: translateY(-100%)
 
 .main_menu>ul
-    z-index: 30
-    background-color: #fff
-    padding: 20px
-    display: flex
-    justify-content: center !important
+	z-index: 30
+	background-color: #fff
+	padding: 20px
+	display: flex
+	justify-content: center !important
 
 .main_menu>ul>li
-    padding: 5px 15px
-    border: 2px solid #31479d
-    border-radius: 4rem
-    margin: 0 5px
-    width: 210px
-    text-align: center
+	padding: 5px 0
+	border: 2px solid #31479d
+	border-radius: 4rem
+	margin: 0 5px
+	width: 210px
+	text-align: center
+	transition: border 0.3s
+	a
+		transition: color 0.3s
+
+.main_menu>ul>li.active
+	border: 2px solid #9c9c9c
+	a
+		color: #9c9c9c
 
 .main_menu>ul>li>.nav-link
-    color: #31479d !important
-    font-weight: 700
-    text-transform: uppercase
+	color: #31479d
+	font-weight: 700
+	text-transform: uppercase
 
 
 .second_menu>ul
-    z-index: 30
-    background-color: #fff
-    padding: 20px
-    display: flex
-    justify-content: center !important
+	z-index: 30
+	background-color: #fff
+	padding: 20px
+	display: flex
+	justify-content: center !important
 
 .second_menu>ul>li>.nav-link
-    color: #31479d !important
-    font-weight: 700
-    text-transform: uppercase
+	color: #284ea5 !important
+	font-weight: 700
+	text-transform: uppercase
+	padding: 20px
+
+	&:hover
+		background-color: #284ea5
+		color: #fff !important
 
 
 
 .second_menu
-    z-index: 10
-    position: absolute
-    width: 100%
-    left: 0
-    bottom: 0
-    transform: translateY(-100%)
+	z-index: 10
+	position: absolute
+	width: 100%
+	left: 0
+	bottom: 0
+	transform: translateY(-100%)
 
-    
+	
 .hello-slider
-    .item
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center
+	.item
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
 
-        .container
-            color: #31479d
-            height: 75vh
+		.container
+			color: #31479d
+			height: 400px
 
-            .description
-                margin-bottom: 40px
-                font-weight: 600
-                font-size: 1.3rem
-                line-height: 1.4rem
+			.description
+				margin-bottom: 40px
+				font-weight: 600
+				font-size: 1.3rem
+				line-height: 1.4rem
 
-                p
-                    margin-bottom: 5px
+				p
+					margin-bottom: 5px
 
-            .link a
-                border: 2px solid #31479d
-                padding: 5px 15px
-                font-weight: 400
-                color: #31479d
-                border-radius: 50px
-                font-size: 1.3rem
+			.link a
+				border: 2px solid #31479d
+				padding: 5px 15px
+				font-weight: 400
+				color: #31479d
+				border-radius: 50px
+				font-size: 1.3rem
+				transition: background-color 0.2s
 
-                &:hover
-                    text-decoration: none
+				&:hover
+					text-decoration: none
+					background-color: #31479d
+					color: #fff
 
 .open-imagine-people
-    background-color: #264796
-    color: #fff
-    padding: 100px 0
-    text-align: center
+	background-color: #264796
+	color: #fff
+	padding: 100px 0
+	text-align: center
 
-    h1
-        font-size: 5rem
-        text-transform: uppercase
-        font-weight: 100
+	h1
+		font-size: 5rem
+		text-transform: uppercase
+		font-weight: 100
 
-    h2
-        font-size: 3rem
-        text-transform: uppercase
-        font-weight: 100
+	h2
+		font-size: 3rem
+		text-transform: uppercase
+		font-weight: 100
 
-    p
-        font-size: 1.5rem
+	p
+		font-size: 1.5rem
 
-    img
-        height: 270px
-        display: block
-        margin: auto
+	img
+		max-width: 100%
+		display: block
+		margin: auto
 
 .products .selects
-    &>div
-        text-transform: uppercase
-        font-size: 2rem
-        color: #31479d
+	text-transform: uppercase
+	font-size: 2rem
+	color: #31479d
+	text-transform: uppercase
+
+	&>a.active
+		font-size: 2.5rem
+		text-decoration: underline
+		color: #0056b3
 
 .slick-dots
-    transform: translateY(-40px)
+	transform: translateY(-40px)
 
 .slick-dotted.slick-slider
-    margin-bottom: 0 !important
+	margin-bottom: 0 !important
 
 .product-left
-    .img
-        border: 8px solid #7593da
-        margin-left: auto
-        margin-right: -40px
-        border-radius: 10rem
-        overflow: hidden
-        width: 300px
-        height: 300px
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center
-        z-index: 2
-        background-color: #fff
+	.img
+		border: 8px solid #7593da
+		margin-left: auto
+		margin-right: -40px
+		border-radius: 10rem
+		overflow: hidden
+		width: 300px
+		height: 300px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		z-index: 2
+		background-color: #fff
 
-    .description
-        background-color: #3e68cc
-        z-index: 1
-        text-align: left
-        padding-left: 4rem
-        h2
-            color: #fff
-            font-weight: 400
+	.description
+		background-color: #264796
+		z-index: 1
+		text-align: left
+		padding-left: 4rem
+		h2
+			color: #fff
+			font-weight: 400
 
 .product-right
-    .img
-        border: 8px solid #7593da
-        margin-right: auto
-        margin-left: -40px
-        border-radius: 10rem
-        overflow: hidden
-        width: 300px
-        height: 300px
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center
-        z-index: 2
-        background-color: #fff
+	.img
+		border: 8px solid #7593da
+		margin-right: auto
+		margin-left: -40px
+		border-radius: 10rem
+		overflow: hidden
+		width: 300px
+		height: 300px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		z-index: 2
+		background-color: #fff
 
-    .description
-        background-color: #3e68cc
-        z-index: 1
-        text-align: right
-        padding-right: 4rem
-        h2
-            color: #fff
-            font-weight: 400
+	.description
+		background-color: #264796
+		z-index: 1
+		text-align: right
+		padding-right: 4rem
+		h2
+			color: #fff
+			font-weight: 400
 
 footer
-    .with-icon
-        background-repeat: no-repeat
-        background-position: left
-        background-size: contain
-        height: 4rem
-        padding-left: 5rem
-        display: flex
-        flex-direction: column
-        justify-content: center
-        margin-bottom: 1rem
+	.with-icon
+		background-repeat: no-repeat
+		background-position: left
+		background-size: contain
+		height: 4rem
+		padding-left: 5rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		margin-bottom: 1rem
 
-    &>div p
-        margin: 0
-        font-size: 1.3rem
-        font-weight: 400
-        color: #1d45a1
+	&>div p
+		margin: 0
+		font-size: 1.3rem
+		font-weight: 400
+		color: #1d45a1
 
 .content
 
-    .left-side
-        
-        h3
-            color: #31479d
-            text-transform: uppercase
-            text-align: center
-            font-weight: 700
-        
-        h4
-            color: #31479d
+	.left-side
+		
+		h3
+			color: #31479d
+			text-transform: uppercase
+			text-align: center
+			font-weight: 700
+		
+		h4
+			color: #31479d
 
-        .month
-            text-transform: uppercase
-            font-size: 18px
-            font-weight: 500
-            margin-bottom: 0.7rem
+		.month
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 500
+			margin-bottom: 0.7rem
 
-            a
-                color: #31479d
+			a
+				color: #31479d
 
-            &.active
-                text-align: center
-                a
-                    text-decoration: underline
-                    font-weight: 700
+			&.active
+				text-align: center
+				a
+					text-decoration: underline
+					font-weight: 700
 .news
-    .item
-        margin-bottom: 2rem
+	.item
+		margin-bottom: 2rem
 
-        .info
-            color: #31479d
+		.info
+			color: #31479d
 
-            h2
-                font-weight: 500
-                font-size: 24px
-            
-            p
-                font-weight: 400
-                font-size: 18px
+			h2
+				font-weight: 500
+				font-size: 24px
+			
+			p
+				font-weight: 400
+				font-size: 18px
 
-        .img
-            max-width: 100%
-            height: 30vh
-            background-position: center
-            background-size: cover
+		.img
+			max-width: 100%
+			height: 30vh
+			background-position: center
+			background-size: cover
 
-    .pagination
-        justify-content: center
+	.pagination
+		justify-content: center
 
 .news-image
-    max-width: 100%
-    height: 50vh
-    background-position: center
-    background-size: cover
+	max-width: 100%
+	height: 50vh
+	background-position: center
+	background-size: cover
 
 .news-content
-    color: #31479d
+	color: #31479d
 
 .products
-    .line
-        background-repeat: no-repeat
-        background-position: 100% calc(50% - 1.5rem)
-        background-size: calc(50% + 200px) 150px
-    .item
-        margin: 0 10px
-        .img
-            border: 8px solid #7593da
-            border-radius: 10rem
-            overflow: hidden
-            width: 300px
-            height: 300px
-            background-repeat: no-repeat
-            background-size: cover
-            background-position: center
-            background-color: #fff
+	.line
+		background-repeat: no-repeat
+		background-position: 100% calc(50% - 1.5rem)
+		background-size: calc(50% + 200px) 150px
+	.item
+		margin: 0 10px
+		.img
+			border: 8px solid #7593da
+			border-radius: 10rem
+			overflow: hidden
+			width: 300px
+			height: 300px
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			background-color: #fff
 
-        .name
-            text-align: center
-            font-size: 2rem
-            font-weight: 600
-            color: #425fa8
-            text-transform: uppercase
+		.name
+			text-align: center
+			font-size: 2rem
+			font-weight: 600
+			color: #425fa8
+			text-transform: uppercase
 
-        .price
-            text-align: center
-            font-size: 1rem
-            font-weight: 400
-            color: #425fa8
-            text-transform: uppercase
+		.price
+			text-align: center
+			font-size: 1rem
+			font-weight: 400
+			color: #425fa8
+			text-transform: uppercase
 
 .product-presents
-    .item
-        .img
-            width: 300px
-            height: 300px
-            background-repeat: no-repeat
-            background-size: cover
-            background-position: center
-            background-color: #fff
-            margin-left: auto
-        .info
-            display: flex
-            flex-direction: column
-            justify-content: center
-        
-            .name
-                color: #425fa8
+	.item
+		.img
+			width: 300px
+			height: 300px
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			background-color: #fff
+			margin-left: auto
+		.info
+			display: flex
+			flex-direction: column
+			justify-content: center
+		
+			.name
+				color: #425fa8
 
-            .description
-                color: #425fa8
+			.description
+				color: #425fa8
 
-            .buy
-                font-size: 1.1rem
-                font-weight: 500
-                color: #425fa8
-            
+			.buy
+				font-size: 1.1rem
+				font-weight: 500
+				color: #425fa8
+			
 .showrooms-left
-    .accordion
-        .card
-            border: none
-            .card-header
-                background-color: #fff
-                border: none
+	.accordion
+		.card
+			border: none
+			.card-header
+				background-color: #fff
+				border: none
 
-                span
-                    font-size: 1.3rem
-                    color: #31479d
-                    cursor: pointer
+				span
+					font-size: 1.3rem
+					color: #31479d
+					cursor: pointer
 
 .bussines *
-    color: #31479d
+	color: #31479d
 
 .packet
-    .packet-header
-        text-align: center
-        border-bottom: solid 3px #31479d
+	.packet-header
+		text-align: center
+		border-bottom: solid 3px #31479d
 
-        .number
-            font-size: 2rem
-            font-weight: 600
-        
-        .name
-            font-size: 1.6rem
-            text-transform: uppercase
+		.number
+			font-size: 2rem
+			font-weight: 600
+		
+		.name
+			font-size: 1.6rem
+			text-transform: uppercase
 
-    .packet-body
-        text-align: left
+	.packet-body
+		text-align: left
 
-    .packet-bottom
-        text-align: center
+	.packet-bottom
+		text-align: center
 
-        .price
-            font-size: 2rem
+		.price
+			font-size: 2rem
 
-        .add-price
-            font-size: 1rem
+		.add-price
+			font-size: 1rem
 
 .center-number
-    background-color: #31479d
-    width: 5rem
-    display: block
-    height: 5rem
-    border-radius: 10rem
-    color: #fff
-    text-align: center
-    font-size: 3.5rem
-    margin: auto
+	background-color: #31479d
+	width: 5rem
+	display: block
+	height: 5rem
+	border-radius: 10rem
+	color: #fff
+	text-align: center
+	font-size: 3.5rem
+	margin: auto
 
 .inner_pages
 	font-size: 22px
@@ -873,4 +898,40 @@ footer
 	vertical-align: bottom
 	border-bottom: 2px solid #dee2e6
 .table tbody + tbody
-    border-top: 2px solid #dee2e6
+	border-top: 2px solid #dee2e6
+.show_choice .left_title
+	text-align: left !important
+	padding-left: 30px
+	font-size: 48px
+	line-height: 48px
+	margin-bottom: 25px
+.show_choice h2
+	font-size: 46px
+	margin-top: 70px
+	margin-bottom: 50px
+.country_list
+	padding-left: 30px
+.country_list li
+	font-size: 26px
+	margin: 10px 0
+.country_list li.active
+	font-weight: bold
+.city_list
+	padding-left: 20px
+.city_list li
+	font-size: 20px
+	font-weight: normal
+.city_list li.active
+	text-decoration: underline
+	font-weight: normal
+.contact_info p,
+.contact_info span
+	display: inline-block
+	vertical-align: top
+.contact_info.page_list li
+	line-height: 22px
+	margin: 3px 0
+.contact_info.page_list li.info_name
+	margin-top: 30px
+.contact_info.page_list.angle li:before
+	top: 0

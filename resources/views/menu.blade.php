@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{url('/')}}">Главная</a>
             </li>
             <li class="nav-item">
-                <span class="nav-link" href="#" id="drop_main_menu" style="cursor: pointer;">Меню <i class="fas fa-sort-down"></i></span>
+                <span class="nav-link" href="#" id="drop_main_menu" style="cursor: pointer;">Меню <i class="fas fa-angle-down"></i></span>
             </li>
         </ul>
     </div>
@@ -33,20 +33,21 @@
     <ul class="navbar-nav mr-auto shadow-sm container-fluid">
         @foreach (menu('site', '_json') as $item)
             <li class="nav-item">
-                <a href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-sort-down"></i> @endif</a>
+                <a href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-angle-down"></i> @endif</a>
             </li>
         @endforeach
     </ul>
     @foreach (menu('site', '_json') as $item)
     @if($item->children->count())
         <div class="p-0 second_menu second_menu_{{$item->id}} d-flex justify-content-center">
-            <ul class="navbar-nav shadow-sm p-4" style="display: inline-flex;">
+            <ul class="navbar-nav shadow-sm p-0" style="display: inline-flex;">
                 @foreach($item->children as $child)
                 <li class="nav-item" style="width: 250px;">
+                        <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 85px;">
                         <img src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>
                     </div>
-                    <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">{{$child->title}}</a>
+                    {{$child->title}}</a>
                 </li>
                 @endforeach
             </ul>
