@@ -3,47 +3,40 @@
 @section('title', 'Show Rooms')
 
 @section('content')
-<section class="container-fluid content">
+<section class="container-fluid content inner_pages">
     <div class="row">
-        <div class="col-md-2 py-5 left-side border-right showrooms-left">
-            <h3>Show Rooms</h3>
-            <div class="accordion" id="countries"></div>
+        <div class="col-md-2 border-right left-side show_choice">
+            <h3 class="left_title">SHOW <br>ROOMS</h3>
+            <ul class="country_list">
+                <li>Казахстан</li>
+                <li class="active">
+                    Россия
+                    <ul class="city_list">
+                        <li class="active">Москва</li>
+                        <li>Санкт-Петербург</li>
+                        <li>Екатеринбург</li>
+                        <li>Астрахань</li>
+                        <li>Оренбург</li>
+                    </ul>
+                </li>
+                <li>Германия</li>
+                <li>Израиль</li>
+            </ul>
         </div>
-        <div class="col-md-10 p-4 right-side">
-            
-            <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div>
-            <table class="table table-hover" style="width: 100%;">
-                <thead>
-                    <tr class="success">
-                    <th>#</th>
-                    <th>Город</th>
-                    <th>Адрес</th>
-                    <th>Телефоны</th>
-                    <th>Режим работы</th>
-                    <th>Расписание школ</th>
-                    <th>E-mail</th>
-                    <th>ФИО руководителя</th>
-                </tr>
-            </thead>
-                <tbody>
-                    @foreach($showrooms as $showroom)
-                        <tr class="showroom">
-                            <th scope="row">{{$loop->iteration}}</th>
-                            <th>{!!$showroom['CITY']!!}</th>
-                            <th class="address">{!!$showroom['ADDRESS']!!}</th>
-                            <th>{!!$showroom['PHONE']!!}</th>
-                            <th>{!!$showroom['WORK_TIME']!!}</th>
-                            <th>{!!$showroom['SCHOOL_WORK_TIME']!!}</th>
-                            <th>{!!$showroom['EMAIL']!!}</th>
-                            <th>{!!$showroom['DIR_NAME']!!}</th>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+        <div class="col-md-10 show_choice">
+            <h2>Москва (12)</h2>
+            <ul class="contact_info page_list angle">
+                <li>
+                    <p>Адрес: </p>
+                    <span>м. Пролетарская (м. Крестьянская застава), <br>ул. Воронцовская д.35Б, стр.2, офис 36, 4 этаж</span>
+                </li>
+                <li>Режим работы: понедельник-пятница с 10:00 до 18:00</li>
+                <li>Телефоны: +7 985 300 15 20, +7 916 085 53 52</li>
+                <li>E-mail: piligrim13566@mail.ru</li>
+                <li class="info_name">Ф.И.О. руководителя: Келекешева Михаил Георгиевич</li>
+            </ul>
         </div>
     </div>
-
 </section>
 
 @endsection

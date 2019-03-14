@@ -21,11 +21,20 @@ var initExpandMenu = function(clickSelector, menuSelector) {
 
         expandMenu: function() {
             if(!this.expand) {
+                $(clickSelector).parent().toggleClass('active');
                 anime({
+                    easing: 'easeOutExpo',
+                    duration: 0,
                     targets: menuSelector,
                     translateY: '100%',
-                    easing: 'easeInOutExpo',
-                    duration: 500
+                    complete: function(anim) {
+                        anime({
+                            easing: 'easeOutExpo',
+                            duration: 400,
+                            targets: menuSelector,
+                            opacity: '1',
+                        });
+                    }
                 });
 
                 this.expand = true;
@@ -40,11 +49,20 @@ var initExpandMenu = function(clickSelector, menuSelector) {
 
         unExpandMenu: function() {
             if(this.expand) {
+                $(clickSelector).parent().toggleClass('active');
                 anime({
+                    easing: 'easeOutExpo',
+                    duration: 400,
                     targets: menuSelector,
-                    translateY: '-100%',
-                    easing: 'easeInOutExpo',
-                    duration: 500
+                    opacity: '0',
+                    complete: function(anim) {
+                        anime({
+                            easing: 'easeOutExpo',
+                            duration: 0,
+                            targets: menuSelector,
+                            translateY: '-100%',
+                        });
+                    }
                 });
 
                 this.expand = false;
