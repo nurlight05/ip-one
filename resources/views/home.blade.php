@@ -50,7 +50,7 @@
                                 <h2>{{$product->name}}</h2>
                             </div>
                             <div class="button">
-                                <button type="button" class="btn btn-light shadow-sm rounded-0" style="position: absolute;background-color: #fff; margin-top: 20px; font-weight: 600; color: #1d45a1; {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
+                                <button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
             @endforeach
         </div>
         <div class="row my-5">
-            <a href="{{route('products.index')}}" class="btn btn-light shadow-sm rounded-0" style="background-color: #fff;font-weight: 600; color: #1d45a1;display: block;font-size: 1.5rem;margin: auto;">смотреть ещё</a>
+            <a href="{{route('products.index')}}" class="btn btn-light btn-invertion shadow-sm rounded-0" style="display: block;font-size: 1.5rem;margin: auto;">смотреть ещё</a>
         </div>
       </div>
       <div class="tab-pane fade" id="new-products" role="tabpanel" aria-labelledby="new-products">
@@ -74,7 +74,7 @@
                                 <h2>{{$product->name}}</h2>
                             </div>
                             <div class="button">
-                                <button type="button" class="btn btn-light shadow-sm rounded-0" style="position: absolute;background-color: #fff; margin-top: 20px; font-weight: 600; color: #1d45a1; {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
+                                <button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
                             </div>
                         </div>
                     </div>

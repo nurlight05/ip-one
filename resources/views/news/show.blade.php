@@ -21,10 +21,9 @@
             <div class="month {{request()->input('month', 0) == 12 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 12])}}">Декабрь 2019</a></div>
         </div>
         <div class="col-md-10 p-4 right-side">
-            <div class="news-image mb-4" style="background-image: url('{{Voyager::image($news->img)}}')"></div>
-
             <div class="news-content">
                 <h3 class="mb-3" style="text-align: center;">{{$news->title}}</h3>
+                <img src="{{Voyager::image($news->img)}}" style="float: right;margin-left: 30px;margin-bottom: 30px;width: 600px;"/>
                 {!!$news->text!!}
             </div>
 

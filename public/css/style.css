@@ -7076,14 +7076,14 @@ li {
   margin: 0 5px;
   width: 210px;
   text-align: center;
-  transition: border 0.3s; }
+  transition: background-color 0.3s; }
   .main_menu > ul > li a {
     transition: color 0.3s; }
 
 .main_menu > ul > li.active {
-  border: 2px solid #9c9c9c; }
+  background-color: #31479d; }
   .main_menu > ul > li.active a {
-    color: #9c9c9c; }
+    color: #fff; }
 
 .main_menu > ul > li > .nav-link {
   color: #31479d;
@@ -7103,8 +7103,7 @@ li {
   text-transform: uppercase;
   padding: 20px; }
   .second_menu > ul > li > .nav-link:hover {
-    background-color: #284ea5;
-    color: #fff !important; }
+    background-color: #eaeaea; }
 
 .second_menu {
   z-index: 10;
@@ -7385,6 +7384,18 @@ footer > div p {
   text-align: center;
   font-size: 3.5rem;
   margin: auto; }
+
+.btn-invertion {
+  background-color: #fff;
+  color: #1d45a1;
+  font-weight: 600; }
+  .btn-invertion:hover {
+    background-color: #31479d;
+    color: #fff; }
+
+.gift_block .price button:hover {
+  background-color: #31479d;
+  color: #fff; }
 
 .inner_pages {
   font-size: 22px; }

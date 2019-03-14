@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $slides = Slider::get();
+        $slides = Slider::where('slider_id', 1)->get();
         $products = Product::where('is_present', '<>', 1)->get();
 
         return view('home', compact('slides', 'products'));
