@@ -23,12 +23,12 @@
         <div class="col-md-10 py-5 px-5 right-side news">
             @foreach ($news as $item)
                 <div class="row item">
-                    <div class="col-md-8 info">
+                    <div class="col-md-8 info d-flex flex-column">
                         <h2>{{$item->title}}</h2>
                         <p>{{$item->mini_description}}</p>
-                        <p>
+                        <p class="mt-auto">
                             {{$item->date}}
-                            <a href="{{route('news.show', $item)}}" class="btn btn-light shadow-sm" style="background-color: #fff;font-weight: 600; color: #1d45a1;float:right;">читать далее</a>
+                            <a href="{{route('news.show', $item)}}" class="btn btn-light shadow-sm btn-invertion rounded-0" style="font-weight: 600; float:right;">читать далее</a>
                         </p>
                     </div>
                     <div class="col-md-4 img" style="background-image: url('{{Voyager::image($item->img)}}')"></div>
