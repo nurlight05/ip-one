@@ -7115,7 +7115,7 @@ li {
 
 .hello-slider .item {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center; }
   .hello-slider .item .container {
     color: #31479d;
