@@ -39,11 +39,14 @@
     </ul>
     @foreach (menu('site', '_json') as $item)
     @if($item->children->count())
-        <div class="p-0 second_menu second_menu_{{$item->id}} shadow-sm">
-            <ul class="navbar-nav mr-auto p-4">
+        <div class="p-0 second_menu second_menu_{{$item->id}} d-flex justify-content-center">
+            <ul class="navbar-nav shadow-sm p-4" style="display: inline-flex;">
                 @foreach($item->children as $child)
-                <li class="nav-item">
-                    <a href="{{url($child->link())}}" class="nav-link" href="#" style="cursor: pointer;">{{$child->title}}</a>
+                <li class="nav-item" style="width: 250px;">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 85px;">
+                        <img src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>
+                    </div>
+                    <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">{{$child->title}}</a>
                 </li>
                 @endforeach
             </ul>
