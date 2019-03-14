@@ -3,40 +3,71 @@
 @section('title', 'Show Rooms')
 
 @section('content')
+
 <section class="container-fluid content inner_pages">
     <div class="row">
         <div class="col-md-2 border-right left-side show_choice">
             <h3 class="left_title">SHOW <br>ROOMS</h3>
-            <ul class="country_list">
-                <li>Казахстан</li>
-                <li class="active">
-                    Россия
-                    <ul class="city_list">
-                        <li class="active">Москва</li>
-                        <li>Санкт-Петербург</li>
-                        <li>Екатеринбург</li>
-                        <li>Астрахань</li>
-                        <li>Оренбург</li>
+            <ul class="country_list mb-5" id="accordionExample">
+                @foreach ($places as $key => $item)
+                <li>
+                    <p data-toggle="collapse" data-target="#{{$key}}" aria-expanded="true" aria-controls="{{$key}}" style="cursor: pointer">{{$key}}</p>
+                    <ul class="city_list collapse {{$_country == $key ? 'show' : ''}}" id="{{$key}}" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        @foreach ($item as $city)
+                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
-                <li>Германия</li>
-                <li>Израиль</li>
+                @endforeach
             </ul>
         </div>
-        <div class="col-md-10 show_choice">
-            <h2>Москва (12)</h2>
-            <ul class="contact_info page_list angle">
-                <li>
-                    <p>Адрес: </p>
-                    <span>м. Пролетарская (м. Крестьянская застава), <br>ул. Воронцовская д.35Б, стр.2, офис 36, 4 этаж</span>
-                </li>
-                <li>Режим работы: понедельник-пятница с 10:00 до 18:00</li>
-                <li>Телефоны: +7 985 300 15 20, +7 916 085 53 52</li>
-                <li>E-mail: piligrim13566@mail.ru</li>
-                <li class="info_name">Ф.И.О. руководителя: Келекешева Михаил Георгиевич</li>
-            </ul>
+        <div class="col-md-10 show_choice p-5">
+            @foreach ($showrooms as $item)
+            <div class="mb-5">
+                <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}})</h2>
+                <ul class="contact_info page_list angle">
+                    <li>
+                        <p>Адрес: </p>
+                        <span>{!!$item['ADDRESS']!!}</span>
+                    </li>
+                    <li>Режим работы: {!!$item['WORK_TIME']!!}</li>
+                    <li>Телефоны: {!!$item['PHONE']!!}</li>
+                    <li>E-mail: {!!$item['EMAIL']!!}</li>
+                    <li class="info_name">Ф.И.О. руководителя: {!!$item['DIR_NAME']!!}</li>
+                </ul>
+            </div>
+            @endforeach
+            <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div>
         </div>
     </div>
+    <table class="table table-hover d-none" style="width: 100%;">
+        <thead>
+            <tr class="success">
+            <th>#</th>
+            <th>Город</th>
+            <th>Адрес</th>
+            <th>Телефоны</th>
+            <th>Режим работы</th>
+            <th>Расписание школ</th>
+            <th>E-mail</th>
+            <th>ФИО руководителя</th>
+        </tr>
+    </thead>
+        <tbody>
+            @foreach($showrooms as $showroom)
+                <tr class="showroom">
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <th class="city">{!!$showroom['CITY']!!}</th>
+                    <th class="address">{!!$showroom['ADDRESS']!!}</th>
+                    <th>{!!$showroom['PHONE']!!}</th>
+                    <th>{!!$showroom['WORK_TIME']!!}</th>
+                    <th>{!!$showroom['SCHOOL_WORK_TIME']!!}</th>
+                    <th>{!!$showroom['EMAIL']!!}</th>
+                    <th>{!!$showroom['DIR_NAME']!!}</th>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </section>
 
 @endsection
@@ -56,14 +87,14 @@ ymaps.ready(function () {
     });
 	Promise.all(_.map(addresses, function(addr) {
         // console.log(addr.getElementsByClassName('address')[0].outerText);
-	    var myGeocoder = ymaps.geocode(addr.getElementsByClassName('address')[0].outerText);
+	    var myGeocoder = ymaps.geocode(addr.getElementsByClassName('city')[0].outerText+', '+addr.getElementsByClassName('address')[0].outerText);
 	    return myGeocoder.then(
 	            function (res) {
                     var obj = res.geoObjects.get(0);
                     if(obj) {
                         var country = obj.getCountry();
                         var city = obj.getLocalities()[0];
-                        
+                        console.log(obj.geometry.getCoordinates());
                         if(storage[country] == undefined)
                             storage[country] = {};
 
@@ -76,33 +107,13 @@ ymaps.ready(function () {
                         var myPlacemark = new ymaps.Placemark(obj.geometry.getCoordinates(), {balloonContentHeader: addr.getElementsByClassName('address')[0].outerText});
                         
                         myMap.geoObjects.add(myPlacemark);
+                        myMap.setCenter(obj.geometry.getCoordinates());
+                        myMap.setZoom(9);
                     }
 	            },
 	            function (err) {}
 	    );
     }));
-    // .then(function() {
-    //     for (const key in storage) {
-    //         helper.$('#countries').append(
-    //         '<div class="card">'+
-    //         '  <div class="card-header p-0" id="headingOne">'+
-    //         '    <h2 class="mb-0">'+
-    //         '      <span class="collapsed p-0" data-toggle="collapse" data-target="#'+key+'" aria-expanded="false" aria-controls="'+key+'">'+
-    //             key+
-    //         '      </span>'+
-    //         '    </h2>'+
-    //         '  </div>'+
-    //         '  <div id="'+key+'" class="collapse" aria-labelledby="headingOne" data-parent="#countries">'+
-    //         '    <div class="card-body">'+
-    //         _.map(Object.keys(storage[key]), function(name) {
-    //             return '<div>'+(name!=undefined ? name : '')+'</div>';
-    //         })+
-    //         '    </div>'+
-    //         '  </div>'+
-    //         '</div>'
-    //         );
-    //     }
-    // });
 });
 </script>
 @endpush

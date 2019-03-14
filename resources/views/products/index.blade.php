@@ -30,9 +30,13 @@
                 <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}')">
                     @foreach ($products as $item)
                         <div class="item">
-                            <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')"></div>
-                            <div class="name">{{$item->name}}</div>
-                            <div class="price">{{$item->price}} у.е.</div>
+                            <a href="#">
+                                <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')">
+                                    <div class="buy">Купить</div>
+                                </div>
+                                <div class="name">{{$item->name}}</div>
+                                <div class="price">{{$item->price}} у.е.</div>
+                            </a>
                         </div>
                         @if($loop->iteration%3 == 0)
                             </div>

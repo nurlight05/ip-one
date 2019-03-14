@@ -7296,6 +7296,8 @@ footer > div p {
 
 .products .item {
   margin: 0 10px; }
+  .products .item a {
+    text-decoration: none; }
   .products .item .img {
     border: 8px solid #7593da;
     border-radius: 10rem;
@@ -7305,7 +7307,22 @@ footer > div p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #fff; }
+    background-color: #fff;
+    display: flex; }
+  .products .item .buy {
+    background-color: #0000008c;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    margin-top: auto;
+    transition: transform 0.3s;
+    transform: translateY(100%); }
+  .products .item:hover .buy {
+    transform: translateY(0); }
   .products .item .name {
     text-align: center;
     font-size: 2rem;
