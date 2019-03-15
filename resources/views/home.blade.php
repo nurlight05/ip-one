@@ -50,7 +50,7 @@
                                 <h2>{{$product->name}}</h2>
                             </div>
                             <div class="button">
-                                <button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
+                                <a href="{{route('products.show', $product)}}"><button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button></a>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                 <h2>{{$product->name}}</h2>
                             </div>
                             <div class="button">
-                                <button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button>
+                                <a href="{{route('products.show', $product)}}"><button type="button" class="btn btn-light btn-invertion shadow-sm rounded-0" style="position: absolute; margin-top: 20px;  {{$loop->iteration%2 ? 'left: 0;margin-left: 40px;' : 'right: 0;margin-right: 40px;'}}">подробнее</button></a>
                             </div>
                         </div>
                     </div>
