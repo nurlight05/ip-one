@@ -19,6 +19,7 @@ class ProductsController extends Controller
 
     public function show(Request $request, Product $product)
     {
-        return view('products.show', compact('product'));
+        $products = Product::latest()->where('is_present', '<>', 1)->get();
+        return view('products.show', compact('product', 'products'));
     }
 }

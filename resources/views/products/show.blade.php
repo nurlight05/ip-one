@@ -6,27 +6,28 @@
 
 <section class="container-fluid content inner_pages">
 		<div class="row">
-			<div class="col-md-2 border-right left-side">
-				<h3 class="left_title">ПРОДУКТЫ</h3>
+			<div class="col-md-2 border-right left-side py-5">
+				<h3>Интернет магазин</h3>
+				<h4>Наши продукты</h4>
+				@foreach ($products as $item)
+					<div class="month pl-4"><a href="{{route('products.show', $item)}}">{{$item->name}}</a></div>
+				@endforeach
 			</div>
 			<div class="col-md-10 prod_unit">
-				<div class="prod_unit-name clearfix">
-					<div class="float-left">
-						<div class="prod_unit-img">
+				<div class="product">
+					<div class="img">
                         <img src="{{Voyager::image($product->img)}}" alt="">
-						</div>
 					</div>
-					<div class="float-left text_center">
-						<div class="prod_name-text">
-							<h4>{{$product->name}}</h4>
-							<p>{{$product->mini_description}}</p>
-						</div>
-						<div class="prod_name-price">
-							<p>стоимость: 65 у.е</p>
-							<p>структура: 25 баллов</p>
-						</div>
+					<div class="description">
+                        <h4>{{$product->name}}</h4>
+                        <p>{{$product->mini_description}}</p>
 					</div>
 				</div>
+                <div class="product_buy">
+                    <p>стоимость: {{$product->price}} у.е</p>
+                    <p>структура: {{$product->points}} баллов</p>
+                    <a href="//shop.ip-one.net"><button class="unit_buy m-0 mt-4">купить</button></a>
+                </div>
 				<div class="prod_unit-info">
 					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 						<li class="nav-item active">

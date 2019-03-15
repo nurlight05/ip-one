@@ -30,7 +30,7 @@
                 <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}')">
                     @foreach ($products as $item)
                         <div class="item">
-                            <a href="#">
+                            <a href="{{route('products.show', $item)}}">
                                 <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')">
                                     <div class="buy">Купить</div>
                                 </div>
@@ -55,7 +55,7 @@
                     <div class="gift_unit-info">
                         <h6>{{$item->name}}</h6>
                         {!!$item->description!!}
-                        <p class="price">цена: {{$item->price}} у.е <a href="{{url('/basket')}}"><button class="unit_buy">купить</button></a></p>
+                        <p class="price">цена: {{$item->price}} у.е <a href="{{route('products.show', $item)}}"><button class="unit_buy">купить</button></a></p>
                     </div>
                 </div>
                 @endforeach

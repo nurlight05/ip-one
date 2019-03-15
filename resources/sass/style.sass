@@ -448,6 +448,52 @@ footer
 		background-color: #31479d
 		color: #fff
 
+.product
+	height: 200px
+	background-color: #134094
+	display: flex
+	align-items: center
+	margin-top: 3rem
+	margin-left: 50px
+
+	.img
+		border: 10px solid #134094
+		border-radius: 1000rem
+		overflow: hidden
+		margin-left: -50px
+		flex: 0 0 350px
+		max-width: 350px
+		height: 350px
+
+		img
+			width: 350px
+			height: 350px
+
+	.description
+		color: #fff
+		padding: 2rem
+
+		h4
+			font-size: 4rem
+			margin: 0
+
+		p
+			font-size: 2rem
+			margin: 0
+
+.product_buy
+	padding-left: 350px
+	padding-top: 20px
+	margin-bottom: 2rem
+
+	p
+		font-size: 36px
+		line-height: 36px
+		margin-bottom: 0
+
+.video iframe
+	pointer-events: none
+
 .inner_pages
 	font-size: 22px
 .block
@@ -889,7 +935,7 @@ footer
 	font-size: 30px
 	line-height: 30px
 	margin-top: 20px
-.gift_block .price button
+.unit_buy
 	font-size: 28px
 	border: none
 	box-shadow: 0 0 5px -2px #333
@@ -901,7 +947,7 @@ footer
 	display: inline-block
 	padding: 1px 15px
 	outline: none
-.gift_block .price button:hover
+.unit_buy:hover
 	box-shadow: 0 0 10px -3px #333
 .gift_block img
 	width: 100%
@@ -1021,14 +1067,14 @@ footer
 .prod_unit-name
 	overflow: hidden
 	position: relative
-	margin-bottom: 60px
+	padding-bottom: 100px
 .prod_unit-name:before
 	content: ''
 	width: 2000px
 	height: 200px
 	background: #134094
 	position: absolute
-	top: 50%
+	top: calc(50% - 50px)
 	left: 20%
 	transform: translate(0,-50%)
 	z-index: -1
@@ -1052,10 +1098,8 @@ footer
 	height: 200px
 	position: relative
 .prod_name-text
-	position: absolute
-	top: 50%
-	left: 80px
-	transform: translate(0, -50%)
+	margin-left: 30px
+	transform: translate(0,33%)
 .prod_name-text h4
 	color: #fff
 	font-size: 66px
@@ -1093,21 +1137,19 @@ footer
 	position: relative
 	height: 55px
 	transition: 300ms
-// .prod_unit-info li:hover
-// 	box-shadow: 0 0 15px -3px #333
-// .prod_unit-info li.active
-// 	background: #134094
-// .nav-pills .nav-link
-// 	padding: 0
-// 	color: #134094
-// 	position: absolute
-// 	top: 50%
-// 	left: 50%
-// 	transform: translate(-50%,-50%)
-// 	width: 100%
-// 	padding: 6px 15px
-// .nav-pills .nav-link.active, 
-// .nav-pills .show > .nav-link
-// 	background: transparent
+.nav-pills .nav-link
+	color: #134094
+	border-radius: 0
+	box-shadow: 0 0 10px -3px #333
+.nav-pills .nav-link:hover
+	box-shadow: 0 0 15px -3px #333
+.nav-pills .nav-link.active, 
+.nav-pills .show > .nav-link
+	background: #134094
+.prod_name-price .unit_buy
+	margin-left: 0
+	margin-top: 20px
 #lightgallery img
+	width: 100%
+#video-gallery img
 	width: 100%
