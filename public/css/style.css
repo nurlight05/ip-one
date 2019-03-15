@@ -7416,6 +7416,46 @@ footer > div p {
   background-color: #31479d;
   color: #fff; }
 
+.product {
+  height: 200px;
+  background-color: #134094;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: 50px; }
+  .product .img {
+    border: 10px solid #134094;
+    border-radius: 1000rem;
+    overflow: hidden;
+    margin-left: -50px;
+    flex: 0 0 350px;
+    max-width: 350px;
+    height: 350px; }
+    .product .img img {
+      width: 350px;
+      height: 350px; }
+  .product .description {
+    color: #fff;
+    padding: 2rem; }
+    .product .description h4 {
+      font-size: 4rem;
+      margin: 0; }
+    .product .description p {
+      font-size: 2rem;
+      margin: 0; }
+
+.product_buy {
+  padding-left: 350px;
+  padding-top: 20px;
+  margin-bottom: 2rem; }
+  .product_buy p {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 0; }
+
+.video iframe {
+  pointer-events: none; }
+
 .inner_pages {
   font-size: 22px; }
 
@@ -7952,7 +7992,7 @@ footer > div p {
   line-height: 30px;
   margin-top: 20px; }
 
-.gift_block .price button {
+.unit_buy {
   font-size: 28px;
   border: none;
   box-shadow: 0 0 5px -2px #333;
@@ -7965,7 +8005,7 @@ footer > div p {
   padding: 1px 15px;
   outline: none; }
 
-.gift_block .price button:hover {
+.unit_buy:hover {
   box-shadow: 0 0 10px -3px #333; }
 
 .gift_block img {
@@ -8121,7 +8161,7 @@ footer > div p {
 .prod_unit-name {
   overflow: hidden;
   position: relative;
-  margin-bottom: 60px; }
+  padding-bottom: 100px; }
 
 .prod_unit-name:before {
   content: '';
@@ -8129,7 +8169,7 @@ footer > div p {
   height: 200px;
   background: #134094;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 50px);
   left: 20%;
   transform: translate(0, -50%);
   z-index: -1; }
@@ -8157,10 +8197,8 @@ footer > div p {
   position: relative; }
 
 .prod_name-text {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translate(0, -50%); }
+  margin-left: 30px;
+  transform: translate(0, 33%); }
 
 .prod_name-text h4 {
   color: #fff;
@@ -8206,5 +8244,24 @@ footer > div p {
   height: 55px;
   transition: 300ms; }
 
+.nav-pills .nav-link {
+  color: #134094;
+  border-radius: 0;
+  box-shadow: 0 0 10px -3px #333; }
+
+.nav-pills .nav-link:hover {
+  box-shadow: 0 0 15px -3px #333; }
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: #134094; }
+
+.prod_name-price .unit_buy {
+  margin-left: 0;
+  margin-top: 20px; }
+
 #lightgallery img {
+  width: 100%; }
+
+#video-gallery img {
   width: 100%; }

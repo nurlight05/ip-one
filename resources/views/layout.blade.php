@@ -8,6 +8,7 @@
 
         <link href="{{asset('css/style.css')}}?q={{rand()}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{asset('css/lightgallery.css')}}">
     </head>
     <body>
 
@@ -42,6 +43,13 @@
     </footer>
 
     <script src="{{asset('js/script.js')}}?q={{rand()}}"></script>
+    <script>
+        var $ = helper.$;
+    </script>
+	<script src="{{asset('js/lightgallery.min.js')}}"></script>
+    <script src="{{asset('js/lg-video.js')}}"></script>
+    <script src="{{asset('js/lg-autoplay.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}?q={{rand()}}"></script>
 
     @stack('styles')
     @stack('scripts')
