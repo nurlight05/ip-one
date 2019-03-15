@@ -7026,7 +7026,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: 'MyWebFont';
-  color: #31479d; }
+  color: #264796; }
 
 li {
   list-style: none;
@@ -7041,7 +7041,7 @@ li {
   background-color: #fff; }
 
 #header_menu > ul > li > .nav-link {
-  color: #31479d;
+  color: #264796;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -7050,7 +7050,7 @@ li {
 
 .right-menu a {
   margin: 0 0.7rem;
-  color: #31479d; }
+  color: #264796; }
 
 .main_menu {
   z-index: 25;
@@ -7071,7 +7071,7 @@ li {
 
 .main_menu > ul > li {
   padding: 5px 0;
-  border: 2px solid #31479d;
+  border: 2px solid #264796;
   border-radius: 4rem;
   margin: 0 5px;
   width: 210px;
@@ -7081,17 +7081,17 @@ li {
     transition: color 0.3s; }
 
 .main_menu > ul > li.active {
-  background-color: #31479d; }
+  background-color: #264796; }
   .main_menu > ul > li.active a {
     color: #fff; }
 
 .main_menu > ul > li:hover {
-  background-color: #31479d; }
+  background-color: #264796; }
   .main_menu > ul > li:hover a {
     color: #fff; }
 
 .main_menu > ul > li > .nav-link {
-  color: #31479d;
+  color: #264796;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -7123,7 +7123,7 @@ li {
   background-size: contain;
   background-position: center; }
   .hello-slider .item .container {
-    color: #31479d;
+    color: #264796;
     height: 400px; }
     .hello-slider .item .container .description {
       margin-bottom: 40px;
@@ -7133,16 +7133,16 @@ li {
       .hello-slider .item .container .description p {
         margin-bottom: 5px; }
     .hello-slider .item .container .link a {
-      border: 2px solid #31479d;
+      border: 2px solid #264796;
       padding: 5px 15px;
       font-weight: 400;
-      color: #31479d;
+      color: #264796;
       border-radius: 50px;
       font-size: 1.3rem;
       transition: background-color 0.2s; }
       .hello-slider .item .container .link a:hover {
         text-decoration: none;
-        background-color: #31479d;
+        background-color: #264796;
         color: #fff; }
 
 .open-imagine-people {
@@ -7168,7 +7168,7 @@ li {
 .products .selects {
   text-transform: uppercase;
   font-size: 2rem;
-  color: #31479d;
+  color: #264796;
   text-transform: uppercase; }
   .products .selects > a.active {
     font-size: 2.5rem;
@@ -7247,19 +7247,19 @@ footer > div p {
 .content .left-side {
   background-color: #fdfdfd; }
   .content .left-side h3 {
-    color: #31479d;
+    color: #264796;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700; }
   .content .left-side h4 {
-    color: #31479d; }
+    color: #264796; }
   .content .left-side .month {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 0.7rem; }
     .content .left-side .month a {
-      color: #31479d; }
+      color: #264796; }
     .content .left-side .month.active {
       text-align: center; }
       .content .left-side .month.active a {
@@ -7269,7 +7269,7 @@ footer > div p {
 .news .item {
   margin-bottom: 2rem; }
   .news .item .info {
-    color: #31479d; }
+    color: #264796; }
     .news .item .info h2 {
       font-weight: 500;
       font-size: 24px; }
@@ -7292,7 +7292,7 @@ footer > div p {
   background-size: cover; }
 
 .news-content {
-  color: #31479d; }
+  color: #264796; }
 
 .products .line {
   background-repeat: no-repeat;
@@ -7370,11 +7370,11 @@ footer > div p {
     border: none; }
     .showrooms-left .accordion .card .card-header span {
       font-size: 1.3rem;
-      color: #31479d;
+      color: #264796;
       cursor: pointer; }
 
 .bussines * {
-  color: #31479d; }
+  color: #264796; }
 
 .packet {
   width: 250px;
@@ -7382,7 +7382,7 @@ footer > div p {
   margin-top: 30px; }
   .packet .packet-header {
     text-align: center;
-    border-bottom: solid 3px #31479d; }
+    border-bottom: solid 3px #264796; }
     .packet .packet-header .number {
       font-size: 2rem;
       font-weight: 600; }
@@ -7399,7 +7399,7 @@ footer > div p {
       font-size: 1rem; }
 
 .center-number {
-  background-color: #31479d;
+  background-color: #264796;
   width: 5rem;
   display: block;
   height: 5rem;
@@ -7414,11 +7414,11 @@ footer > div p {
   color: #1d45a1;
   font-weight: 600; }
   .btn-invertion:hover {
-    background-color: #31479d;
+    background-color: #264796;
     color: #fff; }
 
 .gift_block .price button:hover {
-  background-color: #31479d;
+  background-color: #264796;
   color: #fff; }
 
 .product {
@@ -7460,6 +7460,12 @@ footer > div p {
 
 .video iframe {
   pointer-events: none; }
+
+.page-item.active .page-link {
+  background-color: #264796; }
+
+.page-link {
+  color: #264796; }
 
 .inner_pages {
   font-size: 22px; }
