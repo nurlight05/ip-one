@@ -19,6 +19,7 @@
             <div class="month {{request()->input('month', 0) == 10 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 10])}}">Октябрь 2019</a></div>
             <div class="month {{request()->input('month', 0) == 11 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 11])}}">Ноябрь 2019</a></div>
             <div class="month {{request()->input('month', 0) == 12 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 12])}}">Декабрь 2019</a></div>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 py-5 px-5 right-side news">
             @foreach ($news as $item)

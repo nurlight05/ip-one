@@ -11,6 +11,7 @@
             @foreach ($products as $item)
                 <div class="month pl-4"><a href="#">{{$item->name}}</a></div>
             @endforeach
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-0 right-side">
             
@@ -46,6 +47,7 @@
                 </div>
             </div>
             <div class="gift_block">
+                @if ($presents->count())
                 <h5>ПОДАРОЧНЫЕ НАБОРЫ</h5>
                 @foreach ($presents as $item)
                 <div class="gift_unit">
@@ -59,6 +61,7 @@
                     </div>
                 </div>
                 @endforeach
+                @endif
             </div>
         </div>
     </div>

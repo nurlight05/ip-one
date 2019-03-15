@@ -1,4 +1,4 @@
-<div style="position: relative;">
+<div style="position: relative;" id="header_menu">
 <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm" style="z-index: 90; background-color: #fff">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_menu" aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,8 +22,8 @@
     <div class="col-md-4">
         <div class="d-block right-menu ml-auto text-right">
             <a href=""><i class="fas fa-search"></i></a>
-            <a href="{{url('/basket')}}"><i class="fas fa-shopping-bag"></i></a>
-            <a href=""><i class="fas fa-user"></i></a>
+            <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a>
+            <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
             <a href="">RU</a>
         </div>
     </div>

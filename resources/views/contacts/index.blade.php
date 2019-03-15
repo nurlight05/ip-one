@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">КОНТАКТЫ</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 contacts p-5">
             <p class="contacts-title">Представляем Вам команду Центрального офиса. <br>Вы можете напрямую обратиться к нашим сотрудникам по интересующим Вас вопросам.</p>

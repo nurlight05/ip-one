@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">О НАС</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 about p-5">
             <p class="about_title">IMAGINE PEOPLE <br>Международная интернет-компания, которая дает возможность приобретать продукт <br>и вести бизнес по всему миру!</p>

@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">НАУКА</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 science p-5">
             <h3>Инюшин Виктор Михайлович</h3>

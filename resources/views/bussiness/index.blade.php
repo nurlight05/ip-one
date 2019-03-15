@@ -8,6 +8,7 @@
         <div class="col-md-2 py-5 left-side border-right showrooms-left">
             <h3 class="mb-5">Возможности</h3>
             <img src="img/business.png" alt="" class="idea_icon">
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-4 right-side bussines">
             <h2 style="text-align: center;">Бизнес возможности</h2>

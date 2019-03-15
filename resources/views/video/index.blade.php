@@ -7,8 +7,9 @@
     <div class="row">
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">ВИДЕО</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
-        <div class="col-md-10 prod_unit">
+        <div class="col-md-10 py-5">
             <ul id="video-gallery" class="row">
                 <li class="col-md-3 video" data-src="https://www.youtube.com/embed/S-cOFBMlNE8">
                     <a href="#"><iframe src="https://www.youtube.com/embed/S-cOFBMlNE8" allowfullscreen="" class="fr-draggable" width="100%" height="250" frameborder="0"></iframe></a>

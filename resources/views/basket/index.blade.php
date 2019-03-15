@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">ИНТЕРНЕТ МАГАЗИН</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 basket p-5">
             <div class="issue" style="margin: 0;">
