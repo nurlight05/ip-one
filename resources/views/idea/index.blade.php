@@ -8,6 +8,7 @@
         <div class="col-md-2 border-right left-side">
             <h3 class="left_title">ИДЕЯ</h3>
             <img src="img/idea-icon.png" alt="" class="idea_icon">
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 idea p-5">
             <h5>Многие люди считают, что для того, чтобы зарабатывать в сетевом <br>бизнесе, нужно продавать. Но это не так!</h5>

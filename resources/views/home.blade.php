@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="hello-slider">
+<div class="hello-slider main_slider">
     @foreach ($slides as $item)
         <div class="item" style="background-image: url('{{Voyager::image($item->image)}}')">
             <div class="container d-flex justify-content-center flex-column">
@@ -33,8 +33,8 @@
 
 <div class="container-fluid products py-5 mb-5">
     <div class="row selects mb-5 nav align-items-center" id="nav-tab" role="tablist">
-        <a class="ml-auto active mr-5" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="true" style="color: #264796;">Наши продукты</a>
-        <a class="mr-auto ml-5" id="new-products-tab" data-toggle="tab" href="#new-products" role="tab" aria-controls="new-products" aria-selected="false" style="color: #264796;">Новинки</a>
+        <a class="ml-auto active mr-5" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="true">Наши продукты</a>
+        <a class="mr-auto ml-5" id="new-products-tab" data-toggle="tab" href="#new-products" role="tab" aria-controls="new-products" aria-selected="false">Новинки</a>
     </div>
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="products" role="tabpanel" aria-labelledby="products">
@@ -90,6 +90,6 @@
 
 @push('scripts')
 <script>
-    helper.$('.hello-slider').slick({arrows: false, dots: true});
+    helper.$('.hello-slider').slick({arrows: true, dots: true});
 </script>
 @endpush

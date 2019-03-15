@@ -8,6 +8,7 @@
         <div class="col-md-2 border-right left-side pb-5">
             <h3 class="left_title">Инфо</h3>
             <img src="{{asset('img/faq.png')}}" alt="" class="faq_img">
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-5">
             <h3>Научное обоснование применения гидроплазмы в процессе тренировок</h3>

@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-md-2 py-5 left-side border-right">
             <h3>{{$content->name}}</h3>
+            <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-5 right-side">{!!$content->content!!}</div>
     </div>
