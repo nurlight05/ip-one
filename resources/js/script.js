@@ -110,7 +110,23 @@ $(document).ready(function(){
 		$input.change();
 		return false;
 	});
-});
+	$('.click').on('click', function(){
+      var link = $(this).attr('href');
+      $(''+link).fadeIn();
+      $('.modal .close_btn').on('click', function(){
+          $(this).parents('.modal').fadeOut();
+          return false;
+      });
+      return false;
+   });
+	$('.country_list > li p').click(function(){
+		$(this).next('.city_list').slideToggle();
+	});
+	$('.show_btn').click(function(){
+		$(this).parent('.show_all').prev('.comment_hidden-block').slideToggle();
+	})
+	new WOW().init();
+})
 
 export {
     $,

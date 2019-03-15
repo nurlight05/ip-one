@@ -19,7 +19,7 @@
                 (в состав пакета входит продукт компании)<br/>
             </p>
             <div class="row justify-content-center mb-5">
-                    <div class="col-md-2 packet shadow py-4 d-flex flex-column mx-2">
+                    <div class="packet shadow py-4 d-flex flex-column mx-2">
                         <div class="packet-header">
                             <div class="number">1</div>
                             <div class="name">Пробный</div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 packet shadow py-4 d-flex flex-column mx-2">
+                    <div class="packet shadow py-4 d-flex flex-column mx-2">
                         <div class="packet-header">
                             <div class="number">2</div>
                             <div class="name">Старт</div>
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 packet shadow py-4 d-flex flex-column mx-2">
+                    <div class="packet shadow py-4 d-flex flex-column mx-2">
                         <div class="packet-header">
                             <div class="number">3</div>
                             <div class="name">Профессионал</div>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 packet shadow py-4 d-flex flex-column mx-2">
+                    <div class="packet shadow py-4 d-flex flex-column mx-2">
                         <div class="packet-header">
                             <div class="number">4</div>
                             <div class="name">Мега</div>
