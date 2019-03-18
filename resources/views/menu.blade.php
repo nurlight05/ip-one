@@ -6,7 +6,7 @@
     
     <div class="collapse navbar-collapse col-md-4" id="header_menu" style="padding: 20px">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{{url('/')}}">Главная</a>
             </li>
             <li class="nav-item">
