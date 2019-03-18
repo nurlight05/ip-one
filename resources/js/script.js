@@ -49,7 +49,7 @@ var initExpandMenu = function(clickSelector, menuSelector) {
 
         unExpandMenu: function() {
             if(this.expand) {
-                $(clickSelector).parent().toggleClass('active');
+                $(clickSelector).parent().removeClass('active');
                 anime({
                     easing: 'easeOutExpo',
                     duration: 400,
