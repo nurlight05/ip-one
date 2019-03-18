@@ -5,7 +5,7 @@
 @section('content')
 <section class="container-fluid content inner_pages">
     <div class="row">
-        <div class="col-md-2 border-right left-side">
+        <div class="col-md-2 left-side">
             <h3 class="left_title">ИНТЕРНЕТ МАГАЗИН</h3>
             <a href="#header_menu" class="toUp_btn"></a>
         </div>

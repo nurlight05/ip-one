@@ -6,7 +6,7 @@
 
 <section class="container-fluid content inner_pages">
     <div class="row">
-        <div class="col-md-2 border-right left-side show_choice">
+        <div class="col-md-2 left-side show_choice">
             <h3 class="left_title">SHOW <br>ROOMS</h3>
             <ul class="country_list mb-5" id="accordionExample">
                 @foreach ($places as $key => $item)

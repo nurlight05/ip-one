@@ -5,7 +5,7 @@
 @section('content')
 <section class="container-fluid content">
     <div class="row">
-        <div class="col-md-2 py-5 left-side border-right showrooms-left">
+        <div class="col-md-2 py-5 left-side showrooms-left">
             <h3 class="mb-5">Возможности</h3>
             <img src="img/business.png" alt="" class="idea_icon">
             <a href="#header_menu" class="toUp_btn"></a>
