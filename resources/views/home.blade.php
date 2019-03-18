@@ -90,6 +90,6 @@
 
 @push('scripts')
 <script>
-    helper.$('.hello-slider').slick({arrows: true, dots: true});
+    helper.$('.hello-slider').slick({arrows: true, dots: true,autoplay: true,autoplaySpeed: 5000});
 </script>
 @endpush
