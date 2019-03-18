@@ -5,7 +5,7 @@
 @section('content')
 <section class="container-fluid content">
     <div class="row">
-        <div class="col-md-2 py-5 left-side border-right">
+        <div class="col-md-2 py-5 left-side">
             <h3>Новости</h3>
             <div class="month {{request()->input('month', 0) == 1 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 1])}}">Январь 2019</a></div>
             <div class="month {{request()->input('month', 0) == 2 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 2])}}">Февраль 2019</div>

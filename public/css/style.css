@@ -7120,7 +7120,7 @@ li {
 
 .hello-slider .item {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center; }
   .hello-slider .item .container {
     color: #264796;
@@ -7362,6 +7362,12 @@ footer > div p {
     font-size: 1.1rem;
     font-weight: 500;
     color: #425fa8; }
+
+.showrooms-left h3 {
+  font-size: 18px; }
+  @media (min-width: 1600px) {
+    .showrooms-left h3 {
+      font-size: 1.75rem; } }
 
 .showrooms-left .accordion .card {
   border: none; }

@@ -6,7 +6,7 @@
 
 <section class="container-fluid content inner_pages">
 		<div class="row">
-			<div class="col-md-2 border-right left-side py-5">
+			<div class="col-md-2 left-side py-5">
 				<h3>Интернет магазин</h3>
 				<h4>Наши продукты</h4>
 				@foreach ($products as $item)
