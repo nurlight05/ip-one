@@ -72,6 +72,6 @@
 
 @push('scripts')
 <script>
-    helper.$('.hello-slider').slick({arrows: false, dots: true});
+    helper.$('.hello-slider').slick({arrows: false, dots: true,autoplay: true,autoplaySpeed: 5000});
 </script>
 @endpush

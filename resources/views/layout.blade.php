@@ -21,7 +21,8 @@
             <div class="row">
                 <div class="col-md-6 info" style="display: flex;flex-direction: column;justify-content: center;">
                         <div class="with-icon" style="background-image: url('{{asset('img/phone-icon.png')}}')">
-                            <p>+7 (707) 777 77 77<br>+7 (707) 777 77 77</p>
+                            <p>+7 (727) 364 53 30<br>
+                                +7 (776) 757 57 57</p>
                         </div>
                         <div class="with-icon" style="background-image: url('{{asset('img/email-icon.png')}}')">
                             <p>info@ip-one.net</p>
