@@ -91,9 +91,6 @@ li
 	text-transform: uppercase
 	padding: 20px
 
-	&:hover
-		background-color: #eaeaea
-
 .second_menu
 	z-index: 10
 	position: absolute
@@ -102,6 +99,18 @@ li
 	bottom: 0
 	transform: translateY(-100%)
 
+	.nav-item
+		.nav-link
+			transition: 300ms
+		.svg_icon
+			path, polygon
+				transition: 300ms
+		&:hover
+			.nav-link
+				color: #ccc !important
+			.svg_icon
+				path, polygon
+					fill: #ccc
 	
 .hello-slider
 	.item
@@ -511,7 +520,31 @@ footer
 .page-link
 	color: #264796
 
-	
+.svg_icon
+	width: 100%
+	shape-rendering: geometricPrecision
+	text-rendering: geometricPrecision
+	image-rendering: optimizeQuality
+	fill-rule: evenodd
+	clip-rule: evenodd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1176,9 +1209,9 @@ footer
 .toUp
 	position: relative
 .toUp_btn
-	position: absolute
-	bottom: 15px
-	left: 50%
+	position: fixed
+	bottom: 20px
+	left: 8%
 	transform: translate(-50%, 0)
 .toUp_btn:before
 	content: ''
@@ -1199,3 +1232,12 @@ footer
 
 .left-side
 	padding-right: 35px
+
+.nav-link.submenu-nav
+	transition: 300ms
+	&:hover
+	color: #ccc
+.svg_icon path
+	transition: 300ms
+.svg_icon:hover path
+	fill: #ccc
