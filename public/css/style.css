@@ -7261,9 +7261,13 @@ footer > div p {
     color: #264796; }
   .content .left-side .month {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 0.7rem; }
+    @media (min-width: 1500px) {
+      .content .left-side .month {
+        font-size: 18px;
+        line-height: 18px; } }
     .content .left-side .month a {
       color: #264796; }
     .content .left-side .month.active {
