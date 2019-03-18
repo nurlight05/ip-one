@@ -7107,8 +7107,6 @@ li {
   font-weight: 700;
   text-transform: uppercase;
   padding: 20px; }
-  .second_menu > ul > li > .nav-link:hover {
-    background-color: #eaeaea; }
 
 .second_menu {
   z-index: 10;
@@ -7117,6 +7115,14 @@ li {
   left: 0;
   bottom: 0;
   transform: translateY(-100%); }
+  .second_menu .nav-item .nav-link {
+    transition: 300ms; }
+  .second_menu .nav-item .svg_icon path, .second_menu .nav-item .svg_icon polygon {
+    transition: 300ms; }
+  .second_menu .nav-item:hover .nav-link {
+    color: #ccc !important; }
+  .second_menu .nav-item:hover .svg_icon path, .second_menu .nav-item:hover .svg_icon polygon {
+    fill: #ccc; }
 
 .hello-slider .item {
   background-repeat: no-repeat;
@@ -7472,6 +7478,14 @@ footer > div p {
 
 .page-link {
   color: #264796; }
+
+.svg_icon {
+  width: 100%;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  fill-rule: evenodd;
+  clip-rule: evenodd; }
 
 .inner_pages {
   font-size: 22px; }
@@ -8286,9 +8300,9 @@ footer > div p {
   position: relative; }
 
 .toUp_btn {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
+  position: fixed;
+  bottom: 20px;
+  left: 8%;
   transform: translate(-50%, 0); }
 
 .toUp_btn:before {
@@ -8311,3 +8325,13 @@ footer > div p {
 
 .left-side {
   padding-right: 35px; }
+
+.nav-link.submenu-nav {
+  transition: 300ms;
+  color: #ccc; }
+
+.svg_icon path {
+  transition: 300ms; }
+
+.svg_icon:hover path {
+  fill: #ccc; }

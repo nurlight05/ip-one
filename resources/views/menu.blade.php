@@ -45,7 +45,7 @@
                 <li class="nav-item" style="width: 250px;">
                         <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 85px;">
-                        <img src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>
+                        <img class="svg" src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>
                     </div>
                     {{$child->title}}</a>
                 </li>
@@ -66,6 +66,23 @@ helper.init(function() {
     @foreach (menu('site', '_json') as $item)
         helper.initExpandMenu('#drop_second_menu_{{$item->id}}', '.second_menu_{{$item->id}}');
     @endforeach
+
+
+
+    helper.$("img.svg").each(function () {
+        var $img = helper.$(this);
+        var attributes = $img.prop("attributes");
+        var imgURL = $img.attr("src");
+        helper.$.get(imgURL, function (data) {
+            var $svg = helper.$(data).find('svg');
+            $svg = $svg.removeAttr('xmlns:a');
+            helper.$.each(attributes, function() {
+                $svg.attr(this.name, this.value);
+            });
+            $img.replaceWith($svg);
+            $svg.toggleClass("svg_icon");
+        });
+    });
 });
 </script>
 @endpush
