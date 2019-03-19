@@ -72,4 +72,10 @@ $(document).ready(function(){
 	lightGallery(document.getElementById('lightgallery'));
 	lightGallery(document.getElementById('video-gallery'));
 	$('.hello-slider').css('display', 'block');
+	$('img').each(function(){
+		var img = $(this);
+		if(img.height() == 0){
+			img.hide();
+		}
+	});
 })

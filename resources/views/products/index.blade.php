@@ -43,7 +43,7 @@
             
             <div class="hello-slider">
             @foreach ($slides as $item)
-                <div class="item" style="background-image: url('{{Voyager::image($item->image)}}'); background-size: cover;">
+                <div class="item" style="background-image: url('{{Voyager::image($item->image)}}');">
                     <div class="container d-flex justify-content-center flex-column">
                         <h1 class="title">{{$item->title}}</h1>
                         <div class="description">{!!$item->description!!}</div>
