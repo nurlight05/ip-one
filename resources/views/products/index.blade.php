@@ -6,7 +6,7 @@
 <section class="container-fluid content">
     <div class="row">
         <div class="col-md-2 py-5 left-side">
-            <h3>Интернет магазин</h3>
+            <h3>Продукты</h3>
             <h4>Наши продукты</h4>
             @foreach ($products as $item)
                 <div class="month pl-4"><a href="{{route('products.show', $item)}}">{{$item->name}}</a></div>
