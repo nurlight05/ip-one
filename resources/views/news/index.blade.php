@@ -6,7 +6,7 @@
 <section class="container-fluid content news">
     <div class="row">
         <div class="col-md-2 py-5 left-side">
-            <h3>Новости</h3>
+            <a href="{{route('news.index')}}"><h3>Новости</h3></a>
             @foreach ($months as $key => $item)
                 <div class="month {{request()->input('year', 0) == $item[0] && request()->input('month', 0) == $item[1] ? 'active' : ''}}"><a href="{{route('news.index', ['year' => $item[0], 'month' => $item[1]])}}">{{$key}}</a></div>
             @endforeach
