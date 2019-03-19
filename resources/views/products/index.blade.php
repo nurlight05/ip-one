@@ -11,7 +11,7 @@
             @foreach ($products as $item)
                 <div class="month pl-4"><a href="{{route('products.show', $item)}}">{{$item->name}}</a></div>
             @endforeach
-            <div class="converter mt-4">
+            <div class="converter mt-4" id="converter">
                 <h6>конвертер валют</h6>
                 <form action="">
                     <div class="convert_box">
@@ -33,7 +33,7 @@
                 </form>
                 <p>1 y.e. = 300 KZT (тенге)</p>
                 <p>1 y.e. = 55 RUB (рублей)</p>
-                <p>1 y.e. = 1 USD (долларов)</p>
+                <p>1 y.e. = 1 USD (долларов США)</p>
                 <p>1 y.e. = 25 UAH (гривен)</p>
                 <p>1 y.e. = 0.7 EUR (евро)</p>	
             </div>
