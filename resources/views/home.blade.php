@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="hello-slider main_slider">
+<div class="hello-slider main_slider" style="display: none;">
     @foreach ($slides as $item)
         <div class="item" style="background-image: url('{{Voyager::image($item->image)}}')">
             <div class="container d-flex justify-content-center flex-column">
@@ -84,8 +84,6 @@
       </div>
     </div>
 </div>
-
-
 @endsection
 
 @push('scripts')

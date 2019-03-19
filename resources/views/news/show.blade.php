@@ -7,18 +7,9 @@
     <div class="row">
         <div class="col-md-2 py-5 left-side">
             <h3>Новости</h3>
-            <div class="month {{request()->input('month', 0) == 1 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 1])}}">Январь 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 2 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 2])}}">Февраль 2019</div>
-            <div class="month {{request()->input('month', 0) == 3 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 3])}}">Март 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 4 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 4])}}">Апрель 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 5 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 5])}}">Май 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 6 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 6])}}">Июнь 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 7 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 7])}}">Июль 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 8 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 8])}}">Август 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 9 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 9])}}">Сентябрь 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 10 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 10])}}">Октябрь 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 11 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 11])}}">Ноябрь 2019</a></div>
-            <div class="month {{request()->input('month', 0) == 12 ? 'active' : ''}}"><a href="{{route('news.index', ['month' => 12])}}">Декабрь 2019</a></div>
+            @foreach ($months as $key => $item)
+                <div class="month {{request()->input('year', 0) == $item[0] && request()->input('month', 0) == $item[1] ? 'active' : ''}}"><a href="{{route('news.index', ['year' => $item[0], 'month' => $item[1]])}}">{{$key}}</a></div>
+            @endforeach
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-4 right-side">
