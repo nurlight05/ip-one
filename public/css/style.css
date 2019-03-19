@@ -7126,8 +7126,7 @@ li {
 
 .hello-slider .item {
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
+  background-position: center center; }
   .hello-slider .item .container {
     color: #264796;
     height: 400px; }
