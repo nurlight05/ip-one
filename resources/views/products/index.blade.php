@@ -59,7 +59,7 @@
                         <div class="item">
                             <a href="{{route('products.show', $item)}}">
                                 <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')">
-                                    <div class="buy">Купить</div>
+                                    <div class="buy">Подробнее</div>
                                 </div>
                                 <div class="name">{{$item->name}}</div>
                                 <div class="price">{{$item->price}} у.е.</div>
