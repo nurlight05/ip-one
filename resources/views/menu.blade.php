@@ -22,7 +22,7 @@
     <div class="col-md-4">
         <div class="d-block right-menu ml-auto text-right">
             <a href=""><i class="fas fa-search"></i></a>
-            <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a>
+            {{-- <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a> --}}
             <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
             <a href="">RU</a>
         </div>

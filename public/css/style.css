@@ -7620,20 +7620,14 @@ footer > div p {
   margin-top: 50px; }
 
 .left_title {
-  font-size: 22px;
+  font-size: 36px;
   margin: 40px 0; }
-  @media (min-width: 1500px) {
-    .left_title {
-      font-size: 36px; } }
 
 .science h3 {
-  font-size: 22px;
+  font-size: 36px;
   margin-top: 70px;
   margin-bottom: 0;
   text-align: center; }
-  @media (min-width: 1100px) {
-    .science h3 {
-      font-size: 36px; } }
 
 .science h5 {
   font-size: 28px;
@@ -8373,7 +8367,15 @@ footer > div p {
   border: 2px solid #134094;
   text-align: center;
   font-size: 22px;
-  outline: none; }
+  outline: none;
+  color: #134094; }
+  .converter input::placeholder {
+    color: #134094;
+    opacity: 1; }
+  .converter input:-ms-input-placeholder {
+    color: #134094; }
+  .converter input::-ms-input-placeholder {
+    color: #134094; }
 
 .converter select {
   -moz-appearance: none;
@@ -8442,6 +8444,36 @@ footer > div p {
 .sticky {
   position: fixed;
   top: 0; }
+
+.shop_block {
+  text-align: center; }
+
+.shop_list-img {
+  position: relative;
+  width: 100%;
+  border: 10px solid #94a7d6;
+  border-radius: 50%;
+  overflow: hidden; }
+  .shop_list-img a {
+    display: block; }
+  .shop_list-img span {
+    width: 100%;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.7);
+    padding: 20px 0;
+    color: #fff;
+    font-size: 28px;
+    transition: 300ms; }
+  .shop_list-img img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; }
 
 @media screen and (max-width: 1500px) {
   .converter select,

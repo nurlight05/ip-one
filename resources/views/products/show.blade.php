@@ -53,7 +53,7 @@
                 <div class="product_buy">
                     <p>стоимость: {{$product->price}} у.е</p>
                     <p>структура: {{$product->points}} баллов</p>
-                    <a href="//shop.ip-one.net"><button class="unit_buy m-0 mt-4">купить</button></a>
+                    <a href="//shop.ip-one.net"><button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400">купить</button></a>
                 </div>
 				<div class="prod_unit-info p-5">
 					{!!$product->description!!}
