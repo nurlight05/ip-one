@@ -28,7 +28,7 @@ class StocksController extends Controller
         $months = [];
         for ($i=0; $i < 11; $i++) {
             $time = Carbon::now()->addMonth(-$i);
-            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month];
+            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month, $time->format('Y-m')];
         }
         return view('stocks.show', compact('stock', 'months'));
     }

@@ -19,6 +19,9 @@ class NewsController extends Controller
         if($request->has('year') && $request->has('month')) {
             $news = $news->whereRaw('YEAR(`date`) = '.$request->year.' AND MONTH(`date`) = '.$request->month);
         }
+        if($request->has('event')) {
+            $news = $news->where('is_event', 1);
+        }
         $news = $news->paginate(5);
 
         return view('news.index', compact('news', 'months'));
@@ -29,7 +32,7 @@ class NewsController extends Controller
         $months = [];
         for ($i=0; $i < 11; $i++) {
             $time = Carbon::now()->addMonth(-$i);
-            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month];
+            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month, $time->format('Y-m')];
         }
         return view('news.show', compact('news', 'months'));
     }

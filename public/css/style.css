@@ -7619,14 +7619,20 @@ footer > div p {
   margin-top: 50px; }
 
 .left_title {
-  font-size: 36px;
+  font-size: 22px;
   margin: 40px 0; }
+  @media (min-width: 1500px) {
+    .left_title {
+      font-size: 36px; } }
 
 .science h3 {
-  font-size: 36px;
+  font-size: 22px;
   margin-top: 70px;
   margin-bottom: 0;
   text-align: center; }
+  @media (min-width: 1100px) {
+    .science h3 {
+      font-size: 36px; } }
 
 .science h5 {
   font-size: 28px;
@@ -8409,6 +8415,10 @@ footer > div p {
 
 .showTable {
   width: 100%; }
+  .showTable tr[data-href]:hover {
+    background: #134094;
+    color: #fff;
+    transition: 300ms; }
   .showTable td {
     width: 25%;
     text-align: center;
@@ -8431,3 +8441,20 @@ footer > div p {
 .sticky {
   position: fixed;
   top: 0; }
+
+@media screen and (max-width: 1500px) {
+  .converter select,
+  .converter input,
+  .converter .part {
+    font-size: 18px; }
+  .converter .part {
+    height: 33px;
+    width: 60px; }
+  .converter input {
+    width: 80px; }
+  .select_box:before {
+    width: 10px;
+    top: 14px; }
+  .converter select {
+    padding-right: 15px;
+    padding-left: 10px; } }

@@ -5,10 +5,10 @@
 @section('content')
 <section class="container-fluid content">
     <div class="row">
-        <div class="col-md-2 py-5 left-side border-right">
+        <div class="col-md-2 py-5 left-side">
             <h3>Акции</h3>
             @foreach ($months as $key => $item)
-                <div class="month {{request()->input('year', 0) == $item[0] && request()->input('month', 0) == $item[1] ? 'active' : ''}}"><a href="{{route('stocks.index', ['year' => $item[0], 'month' => $item[1]])}}">{{$key}}</a></div>
+                <div class="month {{strpos($stock->date, $item[2]) !== false ? 'active' : ''}}"><a href="{{route('stocks.index', ['year' => $item[0], 'month' => $item[1]])}}">{{$key}}</a></div>
             @endforeach
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
@@ -19,6 +19,7 @@
                 <img src="{{Voyager::image($stock->img)}}" style="float: right;margin-left: 30px;margin-bottom: 30px;width: 600px;"/>
                 {!!$stock->text!!}
             </div>
+            <a href="{{route('stocks.index')}}" class="btn btn-light shadow-sm btn-invertion rounded-0 ml-5 mb-5" style="font-size: 20px;">лента акций</a>
 
         </div>
     </div>

@@ -10,6 +10,7 @@
             @foreach ($months as $key => $item)
                 <div class="month {{request()->input('year', 0) == $item[0] && request()->input('month', 0) == $item[1] ? 'active' : ''}}"><a href="{{route('news.index', ['year' => $item[0], 'month' => $item[1]])}}">{{$key}}</a></div>
             @endforeach
+            <a href="{{route('news.index', ['event' => 1])}}"><h3 class="mt-5">Мероприятия</h3></a>
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 py-5 px-5 right-side news">
