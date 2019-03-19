@@ -26,6 +26,11 @@ class NewsController extends Controller
 
     public function show(Request $request, News $news)
     {
-        return view('news.show', compact('news'));
+        $months = [];
+        for ($i=0; $i < 11; $i++) {
+            $time = Carbon::now()->addMonth(-$i);
+            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month];
+        }
+        return view('news.show', compact('news', 'months'));
     }
 }

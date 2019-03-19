@@ -54,28 +54,22 @@ $(document).ready(function(){
 	    }
 	    else  {$('.toUp_btn').hide();}
 	});
-	var converter = document.getElementById("converter");
-	var sticky = converter.offsetTop;
-	var header = document.getElementById("header_menu").offsetHeight;
-	$(window).scroll(function(){
-		if (window.pageYOffset > sticky + header) {
-	   		converter.classList.add("sticky");
-		} else {
-			converter.classList.remove("sticky");
-		}
-	});
+	if($('#converter').length > 0){
+		var converter = document.getElementById("converter");
+		var sticky = converter.offsetTop;
+		var header = document.getElementById("header_menu").offsetHeight;
+		$(window).scroll(function(){
+			if (window.pageYOffset > sticky + header) {
+		   		converter.classList.add("sticky");
+			} else {
+				converter.classList.remove("sticky");
+			}
+		});
+	}
 	$('*[data-href]').on('click', function() {
         window.location = $(this).data("href");
     });
-	 $('.main_slider').slick({
-	    slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true,
-		dots: true,
-		fade: true,
-		autoplay: true,
-		autoplaySpeed: 5000
-    });
 	lightGallery(document.getElementById('lightgallery'));
 	lightGallery(document.getElementById('video-gallery'));
+	$('.hello-slider').css('display', 'block');
 })

@@ -25,6 +25,11 @@ class StocksController extends Controller
 
     public function show(Request $request, Stock $stock)
     {
-        return view('stocks.show', compact('stock'));
+        $months = [];
+        for ($i=0; $i < 11; $i++) {
+            $time = Carbon::now()->addMonth(-$i);
+            $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month];
+        }
+        return view('stocks.show', compact('stock', 'months'));
     }
 }
