@@ -54,10 +54,11 @@ $(document).ready(function(){
 	    }
 	    else  {$('.toUp_btn').hide();}
 	});
+	var converter = document.getElementById("converter");
+	var sticky = converter.offsetTop;
+	var header = document.getElementById("header_menu").offsetHeight;
 	$(window).scroll(function(){
-		var converter = document.getElementById("converter");
-		var sticky = converter.offsetTop;
-		if (window.pageYOffset > sticky) {
+		if (window.pageYOffset > sticky + header) {
 	   		converter.classList.add("sticky");
 		} else {
 			converter.classList.remove("sticky");
