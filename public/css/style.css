@@ -7306,6 +7306,8 @@ footer > div p {
   color: #264796; }
   .news-content img {
     max-width: 600px; }
+  .news-content * {
+    font-family: 'MyWebFont'; }
 
 .products .line {
   background-repeat: no-repeat;

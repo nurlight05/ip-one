@@ -12,7 +12,7 @@ class ProductsController extends Controller
     {
         $products = Product::latest()->where('is_present', '<>', 1)->get();
         $presents = Product::latest()->where('is_present', '=', 1)->get();
-        $slides = Slider::where('slider_id', 2)->get();
+        $slides = Slider::where('slider_id', 2)->orderBy('number', 'asc')->get();
         
         return view('products.index', compact('products', 'slides', 'presents'));
     }
