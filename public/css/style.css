@@ -8372,7 +8372,8 @@ footer > div p {
   text-align: center;
   font-size: 22px;
   outline: none;
-  color: #134094; }
+  color: #134094;
+  background: transparent; }
   .converter input::placeholder {
     color: #134094;
     opacity: 1; }
