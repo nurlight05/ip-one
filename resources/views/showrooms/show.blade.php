@@ -10,11 +10,11 @@
             <h3 class="left_title">SHOW <br>ROOMS</h3>
             <ul class="country_list">
                 @foreach ($places as $key => $item)
-                <li>
+                <li class="{{$_country == $key ? 'active' : ''}}">
                     <p>{{$key}}</p>
                     <ul class="city_list">
                         @foreach ($item as $city)
-                        <li class="m-0 mb-2"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
+                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
                         @endforeach
                     </ul>
                 </li>

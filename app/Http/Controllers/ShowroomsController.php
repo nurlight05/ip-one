@@ -54,6 +54,9 @@ class ShowroomsController extends Controller
             return true;
         });
 
-        return view('showrooms.show', compact('showrooms', 'places'));
+        $_country = reset($showrooms)['COUNTRY'];
+        $_city = reset($showrooms)['CITY'];
+
+        return view('showrooms.show', compact('showrooms', 'places', '_country', '_city'));
     }
 }
