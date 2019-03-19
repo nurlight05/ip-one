@@ -7303,6 +7303,8 @@ footer > div p {
 
 .news-content {
   color: #264796; }
+  .news-content img {
+    max-width: 600px; }
 
 .products .line {
   background-repeat: no-repeat;
