@@ -8,11 +8,11 @@
     <div class="row">
         <div class="col-md-2 left-side show_choice">
             <h3 class="left_title">SHOW <br>ROOMS</h3>
-            <ul class="country_list mb-5" id="accordionExample">
+            <ul class="country_list">
                 @foreach ($places as $key => $item)
                 <li>
-                    <p data-toggle="collapse" data-target="#{{$key}}" aria-expanded="true" aria-controls="{{$key}}" style="cursor: pointer">{{$key}}</p>
-                    <ul class="city_list collapse" id="{{$key}}" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <p>{{$key}}</p>
+                    <ul class="city_list">
                         @foreach ($item as $city)
                         <li class="m-0 mb-2"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
                         @endforeach

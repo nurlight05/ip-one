@@ -8427,3 +8427,7 @@ footer > div p {
     margin-bottom: 30px; }
   .showTable span {
     display: block; }
+
+.sticky {
+  position: fixed;
+  top: 0; }

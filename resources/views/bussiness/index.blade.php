@@ -8,7 +8,7 @@
         <div class="col-md-2 py-5 left-side showrooms-left">
             <h3 class="mb-5">Возможности</h3>
             <img src="img/business.png" alt="" class="idea_icon">
-            <div class="converter mt-4">
+            <div class="converter mt-4" id="converter">
                 <h6>конвертер валют</h6>
                 <form action="">
                     <div class="convert_box">
@@ -30,7 +30,7 @@
                 </form>
                 <p>1 y.e. = 300 KZT (тенге)</p>
                 <p>1 y.e. = 55 RUB (рублей)</p>
-                <p>1 y.e. = 1 USD (долларов)</p>
+                <p>1 y.e. = 1 USD (долларов США)</p>
                 <p>1 y.e. = 25 UAH (гривен)</p>
                 <p>1 y.e. = 0.7 EUR (евро)</p>	
             </div>
