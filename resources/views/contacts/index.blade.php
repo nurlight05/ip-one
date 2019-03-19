@@ -116,7 +116,7 @@
                             <img src="img/empl-icon.png" alt="">
                         </div>
                         <div class="col-md-10">
-                            <p>Умбетьярова Гульмира</p>
+                            <p>Медеум Алима</p>
                             <span class="tel"><a href="tel:+7 747 157 75 94">+7 747 157 75 94</a></span>
                             <span class="post"><a href="mailto:info@ip-one.net">info@ip-one.net</a></span>
                         </div>
