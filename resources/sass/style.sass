@@ -659,14 +659,10 @@ footer
 	margin: 0 auto
 	margin-top: 50px
 .left_title
-	@media(min-width: 1500px)
-		font-size: 36px
-	font-size: 22px
+	font-size: 36px
 	margin: 40px 0
 .science h3
-	font-size: 22px
-	@media(min-width: 1100px)
-		font-size: 36px
+	font-size: 36px
 	margin-top: 70px
 	margin-bottom: 0
 	text-align: center
@@ -1272,6 +1268,14 @@ footer
 	text-align: center
 	font-size: 22px
 	outline: none
+	color: #134094
+	&::placeholder
+	    color: #134094
+	    opacity: 1
+	&:-ms-input-placeholder
+	    color: #134094
+	&::-ms-input-placeholder
+	    color: #134094
 .converter select
 	-moz-appearance: none
 	-webkit-appearance: none
@@ -1332,6 +1336,36 @@ footer
 .sticky
     position: fixed
     top: 0
+.shop_block
+	text-align: center
+	h6
+
+.shop_list-img
+	position: relative
+	width: 100%
+	border: 10px solid #94a7d6
+	border-radius: 50%
+	overflow: hidden
+	a
+		display: block
+	span
+		width: 100%
+		display: none
+		position: absolute
+		bottom: 0
+		left: 0
+		background: rgba(#333,0.7)
+		padding: 20px 0
+		color: #fff
+		font-size: 28px
+		transition: 300ms
+	img
+		width: 100%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		object-fit: cover
 @media screen and (max-width: 1500px )
 	.converter select,
 	.converter input,
