@@ -41,13 +41,22 @@ $(document).ready(function(){
 	$('.show_btn').click(function(){
 		$(this).parent('.show_all').prev('.comment_hidden-block').slideToggle();
 	});
-	$('#num_of_bill, #ex_rate').change(function(){
+	$('#num_of_bill, #ex_rate').keyup(function(){
 		var numOfBill = document.getElementById('num_of_bill').value;
 		var exRate = document.getElementById('ex_rate').value;
 		var sumOfBill = document.getElementById('sum_of_bill').value;
 		sumOfBill = exRate * numOfBill;
 		document.getElementById('sum_of_bill').value = sumOfBill;
 	});
+	$(window).on('load scroll',function(){ 
+	    if ($(this).scrollTop() >= '300') {
+	        $('.toUp_btn').show();
+	    }
+	    else  {$('.toUp_btn').hide();}
+	});
+	$('*[data-href]').on('click', function() {
+        window.location = $(this).data("href");
+    });
 	 $('.main_slider').slick({
 	    slidesToShow: 1,
 		slidesToScroll: 1,

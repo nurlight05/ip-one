@@ -14,7 +14,7 @@
             <h5>Биофизика — дело его жизни</h5>
             <div class="row">
                 <div class="col-md-3">
-                    <img src="img/science.png" alt="" class="science_person">
+                    <img src="img/inushkin.png" alt="" class="science_person">
                 </div>
                 <div class="col-md-9">
                     <ul class="page_list angle">
