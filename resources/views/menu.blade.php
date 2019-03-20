@@ -21,7 +21,10 @@
 
     <div class="col-md-4">
         <div class="d-block right-menu ml-auto text-right">
-            {{-- <a href=""><i class="fas fa-search"></i></a> --}}
+            <form action="{{url('/search')}}" class="search_form" style="margin-bottom: -17px;">
+                <input type="text" name="search">
+                <a href="#" class="search_btn"></a>
+            </form>
             {{-- <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a> --}}
             <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
             <a href="">RU</a>
