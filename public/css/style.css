@@ -7255,7 +7255,13 @@ footer > div p {
     color: #264796;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px; }
+    @media (min-width: 1600px) {
+      .content .left-side h3 {
+        font-size: 1.75rem;
+        line-height: 1.75rem; } }
   .content .left-side h4 {
     color: #264796; }
   .content .left-side .month {
@@ -7459,7 +7465,8 @@ footer > div p {
     height: 350px; }
     .product .img img {
       width: 350px;
-      height: 350px; }
+      height: 350px;
+      margin-left: -15px; }
   .product .description {
     color: #fff;
     padding: 2rem; }
@@ -7495,6 +7502,14 @@ footer > div p {
   image-rendering: optimizeQuality;
   fill-rule: evenodd;
   clip-rule: evenodd; }
+
+.country_list p {
+  font-size: 18px;
+  line-height: 18px; }
+  @media (min-width: 1600px) {
+    .country_list p {
+      font-size: 1.75rem;
+      line-height: 1.75rem; } }
 
 .inner_pages {
   font-size: 22px; }
