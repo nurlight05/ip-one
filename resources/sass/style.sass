@@ -1477,7 +1477,38 @@ footer
 		h6
 			font-size: 28px
 a
-	color: #134094 !important
+	color: #134094
+.search_form
+	position: relative
+	display: table
+	display: inline-block
+	height: 35px
+	min-width: 1px
+	.search_btn
+		position: absolute
+		top: 0
+		left: 0
+		&:before
+			content: '\f002'
+			font-family: 'FontAwesome'
+			font-size: 18px
+			color: #134094
+			font-style: normal
+	input
+		display: none
+		font-size: 22px
+		color: #134094
+		padding-left: 25px
+		outline: none
+		&::placeholder
+	    color: #134094
+	    	opacity: 1
+		&:-ms-input-placeholder
+		    color: #134094
+		&::-ms-input-placeholder
+	   		color: #134094
+.test
+	text-align: right
 @media screen and (max-width: 1500px )
 	.converter select,
 	.converter input,
