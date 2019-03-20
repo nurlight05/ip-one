@@ -8,6 +8,9 @@
     <div class="row">
         <div class="col-md-2 left-side show_choice">
             <h3 class="left_title">SHOW <br>ROOMS</h3>
+            <form action="{{url('showrooms')}}" class="search_room mb-4" style="padding-right: 30px">
+                <input type="text" name="city" placeholder="введите город">
+            </form>
             <ul class="country_list">
                 @foreach ($places as $key => $item)
                 <li class="{{$_country == $key ? 'active' : ''}}">

@@ -5,6 +5,15 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
+function mb_ucfirst($string, $encoding = "utf8")
+{
+    $strlen = mb_strlen($string, $encoding);
+    $firstChar = mb_substr($string, 0, 1, $encoding);
+    $then = mb_substr($string, 1, $strlen - 1, $encoding);
+    return mb_strtoupper($firstChar, $encoding) . $then;
+}
+
+
 class ShowroomsController extends Controller
 {
     public function index(Request $request)
@@ -14,7 +23,7 @@ class ShowroomsController extends Controller
         $showrooms = json_decode((string)$res->getBody(), true);
         $places = [];
         $_country = $request->input('country', 'Россия');
-        $_city = $request->input('city', 'Москва');
+        $_city = mb_convert_case(mb_strtolower($request->input('city', 'Москва')), MB_CASE_TITLE, "UTF-8");
 
         foreach ($showrooms as $item) {
             if(!isset($places[$item['COUNTRY']]) || !is_array($places[$item['COUNTRY']]))
