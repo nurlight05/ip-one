@@ -41,7 +41,7 @@
         </div>
         <div class="col-md-10 p-0 right-side">
             
-            <div class="hello-slider">
+            <div class="hello-slider" style="display: none;">
             @foreach ($slides as $item)
                 <div class="item" style="background-image: url('{{Voyager::image($item->image)}}');">
                     <div class="container d-flex justify-content-center flex-column">
