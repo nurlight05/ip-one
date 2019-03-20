@@ -11,9 +11,7 @@
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 p-5">
-            <h3>Научное обоснование применения гидроплазмы в процессе тренировок</h3>
-            <p style="font-size: 22px;"><a href="{{asset('files/Yi902BW77Zr3jMMGs0Cfetn0U9NPSWYrjv41RZYK.pdf')}}">Биофизическая реабилитация спортсменов с применением гидроплазмы в процессе тренировок.pdf</a></p>
-            <p style="font-size: 22px;"><a href="{{asset('files/LUQKoxJtSPWV6nkozmah534jCK77NMTjjszmi02d.docx')}}">Этический кодекс партнеров Компании IMAGINE PEOPLE.docx</a></p>
+            {!!$content->content!!}
         </div>
     </div>
 </section>
