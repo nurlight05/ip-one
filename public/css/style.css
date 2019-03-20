@@ -8359,9 +8359,18 @@ footer > div p {
 .converter {
   font-size: 0; }
   .converter h6 {
-    font-size: 24px; }
+    font-size: 20px; }
+  .converter p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px; }
   .converter .convert_box {
     margin-bottom: 15px; }
+  @media screen and (min-width: 1200px) {
+    .converter h6 {
+      font-size: 24px; }
+    .converter p {
+      font-size: 18px; } }
 
 .converter .part {
   color: #fff;
@@ -8374,11 +8383,6 @@ footer > div p {
   margin: 0;
   font-size: 22px;
   line-height: inherit; }
-
-.converter p {
-  font-size: 18px;
-  line-height: 20px;
-  margin-bottom: 5px; }
 
 .converter input {
   display: inline-block;
