@@ -48,7 +48,7 @@ Route::get('/basket', 'BasketController@index');
 
 Route::get('/search', 'SearchController@index');
 
-require __DIR__.'/contents.php';
+// require __DIR__.'/contents.php';
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
