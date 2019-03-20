@@ -8259,17 +8259,18 @@ footer > div p {
       font-size: 22px;
       line-height: 22px; } }
 
-.nav-pills .nav-link {
+.prod_unit-info .nav-pills .nav-link {
   color: #134094;
   border-radius: 0;
   box-shadow: 0 0 10px -3px #333; }
 
-.nav-pills .nav-link:hover {
+.prod_unit-info .nav-pills .nav-link:hover {
   box-shadow: 0 0 15px -3px; }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  background: #134094; }
+.prod_unit-info .nav-pills .nav-link.active,
+.prod_unit-info .nav-pills .show > .nav-link {
+  background: #134094;
+  color: #fff; }
 
 .prod_name-price .unit_buy {
   margin-left: 0;
@@ -8466,16 +8467,45 @@ footer > div p {
   top: 0; }
 
 .shop_block {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden; }
+  .shop_block:before {
+    content: '';
+    width: 100%;
+    height: 45%;
+    background: #134094;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    transform: translate(0, -50%);
+    z-index: -1; }
+  .shop_block h6 {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #134094; }
+  .shop_block p {
+    font-size: 26px;
+    line-height: 26px;
+    margin: 0;
+    color: #134094; }
+  .shop_block a:hover {
+    text-decoration: none; }
+    .shop_block a:hover .shop_list-img {
+      border-color: #134094; }
 
 .shop_list-img {
   position: relative;
-  width: 100%;
+  width: 95%;
+  display: table;
+  margin: 0 auto;
   border: 10px solid #94a7d6;
   border-radius: 50%;
-  overflow: hidden; }
-  .shop_list-img a {
-    display: block; }
+  overflow: hidden;
+  transition: 300ms; }
   .shop_list-img span {
     width: 100%;
     display: none;
@@ -8485,8 +8515,7 @@ footer > div p {
     background: rgba(51, 51, 51, 0.7);
     padding: 20px 0;
     color: #fff;
-    font-size: 28px;
-    transition: 300ms; }
+    font-size: 28px; }
   .shop_list-img img {
     width: 100%;
     position: absolute;
@@ -8494,6 +8523,84 @@ footer > div p {
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover; }
+
+.show_search {
+  text-align: center;
+  margin-bottom: 30px; }
+  .show_search p {
+    margin-bottom: 0; }
+
+.search_page {
+  width: 100%; }
+  .search_page .tab-content {
+    padding: 0 15%; }
+
+.search_page .nav-pills {
+  margin: 0 -0.5% !important;
+  margin-bottom: 2rem !important;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #134094; }
+
+.search_page .nav-item {
+  width: 24%;
+  margin: 0 0.5%; }
+  .search_page .nav-item:last-child a {
+    border-right: none; }
+
+.search_page .nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  position: relative;
+  background: transparent;
+  transition: 300ms;
+  border-right: 1px solid #134094;
+  border-radius: 0 !important;
+  padding: 2px 1rem; }
+  @media (min-width: 1500px) {
+    .search_page .nav-item a {
+      font-size: 22px;
+      line-height: 22px; } }
+
+.search_page .nav-pills .nav-link {
+  color: #000; }
+
+.search_page .nav-pills .nav-link:hover {
+  color: #134094; }
+
+.search_page .nav-pills .nav-link.active,
+.search_page .nav-pills .show > .nav-link {
+  color: #134094;
+  background: transparent; }
+
+.search_box {
+  font-size: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #134094;
+  height: 180px; }
+  .search_box .search_box-img,
+  .search_box .search_content {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top; }
+    .search_box .search_box-img img,
+    .search_box .search_content img {
+      width: 100%; }
+  .search_box .search_content {
+    width: 80%;
+    font-size: 22px;
+    padding-left: 20px; }
+    .search_box .search_content.full_content {
+      width: 100%; }
+    .search_box .search_content h6 {
+      font-size: 28px; }
+
+a {
+  color: #134094 !important; }
 
 @media screen and (max-width: 1500px) {
   .converter select,
