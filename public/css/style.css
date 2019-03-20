@@ -8647,6 +8647,14 @@ a {
     .search_form input::-ms-input-placeholder {
       color: #134094; }
 
+.search_room {
+  width: 100%;
+  padding-left: 30px; }
+  .search_room input {
+    width: 100%;
+    border: 1px solid #134094;
+    padding: 0 10px; }
+
 @media screen and (max-width: 1500px) {
   .converter select,
   .converter input,
