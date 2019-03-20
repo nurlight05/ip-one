@@ -76,7 +76,7 @@
                             <div class="search_box">
                                 <div class="search_content full_content">
                                     <h6>{{$content->name}}</h6>
-                                    <p></p>
+                                    <p>{!!$content->description!!}</p>
                                 </div>
                             </div>
                         </a>
