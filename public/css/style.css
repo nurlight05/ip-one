@@ -8581,7 +8581,8 @@ footer > div p {
   font-size: 0;
   margin-bottom: 15px;
   border-bottom: 1px solid #134094;
-  height: 180px; }
+  height: 180px;
+  overflow-y: hidden; }
   .search_box .search_box-img,
   .search_box .search_content {
     display: inline-block;
@@ -8606,23 +8607,33 @@ a {
   position: relative;
   display: table;
   display: inline-block;
-  height: 35px;
-  min-width: 1px; }
+  width: 50px;
+  height: 36px;
+  overflow: hidden;
+  transition: 300ms; }
+  .search_form.search_expand {
+    width: 200px; }
   .search_form .search_btn {
     position: absolute;
     top: 0;
     left: 0; }
     .search_form .search_btn:before {
       content: '\f002';
-      font-family: 'FontAwesome';
+      font-family: 'Font Awesome 5 Free';
       font-size: 18px;
       color: #134094;
-      font-style: normal; }
+      font-style: normal;
+      font-weight: 900; }
+    .search_form .search_btn:hover {
+      text-decoration: none; }
   .search_form input {
+    width: 200px;
     display: none;
+    border: none;
+    border-bottom: 1px solid #134094;
     font-size: 22px;
     color: #134094;
-    padding-left: 25px;
+    padding-left: 40px;
     outline: none; }
     .search_form input::placeholder {
       color: #134094;
@@ -8631,9 +8642,6 @@ a {
       color: #134094; }
     .search_form input::-ms-input-placeholder {
       color: #134094; }
-
-.test {
-  text-align: right; }
 
 @media screen and (max-width: 1500px) {
   .converter select,
