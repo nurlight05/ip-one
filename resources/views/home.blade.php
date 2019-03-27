@@ -11,7 +11,7 @@
             <div class="container d-flex justify-content-center flex-column">
                 <h1 class="title">{{$item->title}}</h1>
                 <div class="description">{!!$item->description!!}</div>
-                @if(!empty($item->link))<div class="link"><a href="{{$item->url}}">@lang('узнать больше')</a></div>@endif
+                @if(strlen($item->link))<div class="link"><a href="{{$item->url}}">@lang('узнать больше')</a></div>@endif
             </div>
         </div>
     @endforeach
