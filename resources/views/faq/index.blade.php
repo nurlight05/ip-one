@@ -3,6 +3,9 @@
 @section('title', 'Отзывы')
 
 @section('content')
+@php
+    $content = $content->translate();
+@endphp
 <section class="container-fluid content">
     <div class="row">
         <div class="col-md-2 left-side">

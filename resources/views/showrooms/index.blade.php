@@ -30,19 +30,19 @@
                 <tr>
                     <td>
                         <img src="img/city-icon.png" alt="">
-                        <span>город</span>
+                        <span>@lang('город')</span>
                     </td>
                     <td>
                         <img src="img/adress-icon.png" alt="">
-                        <span>адрес</span>
+                        <span>@lang('адрес')</span>
                     </td>
                     <td>
                         <img src="img/telephone-icon.png" alt="">
-                        <span>телефоны</span>
+                        <span>@lang('телефоны')</span>
                     </td>
                     <td>
                         <img src="img/avatar-icon.png" alt="">
-                        <span>ФИО руководителя</span>
+                        <span>@lang('ФИО руководителя')</span>
                     </td>
                 </tr>
                 @foreach ($showrooms as $item)
