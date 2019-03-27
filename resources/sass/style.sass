@@ -1530,7 +1530,29 @@ a
 		width: 100%
 		border: 1px solid #134094
 		padding: 0 10px
-
+.lang
+	position: absolute
+	list-style: none
+	text-align: center
+	padding-left: 0
+	max-height: 25px
+	overflow: hidden
+	font-size: 1rem
+	transition: 300ms
+	top: 0
+	right: 10px
+	background-color: #fff
+	&:after
+		content: "\f0d7"
+		font-family: 'Font Awesome 5 Free'
+		font-size: 14px
+		position: absolute
+		top: 0px
+		right: 1px
+		color: #134094
+		font-weight: 900
+	&:hover
+		max-height: 150px
 @media screen and (max-width: 1500px )
 	.converter select,
 	.converter input,

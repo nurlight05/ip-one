@@ -20,14 +20,21 @@
     </div>
 
     <div class="col-md-4">
-        <div class="d-block right-menu ml-auto text-right">
+        <div class="d-block right-menu ml-auto text-right" style="padding-right: 45px;">
             <form action="{{url('/search')}}" class="search_form" style="margin-bottom: -17px;">
                 <input type="text" name="search">
                 <a href="#" class="search_btn"></a>
             </form>
             {{-- <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a> --}}
             <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
-            <a href="" style="text-transform: uppercase;">{{app()->getLocale()}}</a>
+            <ul class="lang">
+                <li>{{strtoupper(app()->getLocale())}}</li>
+                <li><a href="{{url('/lang/ru')}}">RU</a></li>
+                {{-- <li><a href="#">KZ</a></li> --}}
+                <li><a href="{{url('/lang/en')}}">EN</a></li>
+                {{-- <li><a href="#">中文</a></li> --}}
+            </ul>
+            {{-- <a href="" style="text-transform: uppercase;">{{app()->getLocale()}}</a> --}}
         </div>
     </div>
 </nav>
