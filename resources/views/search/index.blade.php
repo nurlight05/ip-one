@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Поиск')
+@section('title', __('Поиск'))
 
 @section('content')
 <section class="container-fluid content inner_pages py-5">

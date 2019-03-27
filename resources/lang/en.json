@@ -31,7 +31,7 @@
     "ФИО руководителя": "directors name",
     "ИДЕЯ": "IDEA",
     "Возможности": "OPPORTUNITIES",
-    "ОТЗЫВЫ": "REVIEwS",
+    "ОТЗЫВЫ": "REVIEWS",
     "Инфо": "Info",
     "КАК КУПИТЬ?": "How to buy?",
     "Контакты": "Contacts",
@@ -47,5 +47,6 @@
     "ПРОДУКТЫ": "PRODUCTS",
     "АКЦИИ": "STOCKS",
     "НОВОСТИ": "NEWS",
+    "Поиск": "Search",
     "СТРАНИЦЫ": "PAGES"
 }
