@@ -51,8 +51,8 @@
 					</div>
 				</div>
                 <div class="product_buy">
-                    <p>стоимость: {{$product->price}} @lang('у.е.')</p>
-                    <p>структура: {{$product->points}} @lang('баллов')</p>
+                    <p>@lang('стоимость'): {{$product->price}} @lang('у.е.')</p>
+                    <p>@lang('структура'): {{$product->points}} @lang('баллов')</p>
                     <a href="//shop.ip-one.net"><button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400">@lang('купить')</button></a>
                 </div>
 				<div class="prod_unit-info p-5">
