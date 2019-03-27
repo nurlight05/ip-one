@@ -6,22 +6,22 @@
 <section class="container-fluid content inner_pages py-5">
     <div class="container">
         <div class="show_search">
-            <p>Показать результаты для:</p>
+            <p>@lang('Показать результаты для'):</p>
             <span>"{{request()->search}}"</span>
         </div>
         <div class="search_page">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item active">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#click_description" role="tab" aria-controls="pills-home" aria-selected="true">ПРОДУКТЫ</a>
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#click_description" role="tab" aria-controls="pills-home" aria-selected="true">@lang('ПРОДУКТЫ')</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#click_usage" role="tab" aria-controls="pills-profile" aria-selected="false">АКЦИИ</a>
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#click_usage" role="tab" aria-controls="pills-profile" aria-selected="false">@lang('АКЦИИ')</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#click_theory" role="tab" aria-controls="pills-contact" aria-selected="false">НОВОСТИ</a>
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#click_theory" role="tab" aria-controls="pills-contact" aria-selected="false">@lang('НОВОСТИ')</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#click_composition" role="tab" aria-controls="pills-profile" aria-selected="false">СТРАНИЦЫ</a>
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#click_composition" role="tab" aria-controls="pills-profile" aria-selected="false">@lang('СТРАНИЦЫ')</a>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">

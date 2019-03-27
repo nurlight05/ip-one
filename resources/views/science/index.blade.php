@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Наука')
+@section('title', @lang('Наука'))
 
 @section('content')
 @php
