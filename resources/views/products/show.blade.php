@@ -7,16 +7,16 @@
 <section class="container-fluid content inner_pages">
 		<div class="row">
 			<div class="col-md-2 left-side py-5">
-				<h3>Продукты</h3>
-				<h4>Наши продукты</h4>
+				<h3>@lang('Продукты')</h3>
+				<h4>@lang('Наши продукты')</h4>
 				@foreach ($products as $item)
 					<div class="month pl-4"><a href="{{route('products.show', $item)}}">{{$item->name}}</a></div>
 				@endforeach
 				<div class="converter" id="converter">
-					<h6>конвертер валют</h6>
+					<h6>@lang('конвертер валют')</h6>
 					<form action="">
 						<div class="convert_box">
-							<p class="part">y.e.</p>
+							<p class="part">@lang('y.e.')</p>
 							<input type="text" value="1" id="num_of_bill">
 						</div>
 						<div class="convert_box">
@@ -32,11 +32,11 @@
 							<input type="text" id="sum_of_bill" value="300">
 						</div>
 					</form>
-					<p>1 y.e. = 300 KZT (тенге)</p>
-					<p>1 y.e. = 55 RUB (рублей)</p>
-					<p>1 y.e. = 1 USD (долларов)</p>
-					<p>1 y.e. = 25 UAH (гривен)</p>
-					<p>1 y.e. = 0.7 EUR (евро)</p>	
+					<p>1 y.e. = 300 KZT (@lang('тенге'))</p>
+					<p>1 y.e. = 55 RUB (@lang('рублей'))</p>
+					<p>1 y.e. = 1 USD (@lang('долларов'))</p>
+					<p>1 y.e. = 25 UAH (@lang('гривен'))</p>
+					<p>1 y.e. = 0.7 EUR (@lang('евро'))</p>	
 				</div>
 				<a href="#header_menu" class="toUp_btn"></a>
 			</div>
@@ -51,9 +51,9 @@
 					</div>
 				</div>
                 <div class="product_buy">
-                    <p>стоимость: {{$product->price}} у.е</p>
-                    <p>структура: {{$product->points}} баллов</p>
-                    <a href="//shop.ip-one.net"><button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400">купить</button></a>
+                    <p>стоимость: {{$product->price}} @lang('у.е.')</p>
+                    <p>структура: {{$product->points}} @lang('баллов')</p>
+                    <a href="//shop.ip-one.net"><button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400">@lang('купить')</button></a>
                 </div>
 				<div class="prod_unit-info p-5">
 					{!!$product->description!!}
