@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Акции')
+@section('title', lang('Акции'))
 
 @section('content')
 <section class="container-fluid content news">
