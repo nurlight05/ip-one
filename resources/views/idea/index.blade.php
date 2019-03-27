@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', @lang('ИДЕЯ'))
+@section('title', __('ИДЕЯ'))
 
 @section('content')
 @php

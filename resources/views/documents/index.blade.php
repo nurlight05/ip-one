@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', @lang('Документы'))
+@section('title', __('Документы'))
 
 @section('content')
 <section class="container-fluid content inner_pages">
