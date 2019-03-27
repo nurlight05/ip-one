@@ -9,7 +9,7 @@ use TCG\Voyager\Traits\Resizable;
 class Slider extends Model
 {
     use Translatable, Resizable;
-    protected $translatable = ['title', 'description'];
+    protected $translatable = ['title', 'image', 'description'];
 
     public function getUrlAttribute()
     {
