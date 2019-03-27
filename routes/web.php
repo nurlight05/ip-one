@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/lang/{locale}', 'HomeController@lang');
+
 Route::get('/', 'HomeController@index');
 
 Route::resource('/news', 'NewsController');
