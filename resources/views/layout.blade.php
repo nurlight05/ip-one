@@ -35,9 +35,7 @@
                         </div>
                 </div>
                 <div class="col-md-5 ml-auto">
-                    <img class="mb-4" src="{{asset('img/logo.png')}}" style="display: block;margin: auto;width: 250px;padding: 10px 0;"/>
-                    <p class="mb-4 text-center" style="line-height: 1.5rem;">IMAGINE PEOPLE - это международная<br>интернет-компания,<br>которая дает возможность приобретать<br>продукт и вести<br>бизнес по всему миру!</p>
-                    <p class="mb-4 text-center" style="line-height: 1.5rem;position: relative;"><i class="fas fa-map-marker-alt" style="position: absolute;left: -1.5rem;top: 0.5rem;font-size: 2rem;"></i> Республика Казахстан, 050000, город Алматы,<br>Бухар Жырау 33, Бизнес центр "Jenis", офис 4</p>
+                    {!!App\Content::where('name', 'Футер')->first()->translate()->content!!}
                 </div>
             </div>
         </div>
