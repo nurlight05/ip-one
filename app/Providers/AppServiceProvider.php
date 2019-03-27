@@ -16,7 +16,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        setlocale(LC_ALL, 'ru_RU.UTF-8');
         view()->composer('*', function($view) {
             $locale = Cookie::get('locale', 'ru');
             
