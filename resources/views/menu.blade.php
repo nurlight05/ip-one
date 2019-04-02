@@ -8,11 +8,11 @@ if(in_array('firebird', \PDO::getAvailableDrivers())) {
     $days = \Illuminate\Support\Carbon::parse($days)->diffInDays(\Illuminate\Support\Carbon::now());
 }
 @endphp
-<div style="position: relative;z-index: 9999;background-color: #f1f1f1;text-transform: uppercase;font-size: 1.5rem;font-weight: 600;display: flex;justify-content: center; padding: 5px 0;">
+<div style="position: fixed;top: 0;z-index: 9999;background-color: #f1f1f1;text-transform: uppercase;font-size: 1.5rem;font-weight: 600;display: flex;justify-content: center; padding: 5px 0;">
     <div style="display: inline-block;margin-right: 50px;">До бизнес форума в санкт-петербурге осталось: <span style="background-color: #264796;color: #fff;padding:5px;">{{$days}} дней</span></div>
     <div style="display: inline-block;">Билетов продано: <span style="background-color: #264796;color: #fff;padding:5px;">{{$orders}}</span></div>
 </div>
-<div style="position: relative;" id="header_menu">
+<div style="position: relative;margin-top: 45px;" id="header_menu">
 <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm" style="z-index: 90; background-color: #fff">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_menu" aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
