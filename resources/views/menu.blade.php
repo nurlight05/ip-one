@@ -1,7 +1,7 @@
 @php
 $orders = 0;
 $days = 0;
-if(in_array('firebird', \PDO::getAvailableDrivers()) && request()->ip()=='80.242.223.90') {
+if(in_array('firebird', \PDO::getAvailableDrivers())) {
     $_db	= new PDO('firebird:dbname=148.251.78.134:D:\imagine_new\imagine.fdb;charset=UTF8', 'WWWDATA', 'ololo123'); 
     $days = $_db->query('select end_date from promo_actions where id=2')->fetch(2)['END_DATE'];
     $orders = $_db->query('select count(*) as cnt from promo_orders where promo_id=2')->fetch(2)['CNT'];
