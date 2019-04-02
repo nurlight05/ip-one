@@ -1,3 +1,17 @@
+@php
+$orders = 0;
+$days = 0;
+if(in_array('firebird', \PDO::getAvailableDrivers()) && request()->ip()=='80.242.223.90') {
+    $_db	= new PDO('firebird:dbname=148.251.78.134:D:\imagine_new\imagine.fdb;charset=UTF8', 'WWWDATA', 'ololo123'); 
+    $days = $_db->query('select end_date from promo_actions where id=2')->fetch(2)['END_DATE'];
+    $orders = $_db->query('select count(*) as cnt from promo_orders where promo_id=2')->fetch(2)['CNT'];
+    $days = \Illuminate\Support\Carbon::parse($days)->diffInDays(\Illuminate\Support\Carbon::now());
+}
+@endphp
+<div style="position: relative;z-index: 9999;background-color: #f1f1f1;text-transform: uppercase;font-size: 1.5rem;font-weight: 600;display: flex;justify-content: center; padding: 5px 0;">
+    <div style="display: inline-block;margin-right: 50px;">До бизнес форума в санкт-петербурге осталось: <span style="background-color: #264796;color: #fff;padding:5px;">{{$days}} дней</span></div>
+    <div style="display: inline-block;">Билетов продано: <span style="background-color: #264796;color: #fff;padding:5px;">{{$orders}}</span></div>
+</div>
 <div style="position: relative;" id="header_menu">
 <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm" style="z-index: 90; background-color: #fff">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_menu" aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
