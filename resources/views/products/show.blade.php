@@ -20,7 +20,7 @@ $product = $product->translate();
 					<h6>@lang('конвертер валют')</h6>
 					<form action="">
 						<div class="convert_box">
-							<p class="part">@lang('y.e.')</p>
+							<p class="part">@lang('у.е.')</p>
 							<input type="text" value="1" id="num_of_bill">
 						</div>
 						<div class="convert_box">
