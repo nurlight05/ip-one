@@ -2,6 +2,10 @@
 
 @section('title', $product->name)
 
+@php
+$product = $product->translate();
+@endphp
+
 @section('content')
 
 <section class="container-fluid content inner_pages">
