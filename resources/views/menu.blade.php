@@ -8,7 +8,7 @@ if(in_array('firebird', \PDO::getAvailableDrivers())) {
     $days = \Illuminate\Support\Carbon::parse($days)->diffInDays(\Illuminate\Support\Carbon::now());
 }
 @endphp
-<div style="position: fixed;top: 0;width: 100%;z-index: 9999;background-color: #f1f1f1;text-transform: uppercase;font-size: 1.5rem;font-weight: 600;display: flex;justify-content: center; padding: 5px 0;">
+<div style="position: fixed;top: 0;width: 100%;z-index: 1000;background-color: #f1f1f1;text-transform: uppercase;font-size: 1.5rem;font-weight: 600;display: flex;justify-content: center; padding: 5px 0;">
     <div style="display: inline-block;margin-right: 50px;">До бизнес форума в санкт-петербурге осталось: <span style="background-color: #264796;color: #fff;padding:5px;">{{$days}} дней</span></div>
     <div style="display: inline-block;">Билетов продано: <span style="background-color: #264796;color: #fff;padding:5px;">{{$orders}}</span></div>
 </div>
