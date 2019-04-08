@@ -1572,24 +1572,26 @@ a
 
 .top_info
 	position: fixed
-	top: -10px
 	width: 100%
+	top: 0
 	z-index: 1000
 	background-color: #f1f1f1
 	text-transform: uppercase
-	font-size: 1.5rem
+	font-size: 12px
 	font-weight: 600
-	display: flex
+	display: block
 	justify-content: center
 	padding: 5px 0
 
-@media screen and (max-width: 768px)
-	.top_info
+	@media(min-width: 768px)
 		top: 0
-		display: block
+		display: flex
 		> div
 			display: block
-			font-size: 14px
-	#header_menu
-		margin-top: 52px
-		
+			font-size: 1.5rem
+
+#main_header_menu
+	margin-top: 52px
+
+	@media(min-width: 768px)
+		margin-top: 36px
