@@ -9,7 +9,7 @@ if(in_array('firebird', \PDO::getAvailableDrivers())) {
 }
 @endphp
 <div class="top_info">
-    <div style="display: inline-block;margin-right: 50px;">До бизнес форума в санкт-петербурге осталось: <span style="background-color: #264796;color: #fff;padding:5px;">{{$days}} дней</span></div>
+    <div style="display: inline-block;">До бизнес форума в санкт-петербурге осталось: <span style="background-color: #264796;color: #fff;padding:5px;">{{$days}} дней</span></div>
     <div style="display: inline-block;">Билетов продано: <span style="background-color: #264796;color: #fff;padding:5px;">{{$orders}}</span></div>
 </div>
 <div style="position: relative;" id="main_header_menu">
