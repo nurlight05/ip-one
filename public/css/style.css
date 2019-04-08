@@ -8718,6 +8718,10 @@ a {
 
 #main_header_menu {
   margin-top: 52px; }
+  #main_header_menu:first-child {
+    margin-right: 0; }
   @media (min-width: 768px) {
     #main_header_menu {
-      margin-top: 36px; } }
+      margin-top: 36px; }
+      #main_header_menu:first-child {
+        margin-right: 50px; } }
