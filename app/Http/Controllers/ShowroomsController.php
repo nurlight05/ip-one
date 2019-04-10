@@ -34,7 +34,7 @@ class ShowroomsController extends Controller
         }
         
         $showrooms = array_filter($showrooms, function($item) use ($_city) {
-            if($item['CITY'] != $_city)
+            if(mb_convert_case(mb_strtolower($item['CITY']), MB_CASE_TITLE, "UTF-8") != $_city)
                 return false;
             return true;
         });
