@@ -64,7 +64,7 @@
         var $ = helper.$;
     </script>
     <script>
-    $('img').contextmenu(function() {
+    $('.prod_unit').contextmenu(function() {
         return false;
     });
     </script>
