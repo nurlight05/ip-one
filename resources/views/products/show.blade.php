@@ -89,5 +89,12 @@ $product = $product->translate();
 			</div>
 		</div>
 	</section>
-
+<style>
+.prod_unit {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+</style>
 @endsection
