@@ -47,7 +47,7 @@ $product = $product->translate();
 			<div class="col-md-10 prod_unit">
 				<div class="product">
 					<div class="img">
-                        <img src="{{Voyager::image($product->img)}}" alt="" oncontextmenu="return false;">
+                        <img src="{{Voyager::image($product->img)}}" alt="" oncontextmenu="return false;" draggable="false">
 					</div>
 					<div class="description">
                         <h4>{{$product->name}}</h4>
