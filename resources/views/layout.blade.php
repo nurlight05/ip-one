@@ -67,6 +67,11 @@
     <script src="{{asset('js/lg-video.js')}}"></script>
     <script src="{{asset('js/lg-autoplay.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}?q={{rand()}}"></script>
+    <script>
+    $('img').contextmenu(function() {
+        return false;
+    });
+    </script>
 
     @stack('styles')
     @stack('scripts')
