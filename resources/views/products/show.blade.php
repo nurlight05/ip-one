@@ -44,7 +44,7 @@ $product = $product->translate();
 				</div>
 				<a href="#header_menu" class="toUp_btn"></a>
 			</div>
-			<div class="col-md-10 prod_unit">
+			<div class="col-md-10 prod_unit" oncontextmenu="return false;" >
 				<div class="product">
 					<div class="img">
                         <img src="{{Voyager::image($product->img)}}" alt="" oncontextmenu="return false;" draggable="false">
