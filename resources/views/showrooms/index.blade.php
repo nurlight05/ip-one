@@ -26,6 +26,11 @@
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 show_room p-5">
+            <!-- /////////////////////////////////////// -->
+            <h2 style="color: red;">ВНИМАНИЕ!</h2>
+            <p>ПРОСИМ ВАС ОБРАТИТЬ ВНИМАНИЕ НА УСЛОВИЯ ПОЛУЧЕНИЯ ПРОДУКЦИИ В ШОУ-РУМАХ.<br>ПРИ ПОЛУЧЕНИИ ПРОДУКЦИИ В ШОУ-РУМЕ НЕОБХОДИМО <span style="color: red;">ОПЛАТИТЬ ДОСТАВКУ</span></p>
+            <a href="https://ip-one.net/news/17" style="font-weight: 900;">ПОДРОБНЕЕ</a>
+            <!-- /////////////////////////////////////// -->
             <table class="showTable">
                 <tr>
                     <td>
