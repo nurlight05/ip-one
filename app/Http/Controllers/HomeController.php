@@ -19,7 +19,8 @@ class HomeController extends Controller
     {
         $slides = Slider::where('slider_id', 1)->orderBy('number', 'asc')->get();
         $products = Product::where('is_present', '<>', 1)->take(3)->get();
+        $last_products = Product::where('is_present', '<>', 1)->take(3)->latest()->get();
 
-        return view('home', compact('slides', 'products'));
+        return view('home', compact('slides', 'products', 'last_products'));
     }
 }
