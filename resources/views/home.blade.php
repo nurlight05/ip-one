@@ -59,7 +59,7 @@
       </div>
       <div class="tab-pane fade" id="new-products" role="tabpanel" aria-labelledby="new-products">
         <div class="row">
-            @foreach ($products as $product)
+            @foreach ($last_products as $product)
                 <div class="col-12">
                     <div class="row product-{{$loop->iteration%2 ? 'left' : 'right'}}">
                         <div class="col-md-5 order-{{$loop->iteration%2 ? '0' : '1'}} pr-0" style="z-index: 2;">
