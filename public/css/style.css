@@ -8725,3 +8725,20 @@ a {
       margin-top: 36px; }
       #main_header_menu:first-child {
         margin-right: 46px; } }
+
+.social {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%); }
+
+.social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.social ul li {
+  width: 40px; }
+
+.social ul li img {
+  width: 100%; }

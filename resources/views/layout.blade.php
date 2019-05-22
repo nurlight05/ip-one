@@ -59,6 +59,14 @@
         </div>
     </footer>
 
+	<div class="social">
+      <ul>
+         <li><a href="#"><img src="{{asset('img/youtube.png')}}" alt=""></a></li>
+         <li><a href="#"><img src="{{asset('img/instagram.png')}}" alt=""></a></li>
+         <li><a href="#"><img src="{{asset('img/telegram.png')}}" alt=""></a></li>
+      </ul>
+   </div>
+
     <script src="{{asset('js/script.js')}}?q={{rand()}}"></script>
     <script>
         var $ = helper.$;
