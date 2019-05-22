@@ -8738,7 +8738,8 @@ a {
   list-style: none; }
 
 .social ul li {
-  width: 40px; }
+  width: 40px;
+  margin-bottom: 10px; }
 
 .social ul li img {
   width: 100%; }
