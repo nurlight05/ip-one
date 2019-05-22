@@ -61,9 +61,9 @@
 
 	<div class="social">
       <ul>
-         <li><a href="https://www.youtube.com/channel/UC2Y_5U3kt6BinPyJa8_nl4A"><img src="{{asset('img/youtube.png')}}" alt=""></a></li>
-         <li><a href="https://instagram.com/imagine_people_official?igshid=1wfrbu5a15fq5"><img src="{{asset('img/instagram.png')}}" alt=""></a></li>
-         <li><a href="https://t.me/imagine_people_official"><img src="{{asset('img/telegram.png')}}" alt=""></a></li>
+         <li><a target="_blank" href="https://www.youtube.com/channel/UC2Y_5U3kt6BinPyJa8_nl4A"><img src="{{asset('img/youtube.png')}}" alt=""></a></li>
+         <li><a target="_blank" href="https://instagram.com/imagine_people_official?igshid=1wfrbu5a15fq5"><img src="{{asset('img/instagram.png')}}" alt=""></a></li>
+         <li><a target="_blank" href="https://t.me/imagine_people_official"><img src="{{asset('img/telegram.png')}}" alt=""></a></li>
       </ul>
    </div>
 
