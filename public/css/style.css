@@ -7318,7 +7318,7 @@ footer > div p {
 .products .line {
   background-repeat: no-repeat;
   background-position: 100% calc(50% - 1.5rem);
-  background-size: calc(50% + 200px) 150px; }
+  background-size: calc(52% + 200px) 150px; }
 
 .products .item {
   margin: 0 10px; }
