@@ -8696,36 +8696,6 @@ a {
     padding-right: 15px;
     padding-left: 10px; } }
 
-.top_info {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  background-color: #f1f1f1;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  display: block;
-  justify-content: center;
-  padding: 5px 0; }
-  @media (min-width: 768px) {
-    .top_info {
-      top: 0;
-      display: flex; }
-      .top_info > div {
-        display: block;
-        font-size: 1.5rem; } }
-
-#main_header_menu {
-  margin-top: 52px; }
-  #main_header_menu:first-child {
-    margin-right: 0; }
-  @media (min-width: 768px) {
-    #main_header_menu {
-      margin-top: 36px; }
-      #main_header_menu:first-child {
-        margin-right: 46px; } }
-
 .social {
   position: fixed;
   top: 50%;
