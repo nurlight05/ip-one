@@ -90,6 +90,7 @@
 }
 .ref .info {
     height: 130px;
+    overflow-y: hidden;
 }
 .ref .info:before {
     content:'';
@@ -98,7 +99,7 @@
     position:absolute;
     left:0;
     top:0;
-    background:linear-gradient(transparent -50px, white);
+    background:linear-gradient(transparent 70px, white);
 }
 </style>
 
