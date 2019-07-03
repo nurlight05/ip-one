@@ -17,16 +17,83 @@
     @endforeach
 </div>
 
-<div class="container">
+<div class="container my-3">
     <div class="row">
-        <div class="col-6"></div>
-        <div class="col-6"></div>
+        <div class="col-6">
+            <div style="text-align: center; font-size: 3rem;">
+                АКЦИИ
+            </div>
+            <div class="news-slider" style="display: none;">
+                @foreach ($stocks as $item)
+                    @php
+                        $item = $item->translate();
+                    @endphp
+                    <div>
+                        <a class="ref" href="{{route('stocks.show', $item->id)}}">
+                            <div class="item row mx-0 my-3" style="height: 130px;">
+                                <div class="col-md-4 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
+                                <div class="col-md-8 info d-flex flex-column">
+                                    <h2 style="line-height: 0.7;">{{$item->title}}</h2>
+                                    <p>{{$item->mini_description}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item row mx-0 mb-3">
+                            <div class="col-md-12">
+                                <p class="mt-auto">
+                                    {{$item->date}}
+                                    <a href="{{route('stocks.index')}}" class="btn btn-light shadow-sm btn-invertion rounded-0" style="float:right;">@lang('все акции')</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="col-6">
+            <div style="text-align: center; font-size: 3rem;">
+                НОВОСТИ
+            </div>
+            <div class="news-slider" style="display: none;">
+                @foreach ($news as $item)
+                    @php
+                        $item = $item->translate();
+                    @endphp
+                    <div>
+                        <a class="ref" href="{{route('news.show', $item->id)}}">
+                            <div class="item row mx-0 my-3" style="height: 130px;">
+                                <div class="col-md-4 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
+                                <div class="col-md-8 info d-flex flex-column">
+                                    <h2 style="line-height: 0.7;">{{$item->title}}</h2>
+                                    <p>{{$item->mini_description}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item row mx-0 mb-3">
+                            <div class="col-md-12">
+                                <p class="mt-auto">
+                                    {{$item->date}}
+                                    <a href="{{route('news.index')}}" class="btn btn-light shadow-sm btn-invertion rounded-0" style="float:right;">@lang('все новости')</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </div>
 
+<style>
+.ref:hover {
+    text-decoration: none;
+}
+</style>
+
+<!-- 
 <div class="my-4 d-flex justify-content-center align-items-center">
     <img src="{{asset('img/line.png')}}" style="width: 40%"/>
-</div>
+</div> -->
 
 <div class="open-imagine-people">
     <div class="container">
@@ -92,5 +159,6 @@
 @push('scripts')
 <script>
     helper.$('.hello-slider').slick({arrows: true, dots: true,autoplay: true,autoplaySpeed: 3000});
+    helper.$('.news-slider').slick({arrows: true, dots: false});
 </script>
 @endpush
