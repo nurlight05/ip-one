@@ -98,5 +98,6 @@ $(document).ready(function(){
 	lightGallery(document.getElementById('lightgallery'));
 	lightGallery(document.getElementById('video-gallery'));
 	$('.hello-slider').css('display', 'block');
+	$('.news-slider').css('display', 'block');
 	new WOW().init();
 })
