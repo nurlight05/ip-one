@@ -17,6 +17,13 @@
     @endforeach
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6"></div>
+    </div>
+</div>
+
 <div class="my-4 d-flex justify-content-center align-items-center">
     <img src="{{asset('img/line.png')}}" style="width: 40%"/>
 </div>
