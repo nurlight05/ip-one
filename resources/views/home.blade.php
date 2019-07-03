@@ -88,6 +88,18 @@
 .ref:hover {
     text-decoration: none;
 }
+.ref .info {
+    height: 130px;
+}
+.ref .info:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent -50px, white);
+}
 </style>
 
 <!-- 
