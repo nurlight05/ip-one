@@ -8713,3 +8713,32 @@ a {
 
 .social ul li img {
   width: 100%; }
+
+.news-slider .slick-prev {
+  height: 70px;
+  width: 26px;
+  left: -50px;
+  z-index: 1; }
+
+.news-slider .slick-prev:before {
+  content: '';
+  background: url(../img/angle-right.png) no-repeat;
+  background-size: contain;
+  display: block;
+  width: 26px;
+  height: 70px;
+  transform: rotate(180deg); }
+
+.news-slider .slick-next {
+  height: 70px;
+  width: 26px;
+  right: -50px;
+  z-index: 1; }
+
+.news-slider .slick-next:before {
+  content: '';
+  background: url(../img/angle-right.png) no-repeat;
+  background-size: contain;
+  display: block;
+  width: 26px;
+  height: 70px; }
