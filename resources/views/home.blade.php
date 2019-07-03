@@ -19,7 +19,7 @@
 
 <div class="container my-3">
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
             <div style="text-align: center; font-size: 3rem;">
                 АКЦИИ
             </div>
@@ -50,7 +50,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-5 offset-2">
             <div style="text-align: center; font-size: 3rem;">
                 НОВОСТИ
             </div>
