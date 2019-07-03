@@ -31,9 +31,9 @@
                     <div>
                         <a class="ref" href="{{route('stocks.show', $item->id)}}">
                             <div class="item row mx-0 my-3" style="height: 130px;">
-                                <div class="col-md-4 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
-                                <div class="col-md-8 info d-flex flex-column">
-                                    <h2 style="line-height: 0.7;">{{$item->title}}</h2>
+                                <div class="col-md-5 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
+                                <div class="col-md-7 info d-flex flex-column">
+                                    <h2 style="line-height: 0.7;font-size: 1.4rem;">{{$item->title}}</h2>
                                     <p>{{$item->mini_description}}</p>
                                 </div>
                             </div>
