@@ -132,7 +132,7 @@ return [
         'locales' => [
             'ru',
             'en',
-            //'pt',
+            'cn',
         ],
     ],
 
