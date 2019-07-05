@@ -33,6 +33,7 @@
                 <li><a href="{{url('/lang/ru')}}">RU</a></li>
                 {{-- <li><a href="#">KZ</a></li> --}}
                 <li><a href="{{url('/lang/en')}}">EN</a></li>
+                <li><a href="{{url('/lang/cn')}}">中文</a></li>
                 {{-- <li><a href="#">中文</a></li> --}}
             </ul>
             {{-- <a href="" style="text-transform: uppercase;">{{app()->getLocale()}}</a> --}}
