@@ -21,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
             
             if($locale == 'en')
                 $ietf = 'en_US';
+            elseif($locale == 'cn')
+                $ietf = 'cn_CN';
             else
                 $ietf = 'ru_RU';
             setlocale(LC_ALL, $ietf.'.UTF-8');
