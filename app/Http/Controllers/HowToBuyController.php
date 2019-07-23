@@ -10,6 +10,6 @@ class HowToBuyController extends Controller
     public function index()
     {
         $content = Content::where('name', 'Как купить')->first();
-        return view('how-to-buy.index', compact('content'));
+        return view($this->getView('how-to-buy.index'), compact('content'));
     }
 }

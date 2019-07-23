@@ -13,38 +13,38 @@ class StocksController extends Controller
     {
         $this->setLocale();
         $months = [];
-        for ($i=0; $i < 11; $i++) {
+        for ($i = 0; $i < 11; $i++) {
             $time = Carbon::now()->addMonth(-$i);
             $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month];
         }
         $stocks = Stock::orderBy('date', 'desc');
-        if($request->has('month')) {
-            $stocks = $stocks->whereRaw('YEAR(`date`) = '.$request->year.' AND MONTH(`date`) = '.$request->month);
+        if ($request->has('month')) {
+            $stocks = $stocks->whereRaw('YEAR(`date`) = ' . $request->year . ' AND MONTH(`date`) = ' . $request->month);
         }
-        $stocks = $stocks->paginate(5);       
-        return view('stocks.index', compact('stocks', 'months'));
+        $stocks = $stocks->paginate(5);
+        return view($this->getView('stocks.index'), compact('stocks', 'months'));
     }
 
     public function show(Request $request, Stock $stock)
     {
         $this->setLocale();
         $months = [];
-        for ($i=0; $i < 11; $i++) {
+        for ($i = 0; $i < 11; $i++) {
             $time = Carbon::now()->addMonth(-$i);
             $months[$time->formatLocalized('%B %Y')] = [$time->year, $time->month, $time->format('Y-m')];
         }
-        return view('stocks.show', compact('stock', 'months'));
+        return view($this->getView('stocks.show'), compact('stock', 'months'));
     }
 
     public function setLocale()
     {
         $locale = Cookie::get('locale', 'ru');
-        
-        if($locale == 'en')
+
+        if ($locale == 'en')
             $ietf = 'en_US';
         else
             $ietf = 'ru_RU';
 
-        setlocale(LC_ALL, $ietf.'.UTF-8');
+        setlocale(LC_ALL, $ietf . '.UTF-8');
     }
 }

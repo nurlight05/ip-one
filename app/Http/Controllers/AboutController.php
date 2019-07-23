@@ -10,6 +10,6 @@ class AboutController extends Controller
     public function index()
     {
         $content = Content::where('name', 'О нас')->first();
-        return view('about.index', compact('content'));
+        return view($this->getView('about.index'), compact('content'));
     }
 }

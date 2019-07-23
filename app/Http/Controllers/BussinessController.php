@@ -10,6 +10,6 @@ class BussinessController extends Controller
     public function index(Request $request)
     {
         $content = Content::where('name', 'Возможности')->first();
-        return view('bussiness.index', compact('content'));
+        return view($this->getView('bussiness.index'), compact('content'));
     }
 }

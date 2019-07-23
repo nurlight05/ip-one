@@ -10,6 +10,6 @@ class ContactsController extends Controller
     public function index()
     {
         $content = Content::where('name', 'Контакты')->first();
-        return view('contacts.index', compact('content'));
+        return view($this->getView('contacts.index'), compact('content'));
     }
 }
