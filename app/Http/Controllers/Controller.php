@@ -13,7 +13,7 @@ class Controller extends BaseController
 
     public function getView($view)
     {
-        if (request()->subdomain == 'm')
+        if (request()->subdomain == 'm.')
             return 'mobile.' . $view;
         else
             return $view;
