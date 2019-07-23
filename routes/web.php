@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::domain('{subdomain}.ip-one.net')->group(function () {
+Route::domain('{subdomain?}ip-one.net')->group(function () {
     Route::get('/', function (Request $request) {
         dd($request->subdomain);
     });
