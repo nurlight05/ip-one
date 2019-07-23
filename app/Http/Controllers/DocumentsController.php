@@ -10,6 +10,6 @@ class DocumentsController extends Controller
     public function index()
     {
         $content = Content::where('name', 'Документы')->first();
-        return view('documents.index', compact('content'));
+        return view($this->getView('documents.index'), compact('content'));
     }
 }

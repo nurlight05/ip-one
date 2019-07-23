@@ -70,18 +70,17 @@
     <script src="{{asset('js/script.js')}}?q={{rand()}}"></script>
     <script>
         var $ = helper.$;
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )     
+        {
+            var url = "https://m.ip-one.net/";    
+            $(location).attr('href', url);
+        }
     </script>
     <script>
     $('.prod_unit').contextmenu(function() {
         return false;
     });
-
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )     
-    {
-        var url = "https://m.ip-one.net/";    
-        $(location).attr('href', url);
-    }
-
     </script>
 	<script src="{{asset('js/lightgallery.min.js')}}"></script>
     <script src="{{asset('js/lg-video.js')}}"></script>

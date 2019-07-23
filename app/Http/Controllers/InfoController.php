@@ -10,6 +10,6 @@ class InfoController extends Controller
     public function index()
     {
         $content = Content::where('name', 'Инфо')->first();
-        return view('info.index', compact('content'));
+        return view($this->getView('info.index'), compact('content'));
     }
 }

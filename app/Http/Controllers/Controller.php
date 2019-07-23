@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function getView($view)
+    {
+        if (request()->subdomain == 'm')
+            return 'mobile.' . $view;
+        else
+            return $view;
+    }
 }

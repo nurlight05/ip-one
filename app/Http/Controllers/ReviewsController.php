@@ -10,6 +10,6 @@ class ReviewsController extends Controller
     public function index()
     {
         $content = Content::where('name', 'Отзывы')->first();
-        return view('reviews.index', compact('content'));
+        return view($this->getView('reviews.index'), compact('content'));
     }
 }

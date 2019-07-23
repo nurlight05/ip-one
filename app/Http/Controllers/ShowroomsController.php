@@ -11,7 +11,7 @@ function mb_ucfirst($string, $encoding = 'utf8')
     $firstChar = mb_substr($string, 0, 1, $encoding);
     $then = mb_substr($string, 1, $strlen - 1, $encoding);
 
-    return mb_strtoupper($firstChar, $encoding).$then;
+    return mb_strtoupper($firstChar, $encoding) . $then;
 }
 
 class ShowroomsController extends Controller
@@ -44,7 +44,7 @@ class ShowroomsController extends Controller
             return true;
         });
 
-        return view('showrooms.index', compact('showrooms', 'places', '_country', '_city'));
+        return view($this->getView('showrooms.index'), compact('showrooms', 'places', '_country', '_city'));
     }
 
     public function show($showroom)
@@ -75,6 +75,6 @@ class ShowroomsController extends Controller
         $_country = reset($showrooms)['COUNTRY'];
         $_city = reset($showrooms)['CITY'];
 
-        return view('showrooms.show', compact('showrooms', 'places', '_country', '_city'));
+        return view($this->getView('showrooms.show'), compact('showrooms', 'places', '_country', '_city'));
     }
 }

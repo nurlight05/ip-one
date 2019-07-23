@@ -13,7 +13,9 @@ class HomeController extends Controller
     public function lang(Request $request, $locale)
     {
         return back()->cookie(
-            'locale', $locale, time() + (10 * 365 * 24 * 60 * 60)
+            'locale',
+            $locale,
+            time() + (10 * 365 * 24 * 60 * 60)
         );
     }
 
@@ -25,6 +27,6 @@ class HomeController extends Controller
         $news = News::orderBy('date', 'desc')->limit(5)->get();
         $stocks = Stock::orderBy('date', 'desc')->limit(5)->get();
 
-        return view('home', compact('slides', 'products', 'last_products', 'news', 'stocks'));
+        return view($this->getView('home'), compact('slides', 'products', 'last_products', 'news', 'stocks'));
     }
 }
