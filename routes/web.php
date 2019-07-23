@@ -13,12 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::domain('{subdomain}.ip-one.net')->group(function () {
-    Route::get('/', function (Request $request) {
-        dd($request->subdomain);
-    });
-});
-
 Route::get('/lang/{locale}', 'HomeController@lang');
 
 Route::get('/', 'HomeController@index');
