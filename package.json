@@ -7,12 +7,15 @@
         "popper": "^1.0.1",
         "popper.js": "^1.14.7",
         "slack": "^11.0.2",
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "slideout": "^1.0.1"
     },
     "scripts": {
         "sass": "node-sass resources/sass/style.sass public/css/style.css -w",
+        "sass-m": "node-sass resources/sass/mobile-style.sass public/css/mobile-style.css -w",
         "sass-production": "node-sass resources/sass/style.sass public/css/style.css -w --output-style compressed",
-        "webpack": "./node_modules/.bin/webpack --hide-modules --mode=development -w"
+        "webpack": "./node_modules/.bin/webpack --hide-modules --mode=development -w",
+        "webpack-m": "./node_modules/.bin/webpack --config mobile-webpack.config.js --hide-modules --mode=development -w"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
