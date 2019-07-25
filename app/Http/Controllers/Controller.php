@@ -13,6 +13,7 @@ class Controller extends BaseController
 
     public function getView($view)
     {
+        return 'mobile.' . $view;
         if (strpos(request()->url(), '://m.') !== false)
             return 'mobile.' . $view;
         else
