@@ -69,7 +69,7 @@
 
     <div id="panel">
         <header>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 title">
                         IMAGINE <b>PEOPLE</b>
