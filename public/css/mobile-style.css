@@ -7024,6 +7024,9 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'MyWebFont';
   src: url("./FuturaBookC.ttf") format("truetype"); }
 
+html {
+  font-size: 14px; }
+
 body {
   font-family: 'MyWebFont';
   color: #264796;
@@ -7063,14 +7066,14 @@ body {
 header .title {
   font-size: 25px;
   text-align: center;
-  padding: 5px 0;
+  padding: 2.5px 0;
   color: #fff;
   background-color: #264796;
   margin-bottom: 1px; }
 
 header .menu {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
   background-color: #264796; }
   header .menu .item {
     text-align: center;
@@ -7097,6 +7100,11 @@ header .menu {
         #menu .navbar .card .card-header button {
           color: #fff; }
 
+.page_title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 5px 0; }
+
 .main_slider {
   margin: 0 -15px;
   margin-bottom: -5px !important; }
@@ -7105,6 +7113,9 @@ header .menu {
     background-position: center center;
     background-size: cover;
     height: 20vh; }
+    @media (min-width: 400px) {
+      .main_slider .item .image {
+        height: 60vh; } }
   .main_slider .item .title {
     background-color: #4562a6;
     color: #fff;

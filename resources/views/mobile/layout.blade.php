@@ -95,11 +95,48 @@
         </header>
     
         @yield('content')
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="with-icon" style="background-image: url('{{asset('img/phone-icon.png')}}')">
+                                    <p>+7 (727) 364 53 30<br>
+                                        +7 (776) 757 57 57</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="with-icon" style="background-image: url('{{asset('img/email-icon.png')}}')">
+                                    <p>info@ip-one.net</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="with-icon" style="background-image: url('{{asset('img/skype-icon.png')}}')">
+                                    <p>live:info_868489</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mt-4">
+                                    <p>&#169; 2015-2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 p-0">
+                        {!!App\Content::where('name', 'Футер')->first()->translate()->content_mobile!!}
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="{{asset('js/mobile-script.js')}}?q={{rand()}}"></script>
 
     <script>
+        var $ = helper.$;
+
         var slideout = new helper.Slideout({
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
