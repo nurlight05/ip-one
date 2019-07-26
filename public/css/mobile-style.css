@@ -7235,3 +7235,26 @@ footer {
   background-color: #26479699;
   color: #fff;
   padding-top: 5px; }
+
+.product img {
+  width: 100%; }
+
+.product .image {
+  height: 30vh;
+  border: 1px solid #264796;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.product .price {
+  text-align: center; }
+
+.product .desc {
+  padding: 0 15px; }
+  .product .desc .nav-link {
+    color: #264796;
+    padding: 5px 10px; }
+    .product .desc .nav-link.active {
+      color: #fff;
+      background-color: #264796; }
