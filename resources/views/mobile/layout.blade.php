@@ -72,7 +72,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 title">
-                        IMAGINE <b>PEOPLE</b>
+                        <a href="{{url('/')}}">IMAGINE <b>PEOPLE</b></a>
                     </div>
                     <div class="col-12 menu">
                         <div class="row">

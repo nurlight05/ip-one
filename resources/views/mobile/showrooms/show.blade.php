@@ -4,28 +4,14 @@
 
 @section('content')
 
-<section class="container-fluid content inner_pages">
+<section class="container-fluid">
     <div class="row">
-        <div class="col-md-2 left-side show_choice">
-            <h3 class="left_title">SHOW <br>ROOMS</h3>
-            <form action="{{url('showrooms')}}" class="search_room mb-4" style="padding-right: 30px">
-                <input type="text" name="city" placeholder="введите город">
-            </form>
-            <ul class="country_list">
-                @foreach ($places as $key => $item)
-                <li class="{{$_country == $key ? 'active' : ''}}">
-                    <p>{{$key}}</p>
-                    <ul class="city_list">
-                        @foreach ($item as $city)
-                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
-                @endforeach
-            </ul>
-            <a href="#header_menu" class="toUp_btn"></a>
+        <div class="col-12">
+            <div class="page_title">
+                SHOW ROOMS
+            </div>
         </div>
-        <div class="col-md-10 show_choice p-5">
+        <div class="col-12">
             @foreach ($showrooms as $item)
             <div class="mb-5">
                 <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}})</h2>
@@ -41,37 +27,10 @@
                 </ul>
             </div>
             @endforeach
-            <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div>
+            {{-- <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div> --}}
+            <a href="{{url('/showrooms')}}" class="btn btn-light shadow-sm btn-invertion rounded-0 my-3">Назад</a>
         </div>
     </div>
-    <table class="table table-hover d-none" style="width: 100%;">
-        <thead>
-            <tr class="success">
-            <th>#</th>
-            <th>Город</th>
-            <th>Адрес</th>
-            <th>Телефоны</th>
-            <th>Режим работы</th>
-            <th>Расписание школ</th>
-            <th>E-mail</th>
-            <th>ФИО руководителя</th>
-        </tr>
-    </thead>
-        <tbody>
-            @foreach($showrooms as $showroom)
-                <tr class="showroom">
-                    <th scope="row">{{$loop->iteration}}</th>
-                    <th class="city">{!!$showroom['CITY']!!}</th>
-                    <th class="address">{!!$showroom['ADDRESS']!!}</th>
-                    <th>{!!$showroom['PHONE']!!}</th>
-                    <th>{!!$showroom['WORK_TIME']!!}</th>
-                    <th>{!!$showroom['SCHOOL_WORK_TIME']!!}</th>
-                    <th>{!!$showroom['EMAIL']!!}</th>
-                    <th>{!!$showroom['DIR_NAME']!!}</th>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
 </section>
 
 @endsection
