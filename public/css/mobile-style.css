@@ -7053,7 +7053,6 @@ body {
 .slideout-panel {
   position: relative;
   z-index: 1;
-  will-change: transform;
   background-color: #FFF;
   min-height: 100vh; }
 
@@ -7258,3 +7257,16 @@ footer {
     .product .desc .nav-link.active {
       color: #fff;
       background-color: #264796; }
+
+.product_buy {
+  background-color: #264796cc;
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 4rem;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+  text-decoration: none; }

@@ -22,6 +22,11 @@
     </div>
 </section>
 
+<a href="//shop.ip-one.net">
+	<div class="product_buy">
+		КУПИТЬ
+	</div>
+</a>
 @endsection
 
 {{-- 
