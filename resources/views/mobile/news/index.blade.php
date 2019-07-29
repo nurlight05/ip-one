@@ -20,7 +20,7 @@
                 <a href="{{route('news.show', $item->id)}}" style="color: #264796;">
                     <div class="row" style="border-bottom: 1px solid;">
                         <div class="col-4 mb-2">
-                            <div class="image" style="background-image: url('{{Voyager::image($item->img)}}'); width: 100px; height: 100px;"></div>
+                            <div class="image" style="background-image: url('{{Voyager::image($item->img)}}'); width: 100px; height: 100px;background-repeat: no-repeat;background-position: center center;background-size: cover;"></div>
                         </div>
                         <div class="col-8">
                             <div>{{$item->title}}</div>
