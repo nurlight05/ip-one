@@ -86,7 +86,12 @@
                                 <a href="//lk.ip-one.net"><i class="fas fa-search"></i></a>
                             </div>
                             <div class="col-3 item">
-                                <a href="//lk.ip-one.net">RU</a>
+                                <span class="lang-change">{{strtoupper(app()->getLocale())}}</span>
+                                <ul class="lang" style="display: none;position: absolute;padding: 0 5px;background-color: #264796;z-index: 999;">
+                                    <li><a href="{{url('/lang/ru')}}">RU</a></li>
+                                    <li><a href="{{url('/lang/en')}}">EN</a></li>
+                                    <li><a href="{{url('/lang/cn')}}">中文</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -158,6 +163,14 @@
         lightGallery(document.getElementById('video-gallery'));
         $(document).ready(function(){
             $('.mobile-hidden-onload').css('display', 'block');
+        });
+
+        $( ".lang-change" ).click(function () {
+            if ( $( ".lang" ).is( ":hidden" ) ) {
+                $( ".lang" ).slideDown( "fast" );
+            } else {
+                $( ".lang" ).slideUp("fast");
+            }
         });
     </script>
     @stack('styles')
