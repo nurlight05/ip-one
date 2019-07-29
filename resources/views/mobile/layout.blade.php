@@ -30,7 +30,7 @@
     <body>
 
     <nav id="menu">
-        <div class="title">@lang('МЕНЮ') <span class="close-button" style="float: right;"><i class="fas fa-times"></i></span></div>
+        <div class="title">@lang('МЕНЮ') <span class="close-button" style="float: right;padding-right: 10px;"><i class="fas fa-times"></i></span></div>
         <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse show">
                 <div class="accordion" id="accordionExample">
