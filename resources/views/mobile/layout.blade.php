@@ -29,7 +29,7 @@
     </head>
     <body>
 
-    <nav id="menu">
+    <nav class="mobile-hidden-onload" style="display: none;" id="menu">
         <div class="title">@lang('МЕНЮ') <span class="close-button" style="float: right;padding-right: 10px;"><i class="fas fa-times"></i></span></div>
         <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse show">
@@ -156,6 +156,9 @@
         });
         lightGallery(document.getElementById('lightgallery'));
         lightGallery(document.getElementById('video-gallery'));
+        $(document).ready(function(){
+            $('.mobile-hidden-onload').css('display', 'block');
+        });
     </script>
     @stack('styles')
     @stack('scripts')
