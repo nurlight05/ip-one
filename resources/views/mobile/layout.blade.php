@@ -82,8 +82,13 @@
                             <div class="col-3 item">
                                 <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
                             </div>
-                            <div class="col-3 item">
-                                <a href="//lk.ip-one.net"><i class="fas fa-search"></i></a>
+                            <div class="col-3 item" style="position: inherit;">
+                                <span class="search"><i class="fas fa-search"></i></span>
+                                
+                                <form action="{{url('/search')}}" class="search_form" style="display: none;position: absolute;left: 0;width: 100%;z-index: 999;background-color: #264796;box-shadow: 0px 14px 14px 0px #00000036;">
+                                    <input type="text" name="search" style="width: 100%;">
+                                    <a href="#" class="search_btn"></a>
+                                </form>
                             </div>
                             <div class="col-3 item">
                                 <span class="lang-change">{{strtoupper(app()->getLocale())}}</span>
@@ -165,13 +170,21 @@
             $('.mobile-hidden-onload').css('display', 'block');
         });
 
-        $( ".lang-change" ).click(function () {
-            if ( $( ".lang" ).is( ":hidden" ) ) {
-                $( ".lang" ).slideDown( "fast" );
-            } else {
-                $( ".lang" ).slideUp("fast");
-            }
-        });
+$( ".lang-change" ).click(function () {
+    if ( $( ".lang" ).is( ":hidden" ) ) {
+        $( ".lang" ).slideDown( "fast" );
+    } else {
+        $( ".lang" ).slideUp("fast");
+    }
+});
+
+$( ".search" ).click(function () {
+    if ( $( ".search_form" ).is( ":hidden" ) ) {
+        $( ".search_form" ).slideDown( "fast" );
+    } else {
+        $( ".search_form" ).slideUp("fast");
+    }
+});
     </script>
     @stack('styles')
     @stack('scripts')
