@@ -7092,7 +7092,7 @@ header .menu {
   header .menu .item {
     text-align: center;
     font-size: 25px; }
-    header .menu .item * {
+    header .menu .item a, header .menu .item span {
       color: #fff; }
 
 #menu {
