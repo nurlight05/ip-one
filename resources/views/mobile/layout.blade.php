@@ -63,6 +63,13 @@
                     </div>
                     @endforeach
                 </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center" style="padding: 10px;font-size: 2rem;color: #fdfdfd;">
+                        <a href="https://www.youtube.com/channel/UC2Y_5U3kt6BinPyJa8_nl4A"><i class="fab fa-youtube mx-3" style="color: #fdfdfd;"></i></a>
+                        <a href="https://www.instagram.com/imagine_people_official/"><i class="fab fa-instagram mx-3" style="color: #fdfdfd;"></i></a>
+                        <a href="https://t.me/imagine_people_official"><i class="fab fa-telegram-plane mx-3" style="color: #fdfdfd;"></i></a>
+                    </div>
+                </div>
             </div>
           </nav>
     </nav>
