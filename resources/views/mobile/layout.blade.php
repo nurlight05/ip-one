@@ -42,7 +42,7 @@
                         <div class="card-header" id="{{\Illuminate\Support\Str::camel($item->title)}}">
                             <h2 class="mb-0">
                                 <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#t{{\Illuminate\Support\Str::camel($item->title)}}" aria-expanded="false" aria-controls="t{{\Illuminate\Support\Str::camel($item->title)}}">
-                                    <a href="{{$item->children->count() ? '#' : url($item->link())}}" style="color: #fff;"@if($item->children->count()) onclick="return false;" @endif>{{$item->title}}</a> @if($item->children->count()) <i class="fas fa-angle-down"></i> @endif
+                                    <a href="{{$item->children->count() ? '#' : url($item->link())}}" style="color: #fff;text-transform: capitalize;"@if($item->children->count()) onclick="return false;" @endif>{{$item->title}}</a> @if($item->children->count()) <i class="fas fa-angle-down"></i> @endif
                                 </button>
                             </h2>
                         </div>
@@ -54,7 +54,7 @@
                                     $child = $child->translate();
                                 @endphp
                                 <div>
-                                    <a href="{{url($child->link())}}" style="color: #fff;">{{$child->title}}</a>
+                                    <a href="{{url($child->link())}}" style="color: #fff;text-transform: capitalize;">{{$child->title}}</a>
                                 </div>
                                 @endforeach
                             </div>
@@ -161,7 +161,7 @@
         var slideout = new helper.Slideout({
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
-            'padding': 250,
+            'padding': 300,
             'tolerance': 70
         });
         slideout.disableTouch();

@@ -7048,7 +7048,7 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 300px;
   min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -7112,6 +7112,7 @@ header .menu {
         padding: 2px 15px;
         border-bottom: 1px solid #fff; }
         #menu .navbar .card .card-header button {
+          font-size: 20px;
           color: #fff; }
 
 .page_title {

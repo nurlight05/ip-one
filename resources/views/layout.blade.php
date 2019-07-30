@@ -73,7 +73,7 @@
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )     
         {
-            var url = "https://m.ip-one.net/";    
+            var url = "{{str_replace("ip-one.net", "m.ip-one.net", url()->full())}}";    
             $(location).attr('href', url);
         }
     </script>
