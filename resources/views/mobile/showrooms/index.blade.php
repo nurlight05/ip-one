@@ -12,7 +12,8 @@
             </div>
         </div>
         <div class="col-12">
-            <p style="text-align: center; font-size: 14px;">ПРОСИМ ВАС ОБРАТИТЬ ВНИМАНИЕ НА УСЛОВИЯ ПОЛУЧЕНИЯ ПРОДУКЦИИ В ШОУ-РУМАХ.<br>ПРИ ПОЛУЧЕНИИ ПРОДУКЦИИ В ШОУ-РУМЕ НЕОБХОДИМО <span style="color: red;">ОПЛАТИТЬ ДОСТАВКУ</span></p>
+            <p style="text-align: center; font-size: 14px;">ПРОСИМ ВАС ОБРАТИТЬ ВНИМАНИЕ НА УСЛОВИЯ ПОЛУЧЕНИЯ ПРОДУКЦИИ В ШОУ-РУМАХ.<br>ПРИ ПОЛУЧЕНИИ ПРОДУКЦИИ В ШОУ-РУМЕ НЕОБХОДИМО <a href="https://m.ip-one.net/news/56" style="font-weight: 900;color: red;">ОПЛАТИТЬ ДОСТАВКУ</a></p>
+            
         </div>
         <div class="col-12">
             <p style="text-align: center; font-size: 14px;color: #b7b7b7;">Нажмите на нужный шоу-рум для подробной информации</p>
