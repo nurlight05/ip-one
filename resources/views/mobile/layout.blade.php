@@ -54,7 +54,7 @@
                                     $child = $child->translate();
                                 @endphp
                                 <div>
-                                    <a href="{{url($child->link())}}" style="color: #fff;text-transform: capitalize;">{{$child->title}}</a>
+                                    <a href="{{url($child->link())}}" style="color: #fff;text-transform: capitalize;font-size: 20px;">{{$child->title}}</a>
                                 </div>
                                 @endforeach
                             </div>
