@@ -7317,7 +7317,7 @@ footer > div p {
 
 .products .line {
   background-repeat: no-repeat;
-  background-position: 100% calc(50% - 1.5rem);
+  background-position: 100% calc(65% - 1.5rem);
   background-size: calc(52% + 200px) 150px; }
 
 .products .item {
@@ -7457,6 +7457,7 @@ footer > div p {
   margin-left: 50px; }
   .product .img {
     border: 10px solid #134094;
+    background-color: #fff;
     border-radius: 1000rem;
     overflow: hidden;
     margin-left: -50px;

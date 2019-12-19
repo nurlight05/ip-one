@@ -24,7 +24,7 @@
                     <div class="convert_box">
                         <div class="select_box">
                             <select name="" id="ex_rate">
-                                <option value="300">KZT</option>
+                                <option value="330">KZT</option>
                                 <option value="55">RUB</option>
                                 <option value="1">USD</option>
                                 <option value="25">UAH</option>
@@ -34,7 +34,7 @@
                         <input type="text" id="sum_of_bill" value="300">
                     </div>
                 </form>
-                <p>1 y.e. = 300 KZT (@lang('тенге'))</p>
+                <p>1 y.e. = 330 KZT (@lang('тенге'))</p>
                 <p>1 y.e. = 55 RUB (@lang('рублей'))</p>
                 <p>1 y.e. = 1 USD (@lang('долларов'))</p>
                 <p>1 y.e. = 25 UAH (@lang('гривен'))</p>
@@ -60,23 +60,25 @@
             </div>
             <div class="products p-5">
                 <h2 style="text-align: center; color: #31479d; text-transform: uppercase; font-weight: 400;">@lang('Наши продукты')</h2>
-                <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}')">
+                <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
                     @foreach ($products as $item)
                         @php
                             $item = $item->translate();
                         @endphp
                         <div class="item">
-                            <a href="{{route('products.show', $item->id)}}">
+                            <a href="{{route('products.show', $item->id)}}" style="display: block; position: relative;">
                                 <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')">
                                     <div class="buy">@lang('Подробнее')</div>
                                 </div>
-                                <div class="name">{{$item->name}}</div>
-                                <div class="price">{{$item->price}} @lang('у.е.')</div>
+                                <div style="position: absolute; width: 100%;">
+                                    <div class="name">{!!nl2br($item->name)!!}</div>
+                                    <div class="price">{{$item->price}} @lang('у.е.')</div>
+                                </div>
                             </a>
                         </div>
                         @if($loop->iteration%3 == 0)
                             </div>
-                            <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}')">
+                            <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
                         @endif
                     @endforeach
                 </div>
