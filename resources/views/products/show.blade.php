@@ -12,10 +12,26 @@ $product = $product->translate();
 		<div class="row">
 			<div class="col-md-2 left-side py-5">
 				<h3>@lang('Продукты')</h3>
-				<h4>@lang('Наши продукты')</h4>
-				@foreach ($products as $item)
-					<div class="month pl-4"><a href="{{route('products.show', $item)}}">{{$item->name}}</a></div>
-				@endforeach
+				<ul class="country_list" style="padding-left: 0px;">
+					@foreach($categories as $item)
+					@php
+						$item = $item->translate();
+					@endphp
+					<li class="">
+						<p>{{$item->name}}</p>
+						<ul class="city_list">
+						@if(isset($products[$item->id]))
+							@foreach ($products[$item->id] as $product)
+								@php
+									$product = $product->translate();
+								@endphp
+								<li class="m-0 mb-2 month pl-2"><a href="{{route('products.show', $product->id)}}" style="color: #31479d">{{$product->name}}</a></li>
+							@endforeach
+						@endif
+						</ul>
+					</li>
+					@endforeach
+				</ul>
 				<div class="converter" id="converter">
 					<h6>@lang('конвертер валют')</h6>
 					<form action="">

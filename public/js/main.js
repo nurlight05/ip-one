@@ -56,10 +56,10 @@ $(document).ready(function(){
 	});
 	if($('#converter').length > 0){
 		var converter = document.getElementById("converter");
-		var sticky = converter.offsetTop;
-		var header = document.getElementById("header_menu").offsetHeight;
+		
 		$(window).scroll(function(){
-			if (window.pageYOffset > sticky + header) {
+			var bottom = $('.country_list').position().top + $('.country_list').outerHeight(true) + 100;
+			if (window.pageYOffset > bottom) {
 		   		converter.classList.add("sticky");
 			} else {
 				converter.classList.remove("sticky");

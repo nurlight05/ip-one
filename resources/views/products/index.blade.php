@@ -7,13 +7,28 @@
     <div class="row">
         <div class="col-md-2 py-5 left-side">
             <h3>@lang('Продукты')</h3>
-            <h4>@lang('Наши продукты')</h4>
-            @foreach ($products as $item)
+            
+            <ul class="country_list" style="padding-left: 0px;">
+                @foreach($categories as $item)
                 @php
                     $item = $item->translate();
                 @endphp
-                <div class="month pl-4"><a href="{{route('products.show', $item->id)}}">{{$item->name}}</a></div>
-            @endforeach
+                <li class="">
+                    <p>{{$item->name}}</p>
+                    <ul class="city_list">
+                    @if(isset($products[$item->id]))
+                        @foreach ($products[$item->id] as $product)
+                            @php
+                                $product = $product->translate();
+                            @endphp
+                            <li class="m-0 mb-2 month pl-2"><a href="{{route('products.show', $product->id)}}" style="color: #31479d">{{$product->name}}</a></li>
+                        @endforeach
+                    @endif
+                    </ul>
+                </li>
+                @endforeach
+            </ul>
+
             <div class="converter" id="converter">
                 <h6>@lang('конвертер валют')</h6>
                 <form action="">
@@ -59,29 +74,36 @@
             @endforeach
             </div>
             <div class="products p-5">
-                <h2 style="text-align: center; color: #31479d; text-transform: uppercase; font-weight: 400;">@lang('Наши продукты')</h2>
-                <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
-                    @foreach ($products as $item)
-                        @php
-                            $item = $item->translate();
-                        @endphp
-                        <div class="item">
-                            <a href="{{route('products.show', $item->id)}}" style="display: block; position: relative;">
-                                <div class="img" style="background-image: url('{{Voyager::image($item->img)}}')">
-                                    <div class="buy">@lang('Подробнее')</div>
-                                </div>
-                                <div style="position: absolute; width: 100%;">
-                                    <div class="name">{!!nl2br($item->name)!!}</div>
-                                    <div class="price">{{$item->price}} @lang('у.е.')</div>
-                                </div>
-                            </a>
-                        </div>
-                        @if($loop->iteration%3 == 0)
+                @foreach($categories as $item)
+                    @php
+                        $item = $item->translate();
+                    @endphp
+                    <h2 style="text-align: center; color: #31479d; text-transform: uppercase; font-weight: 400;">{{$item->name}}</h2>
+                    @if(isset($products[$item->id]))
+                    <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
+                        @foreach ($products[$item->id] as $product)
+                            @php
+                                $product = $product->translate();
+                            @endphp
+                            <div class="item">
+                                <a href="{{route('products.show', $product->id)}}" style="display: block; position: relative;">
+                                    <div class="img" style="background-image: url('{{Voyager::image($product->img)}}')">
+                                        <div class="buy">@lang('Подробнее')</div>
+                                    </div>
+                                    <div style="position: absolute; width: 100%;">
+                                        <div class="name">{!!nl2br($product->name)!!}</div>
+                                        <div class="price">{{$product->price}} @lang('у.е.')</div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
-                        @endif
-                    @endforeach
-                </div>
+                            @if($loop->iteration%3 == 0)
+                                </div>
+                                <div class="row line d-flex justify-content-center my-5" style="background-image: url('{{asset('img/rectangle.png')}}');margin-bottom: 10rem !important;">
+                            @endif
+                        @endforeach
+                    </div>
+                    @endif
+                @endforeach
             </div>
             <div class="gift_block">
                 @if ($presents->count())
