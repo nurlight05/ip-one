@@ -13,7 +13,7 @@
         </div>
         <div class="col-12">
             <div class="row products">
-                @foreach ($products as $item)
+                @foreach ($mob_products as $item)
                     @php
                         $item = $item->translate();
                     @endphp

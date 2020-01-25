@@ -21,11 +21,11 @@ $product = $product->translate();
 						<p>{{$item->name}}</p>
 						<ul class="city_list">
 						@if(isset($products[$item->id]))
-							@foreach ($products[$item->id] as $product)
+							@foreach ($products[$item->id] as $_product)
 								@php
-									$product = $product->translate();
+									$_product = $_product->translate();
 								@endphp
-								<li class="m-0 mb-2 month pl-2"><a href="{{route('products.show', $product->id)}}" style="color: #31479d">{{$product->name}}</a></li>
+								<li class="m-0 mb-2 month pl-2"><a href="{{route('products.show', $_product->id)}}" style="color: #31479d">{{$_product->name}}</a></li>
 							@endforeach
 						@endif
 						</ul>
