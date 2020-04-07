@@ -10,6 +10,7 @@
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
         <div class="col-md-10 documents p-5">
+            {!!$info->content!!}
             {!!$content->content!!}
         </div>
     </div>

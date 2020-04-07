@@ -1,70 +1,79 @@
+@php
+    $left_menu = collect(menu('site', '_json'));
+    $right_menu = $left_menu->splice(4);
+@endphp
 
-<div style="position: relative;" id="main_header_menu">
-<nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm" style="z-index: 90; background-color: #fff">
+
+<div style="position: fixed;width: 100%;z-index: 10;" id="main_header_menu">
+<nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm main_nav" style="z-index: 90; background-color: #fff; height: 120px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_menu" aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse col-md-4" id="header_menu" style="padding: 20px">
+    <div class="collapse navbar-collapse col-md-5 header_menu" id="header_menu" style="padding: 20px">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}">@lang('Главная')</a>
-            </li>
-            <li class="nav-item">
-                <span class="nav-link" href="#" id="drop_main_menu" style="cursor: pointer;">@lang('Меню') <i class="fas fa-angle-down"></i></span>
-            </li>
+            @foreach ($left_menu as $item)
+                @php
+                    $item = $item->translate();
+                @endphp
+                <li class="nav-item">
+                    <a href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link drop_second_menu" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) @endif</a>
+                </li>
+            @endforeach
         </ul>
     </div>
 
-    <div class="col-md-4">
-        <img src="{{asset('img/logo.png')}}" style="display: block;margin: auto;width: 250px;padding: 10px 0;"/>
+    <div class="col-md-2">
+        <a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo.png')}}" style="display: block;margin: auto;height: 100px;padding: 10px 0;"/></a>
     </div>
 
-    <div class="col-md-4">
-        <div class="d-block right-menu ml-auto text-right" style="padding-right: 45px;">
-            <form action="{{url('/search')}}" class="search_form" style="margin-bottom: -17px;">
-                <input type="text" name="search">
-                <a href="#" class="search_btn"></a>
-            </form>
-            {{-- <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a> --}}
-            <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
-            <ul class="lang">
-                <li>{{strtoupper(app()->getLocale())}}</li>
-                <li><a href="{{url('/lang/ru')}}">RU</a></li>
-                {{-- <li><a href="#">KZ</a></li> --}}
-                <li><a href="{{url('/lang/en')}}">EN</a></li>
-                <li><a href="{{url('/lang/cn')}}">中文</a></li>
-                {{-- <li><a href="#">中文</a></li> --}}
+    <div class="collapse navbar-collapse col-md-5">
+        <div class="d-block right-menu ml-auto text-right header_menu" style="padding: 20px 45px 0 0;">
+            <ul class="navbar-nav ml-auto">
+                @foreach ($right_menu as $item)
+                    @php
+                        $item = $item->translate();
+                    @endphp
+                    <li class="nav-item">
+                        <span href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) @endif</span>
+                    </li>
+                @endforeach
+                <li class="nav-item" style="padding: 8px 0;">
+                    <form action="{{url('/search')}}" class="search_form">
+                        <input type="text" name="search">
+                        <a href="#" class="search_btn"></a>
+                    </form>
+                </li>
+                <!-- <li class="nav-item" style="padding: 8px 0;">
+                    <a href="//shop.ip-one.net"><i class="fas fa-shopping-bag"></i></a>
+                </li> -->
+                <li class="nav-item" style="padding: 8px 0;">
+                    <a href="//lk.ip-one.net"><i class="fas fa-user"></i></a>
+                </li>
+                <li class="nav-item" style="padding: 8px 0;">
+                    <ul class="lang" style="top: 28px;">
+                        <li style="color: rgba(0, 0, 0, 0.5);">{{strtoupper(app()->getLocale())}}</li>
+                        <li><a href="{{url('/lang/ru')}}">RU</a></li>
+                        <li><a href="{{url('/lang/en')}}">EN</a></li>
+                        <li><a href="{{url('/lang/cn')}}">中文</a></li>
+                    </ul>
+                </li>
             </ul>
-            {{-- <a href="" style="text-transform: uppercase;">{{app()->getLocale()}}</a> --}}
         </div>
     </div>
 </nav>
 
-<div class="container-fluid p-0 navbar navbar-expand-lg main_menu">
-    <ul class="navbar-nav mr-auto shadow-sm container-fluid">
-        @foreach (menu('site', '_json') as $item)
-            @php
-                $item = $item->translate();
-            @endphp
-            <li class="nav-item">
-                <a href="{{$item->children->count() ? '#' : url($item->link())}}" class="nav-link" id="drop_second_menu_{{$item->id}}" style="cursor: pointer;">{{$item->title}} @if($item->children->count()) <i class="fas fa-angle-down"></i> @endif</a>
-            </li>
-        @endforeach
-    </ul>
+<div class="container-fluid p-0 navbar navbar-expand-lg main_menu" style="opacity: 1;">
     @foreach (menu('site', '_json') as $item)
     @if($item->children->count())
         <div class="p-0 second_menu second_menu_{{$item->id}} d-flex justify-content-center">
-            <ul class="navbar-nav shadow-sm p-0" style="display: inline-flex;">
+            <ul class="navbar-nav shadow-sm p-0" style="display: inline-flex;width: 100%;">
                 @foreach($item->children as $child)
                 @php
                     $child = $child->translate();
                 @endphp
-                <li class="nav-item" style="width: 200px;">
+                <li class="nav-item" style="margin: 0 10px;">
                     <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 85px;">
-                        <img class="svg" src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>
-                    </div>
                     {{$child->title}}</a>
                 </li>
                 @endforeach
@@ -76,10 +85,59 @@
 
 </div>
 
+<div style="margin:0; padding:0; width:100%;height:120px;" id="after_menu_plain"></div>
+
 @push('scripts')
+<style>
+    .second_menu > ul > li > .nav-link {
+        color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .second_menu > ul > li:hover > .nav-link {
+        color: #264796 !important;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #264796;
+    }
+    .navbar-light .navbar-nav .active > .nav-link {
+        color: #264796;
+    }
+    .search_form {
+        width: 40px;
+    }
+    .search_form.search_expand {
+        width: 200px;
+    }
+    .right-menu a {
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .right-menu a:hover {
+        color: #264796;
+    }
+    .search_form .search_btn:before {
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .search_form.search_expand .search_btn:before {
+        color: #264796;
+    }
+    .main_nav {
+        transition: height 0.3s;
+    }
+    .main_nav img.logo {
+        transition: height 0.3s;
+    }
+    .expand_menu {
+        height: 85px !important;
+    }
+    .expand_menu img.logo {
+        height: 85px !important;
+    }
+    .lang::after {
+        color: rgba(0, 0, 0, 0.5);
+    }
+</style>
 <script>
 helper.init(function() {
-    helper.initExpandMenu('#drop_main_menu', '.main_menu');
+    // helper.initExpandMenu('#drop_main_menu', '.main_menu');
     
     @foreach (menu('site', '_json') as $item)
         helper.initExpandMenu('#drop_second_menu_{{$item->id}}', '.second_menu_{{$item->id}}');
@@ -101,6 +159,20 @@ helper.init(function() {
             $svg.toggleClass("svg_icon");
         });
     });
+
+    $('#after_menu_plain').css('height', $('#main_header_menu').outerHeight()+'px');
+
+
+    window.onscroll = function() {scrollFunction()};
+    scrollFunction();
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            $( ".main_nav" ).addClass('expand_menu');
+        } else {
+            $( ".main_nav" ).removeClass('expand_menu');
+        }
+    }
 });
 </script>
 @endpush

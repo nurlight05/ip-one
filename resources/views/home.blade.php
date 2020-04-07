@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-5">
             <div style="text-align: center; font-size: 3rem;">
-                @lang('АКЦИИ')
+                <a href="{{route('stocks.index')}}">@lang('АКЦИИ')</a>
             </div>
             <div class="news-slider" style="display: none;">
                 @foreach ($stocks as $item)
@@ -42,7 +42,6 @@
                             <div class="col-md-12">
                                 <p class="mt-auto">
                                     {{$item->date}}
-                                    <a href="{{route('stocks.index')}}" class="btn btn-light shadow-sm btn-invertion rounded-0" style="float:right;">@lang('все акции')</a>
                                 </p>
                             </div>
                         </div>
@@ -52,7 +51,7 @@
         </div>
         <div class="col-5 offset-2">
             <div style="text-align: center; font-size: 3rem;">
-                @lang('НОВОСТИ')
+                <a href="{{route('news.index')}}">@lang('НОВОСТИ')</a>
             </div>
             <div class="news-slider" style="display: none;">
                 @foreach ($news as $item)
@@ -73,7 +72,6 @@
                             <div class="col-md-12">
                                 <p class="mt-auto">
                                     {{$item->date}}
-                                    <a href="{{route('news.index')}}" class="btn btn-light shadow-sm btn-invertion rounded-0" style="float:right;">@lang('все новости')</a>
                                 </p>
                             </div>
                         </div>

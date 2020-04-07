@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title', 'IP ONE')</title>
+        <title>@yield('title', 'Imagine People')</title>
 
         <link rel="apple-touch-icon" sizes="57x57" href="{{asset('img/icons/apple-icon-57x57.png')}}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{asset('img/icons/apple-icon-60x60.png')}}">
@@ -64,6 +64,7 @@
          <li><a target="_blank" href="https://www.youtube.com/channel/UC2Y_5U3kt6BinPyJa8_nl4A"><img src="{{asset('img/youtube.png')}}" alt=""></a></li>
          <li><a target="_blank" href="https://instagram.com/imagine_people_official?igshid=1wfrbu5a15fq5"><img src="{{asset('img/instagram.png')}}" alt=""></a></li>
          <li><a target="_blank" href="https://t.me/imagine_people_official"><img src="{{asset('img/telegram.png')}}" alt=""></a></li>
+         <li><a href="#header_menu" class="toUp_btn"></a></li>
       </ul>
    </div>
 

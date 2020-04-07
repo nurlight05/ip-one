@@ -7036,16 +7036,16 @@ li {
 .right-side {
   font-size: 1.3rem; }
 
-#header_menu {
+.header_menu {
   z-index: 50;
   background-color: #fff; }
 
-#header_menu > ul > li > .nav-link {
+.header_menu > ul > li > .nav-link {
   color: #264796;
   font-weight: 700;
   text-transform: uppercase; }
 
-#header_menu > ul > li.active > span {
+.header_menu > ul > li.active > span {
   color: #9c9c9c; }
 
 .right-menu a {
@@ -7119,8 +7119,6 @@ li {
     transition: 300ms; }
   .second_menu .nav-item .svg_icon path, .second_menu .nav-item .svg_icon polygon {
     transition: 300ms; }
-  .second_menu .nav-item:hover .nav-link {
-    color: #ccc !important; }
   .second_menu .nav-item:hover .svg_icon path, .second_menu .nav-item:hover .svg_icon polygon {
     fill: #ccc; }
 
@@ -8332,7 +8330,6 @@ footer > div p {
 
 .toUp_btn {
   display: none;
-  position: fixed;
   bottom: 20px;
   left: 8%;
   transform: translate(-50%, 0); }
@@ -8470,7 +8467,7 @@ footer > div p {
 
 .sticky {
   position: fixed;
-  top: 0; }
+  top: 120px; }
 
 .shop_block {
   text-align: center;
