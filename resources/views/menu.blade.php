@@ -60,7 +60,7 @@
                 @php
                     $child = $child->translate();
                 @endphp
-                <li class="nav-item" style="width: 250px;">
+                <li class="nav-item" style="width: 200px;">
                     <a href="{{url($child->link())}}" class="nav-link" href="#" style="text-align: center; cursor: pointer;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 85px;">
                         <img class="svg" src="{{asset('img/'.$child->icon_class)}}" style="max-width: 80px;max-height:85px;"/>

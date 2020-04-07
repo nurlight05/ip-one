@@ -31,13 +31,14 @@
                 <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}})</h2>
                 <ul class="contact_info page_list angle">
                     <li>
-                        <p>Адрес: </p>
+                        Адрес:
                         <span>{!!$item['ADDRESS']!!}</span>
                     </li>
-                    <li>Режим работы: {!!$item['WORK_TIME']!!}</li>
                     <li>Телефоны: {!!$item['PHONE']!!}</li>
                     <li>E-mail: {!!$item['EMAIL']!!}</li>
                     <li class="info_name">Ф.И.О. руководителя: {!!$item['DIR_NAME']!!}</li>
+                    <li class="info_name">Режим работы: <br> {!!$item['WORK_TIME']!!}</li>
+                    <li>Режим работы обучающего центра: <br> {!!$item['SCHOOL_WORK_TIME']!!}</li>
                 </ul>
             </div>
             @endforeach
@@ -78,7 +79,7 @@
 
 @push('scripts')
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6777a222-4a64-4475-bc52-3f5983ff242a" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 <script type="text/javascript">
 var addresses = document.getElementsByClassName('showroom');

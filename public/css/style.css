@@ -7295,7 +7295,8 @@ footer > div p {
       font-size: 22px; }
   .news .item .img {
     max-width: 100%;
-    height: 30vh;
+    height: 450px;
+    max-height: 50vh;
     background-position: center;
     background-size: cover; }
 

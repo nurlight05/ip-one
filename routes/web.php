@@ -28,6 +28,9 @@ Route::resource('/bussiness', 'BussinessController');
 Route::get('/showrooms', 'ShowroomsController@index');
 Route::get('/showrooms/{showroom}', 'ShowroomsController@show');
 
+Route::get('/representation', 'RepresentationController@index');
+Route::get('/representation/{representation}', 'RepresentationController@show');
+
 Route::get('/science', 'ScienceController@index');
 
 Route::get('/reviews', 'ReviewsController@index');

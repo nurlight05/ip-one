@@ -13,6 +13,7 @@ class Content extends Model
     protected $translatable = [
         'name',
         'content',
+        'content_mobile',
     ];
 
     public function getRouteKeyName()

@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-5">
             <div style="text-align: center; font-size: 3rem;">
-                АКЦИИ
+                @lang('АКЦИИ')
             </div>
             <div class="news-slider" style="display: none;">
                 @foreach ($stocks as $item)
@@ -33,7 +33,7 @@
                             <div class="item row mx-0 my-3" style="height: 130px;">
                                 <div class="col-md-5 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
                                 <div class="col-md-7 info d-flex flex-column">
-                                    <h2 style="line-height: 0.7;font-size: 1.4rem;">{{$item->title}}</h2>
+                                    <h2 style="line-height: 1;font-size: 1.4rem;">{{$item->title}}</h2>
                                     <p>{{$item->mini_description}}</p>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="col-5 offset-2">
             <div style="text-align: center; font-size: 3rem;">
-                НОВОСТИ
+                @lang('НОВОСТИ')
             </div>
             <div class="news-slider" style="display: none;">
                 @foreach ($news as $item)
@@ -64,7 +64,7 @@
                             <div class="item row mx-0 my-3" style="height: 130px;">
                                 <div class="col-md-5 img" style="background-image: url('{{Voyager::image($item->img)}}');background-size: cover;background-position: 50% 50%;height: 130px;"></div>
                                 <div class="col-md-7 info d-flex flex-column">
-                                    <h2 style="line-height: 0.7;">{{$item->title}}</h2>
+                                    <h2 style="line-height: 1;font-size: 1.4rem;">{{$item->title}}</h2>
                                     <p>{{$item->mini_description}}</p>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
         <div class="col-md-2 left-side show_choice">
             <h3 class="left_title">SHOW <br>ROOMS</h3>
             <form action="{{url('showrooms')}}" class="search_room mb-4" style="padding-right: 30px">
-                <input type="text" name="city" placeholder="введите город">
+                <input type="text" name="city" placeholder="@lang('введите город')">
             </form>
             <ul class="country_list">
                 @foreach ($places as $key => $item)
@@ -17,7 +17,7 @@
                     <p>{{$key}}</p>
                     <ul class="city_list">
                         @foreach ($item as $city)
-                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">{{$city}}</a></li>
+                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">@lang($city)</a></li>
                         @endforeach
                     </ul>
                 </li>
@@ -27,9 +27,7 @@
         </div>
         <div class="col-md-10 show_room p-5">
             <!-- /////////////////////////////////////// -->
-            <h2 style="color: red;">ВНИМАНИЕ!</h2>
-            <p>ПРОСИМ ВАС ОБРАТИТЬ ВНИМАНИЕ НА УСЛОВИЯ ПОЛУЧЕНИЯ ПРОДУКЦИИ В ШОУ-РУМАХ.<br>ПРИ ПОЛУЧЕНИИ ПРОДУКЦИИ В ШОУ-РУМЕ НЕОБХОДИМО <span style="color: red;">ОПЛАТИТЬ ДОСТАВКУ</span></p>
-            <a href="https://ip-one.net/news/56" style="font-weight: 900;">ПОДРОБНЕЕ</a>
+            {!!App\Content::where('name', 'Showroom уведомление')->first()->translate()->content!!}
             <!-- /////////////////////////////////////// -->
             <table class="showTable">
                 <tr>

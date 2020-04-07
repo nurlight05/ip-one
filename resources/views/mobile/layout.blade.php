@@ -136,7 +136,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="mt-4">
-                                    <p>&#169; 2015-2019</p>
+                                    <p>&#169; 2015-{{date("Y")}}</p>
                                 </div>
                             </div>
                         </div>
