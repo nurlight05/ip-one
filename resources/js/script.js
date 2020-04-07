@@ -5,8 +5,6 @@ import slick from 'slick-carousel';
 import slick_css from 'slick-carousel/slick/slick.css';
 import slick_theme_css from 'slick-carousel/slick/slick-theme.css';
 
-console.log(slick);
-
 var init = function(f) {
     try {
         f();   
@@ -14,6 +12,8 @@ var init = function(f) {
         throw error;    
     }
 }
+
+var menu_items = [];
 
 var initExpandMenu = function(clickSelector, menuSelector) {
     var menu = {
@@ -79,12 +79,23 @@ var initExpandMenu = function(clickSelector, menuSelector) {
         }
     };
 
-    $(clickSelector).click(function() {
-        menu.toggleMenu();
+    menu_items.push(menu);
+
+    $(clickSelector).hover(function() {
+        menu_items.forEach(element => {if(menu != element) element.unExpandMenu()});
+        if(!menu.expand) {
+            menu.expandMenu();
+        }
     });
 
     return menu;
 }
+
+$(document).mousemove(function(e){
+    if($(e.target).parents('div#main_header_menu').length < 1) {
+        menu_items.forEach(element => element.unExpandMenu());
+    }
+});
 
 export {
     $,
