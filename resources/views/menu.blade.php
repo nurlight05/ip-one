@@ -4,7 +4,7 @@
 @endphp
 
 
-<div style="position: fixed;width: 100%;z-index: 10;" id="main_header_menu">
+<div style="position: fixed;width: 100%;z-index: 10;opacity: 0.9;" id="main_header_menu">
 <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm main_nav" style="z-index: 90; background-color: #fff; height: 120px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_menu" aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
