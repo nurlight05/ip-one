@@ -8,11 +8,11 @@
     <div class="row">
         <div class="col-12">
             <div class="page_title">
-                SHOW ROOMS
+                @lang('Представительства')
             </div>
         </div>
         <div class="col-12">
-            @foreach ($showrooms as $item)
+            @foreach ($representations as $item)
             <div class="mb-5">
                 <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}}) @if($item['DISCOUNT'] >= 25) <b>VIP</b> @endif</h2>
                 <ul class="contact_info page_list angle">
@@ -27,8 +27,8 @@
                 </ul>
             </div>
             @endforeach
-            {{-- <div id="showrooms_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div> --}}
-            <a href="{{url('/showrooms')}}" class="btn btn-light shadow-sm btn-invertion rounded-0 my-3">Назад</a>
+            {{-- <div id="representations_map" style="width: 100%; height: 500px; margin-bottom: 50px;"></div> --}}
+            <a href="{{url('/representation')}}" class="btn btn-light shadow-sm btn-invertion rounded-0 my-3">Назад</a>
         </div>
     </div>
 </section>
@@ -44,7 +44,7 @@ var addresses = document.getElementsByClassName('showroom');
 ymaps.ready(function () {
     var storage = {};
 
-	var myMap = new ymaps.Map('showrooms_map', {
+	var myMap = new ymaps.Map('representations_map', {
         center: [55.74954, 37.621587],
          zoom: 2
     });

@@ -12,6 +12,9 @@
                 <input type="text" name="city" placeholder="введите город">
             </form>
             <ul class="country_list">
+                <li class="">
+                    <a href="{{url('/showrooms')}}?vip=1" style="color: #31479d;font-weight: bold;">@lang("VIP")</a>
+                </li>
                 @foreach ($places as $key => $item)
                 <li class="{{$_country == $key ? 'active' : ''}}">
                     <p>{{$key}}</p>
@@ -28,7 +31,7 @@
         <div class="col-md-10 show_choice p-5">
             @foreach ($showrooms as $item)
             <div class="mb-5">
-                <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}})</h2>
+                <h2 class="m-0">{{$item['CITY']}} ({{$item['ID']}}) @if($item['DISCOUNT'] >= 25) <b>VIP</b> @endif</h2>
                 <ul class="contact_info page_list angle">
                     <li>
                         Адрес:

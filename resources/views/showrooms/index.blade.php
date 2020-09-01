@@ -12,12 +12,15 @@
                 <input type="text" name="city" placeholder="@lang('введите город')">
             </form>
             <ul class="country_list">
+                <li class="">
+                    <a href="{{url('/showrooms')}}?vip=1" style="color: #31479d;font-weight: bold;">@lang("VIP")</a>
+                </li>
                 @foreach ($places as $key => $item)
-                <li class="{{in_array($_city, $item) ? 'active' : ''}}">
+                <li class="{{(in_array($_city, $item) && !$_is_vip) ? 'active' : ''}}">
                     <p>{{$key}}</p>
                     <ul class="city_list">
                         @foreach ($item as $city)
-                        <li class="m-0 mb-2 {{$_city == $city ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">@lang($city)</a></li>
+                        <li class="m-0 mb-2 {{($_city == $city && !$_is_vip) ? 'active' : ''}}"><a href="{{url('/showrooms')}}?country={{$key}}&city={{$city}}" style="color: #31479d">@lang($city)</a></li>
                         @endforeach
                     </ul>
                 </li>
@@ -50,7 +53,7 @@
                 </tr>
                 @foreach ($showrooms as $item)
                 <tr data-href="{{url('/showrooms', ['showroom' => $item['ID']])}}">
-                    <td>{{$item['CITY']}} ({{$item['ID']}})</td>
+                    <td>{{$item['CITY']}} ({{$item['ID']}}) @if($item['DISCOUNT'] >= 25) <b>VIP</b> @endif</td>
                     <td class="no_align">{!!$item['ADDRESS']!!}</td>
                     <td>
                         {!!$item['PHONE']!!}

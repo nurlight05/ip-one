@@ -22,11 +22,33 @@
     </div>
 </section>
 
-<a href="//shop.ip-one.net">
-	<div class="product_buy">
-		КУПИТЬ
+<div class="product_buy" data-toggle="modal" data-target="#buyModal">
+	@lang('КУПИТЬ')
+</div>
+
+<div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="buyModalLabel">{{$product->name}}</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			{!!App\Content::where('name', 'Покупка продукта')->first()->translate()->content!!}
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+		</div>
+		</div>
 	</div>
-</a>
+</div>
+<style>
+.modal-backdrop {
+	display: none !important;
+}
+</style>
 @endsection
 
 {{-- 

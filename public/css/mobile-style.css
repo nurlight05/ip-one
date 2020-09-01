@@ -7130,7 +7130,7 @@ header .menu {
     height: 20vh; }
     @media (min-width: 400px) {
       .main_slider .item .image {
-        height: 60vh; } }
+        height: 15vh; } }
   .main_slider .item .title {
     background-color: #4562a6;
     color: #fff;

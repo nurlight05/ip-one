@@ -46,7 +46,8 @@ $product = $product->translate();
 									<option value="65">RUB</option>
 									<option value="1">USD</option>
 									<option value="29.54">UAH</option>
-									<option value="0.82">EUR</option>
+									<option value="0.7">EUR</option>
+									<option value="65">KGS</option>
 								</select>
 							</div>
 							<input type="text" id="sum_of_bill" value="390">
@@ -56,7 +57,8 @@ $product = $product->translate();
 					<p>1 y.e. = 65 RUB (@lang('рублей'))</p>
 					<p>1 y.e. = 1 USD (@lang('долларов'))</p>
 					<p>1 y.e. = 29.54 UAH (@lang('гривен'))</p>
-					<p>1 y.e. = 0.82 EUR (@lang('евро'))</p>	
+					<p>1 y.e. = 0.7 EUR (@lang('евро'))</p>	
+					<p>1 y.e. = 65 KGS (@lang('кир. сомов'))</p>
 				</div>
 				<a href="#header_menu" class="toUp_btn"></a>
 			</div>
@@ -73,7 +75,7 @@ $product = $product->translate();
                 <div class="product_buy">
                     <p>@lang('стоимость'): {{$product->price}} @lang('у.е.')</p>
                     <p>@lang('структура'): {{$product->points}} @lang('баллов')</p>
-                    <a href="//shop.ip-one.net"><button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400">@lang('купить')</button></a>
+                    <button class="unit_buy btn-invertion m-0 mt-4" style="font-weight: 400" data-toggle="modal" data-target="#exampleModal">@lang('купить')</button>
                 </div>
 				<div class="prod_unit-info p-5">
 					{!!$product->description!!}
@@ -113,4 +115,22 @@ $product = $product->translate();
   user-select: none;
 }
 </style>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">{{$product->name}}</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			{!!App\Content::where('name', 'Покупка продукта')->first()->translate()->content!!}
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+		</div>
+		</div>
+	</div>
+</div>
 @endsection

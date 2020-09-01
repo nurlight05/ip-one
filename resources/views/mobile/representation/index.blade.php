@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page_title">
-                SHOW ROOMS
+                @lang('Представительства')
             </div>
         </div>
         <div class="col-12">
@@ -20,22 +20,17 @@
         <div class="col-5 mb-2">@lang('Выберите город'):</div>
         <div class="col-7 mb-2">
             <select class="form-control form-control-sm" onchange="if($(this.item(this.selectedIndex)).data('vip')) {window.location.replace('?vip=1&city='+this.item(this.selectedIndex).value);} else {window.location.replace('?city='+this.item(this.selectedIndex).value);}">
-                @foreach ($_vip_places as $country => $place)
-                    @foreach ($place as $city)
-                        <option value="{{$city}}" {{(($_city == $city) && $_is_vip) ? 'selected' : ''}} style="font-weight: bold;" data-vip="true">@lang($country), @lang($city)</option>
-                    @endforeach
-                @endforeach
                 @foreach ($places as $country => $place)
                     @foreach ($place as $city)
-                        <option value="{{$city}}" {{(($_city == $city) && !$_is_vip) ? 'selected' : ''}}>@lang($country), @lang($city)</option>
+                        <option value="{{$city}}" {{(($_city == $city)) ? 'selected' : ''}}>@lang($country), @lang($city)</option>
                     @endforeach
                 @endforeach
             </select>
         </div>
         <table class="table table-bordered">
-            @foreach ($showrooms as $item)
+            @foreach ($representations as $item)
             <tr>
-            <tr data-href="{{url('/showrooms', ['showroom' => $item['ID']])}}">
+            <tr data-href="{{url('/representation', ['showroom' => $item['ID']])}}">
                 <td style="color: #264796">
                     {{$item['CITY']}} ({{$item['ID']}}) @if($item['DISCOUNT'] >= 25) <b>VIP</b> @endif
                 </td>

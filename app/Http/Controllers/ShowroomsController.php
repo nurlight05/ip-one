@@ -22,8 +22,10 @@ class ShowroomsController extends Controller
         $res = $client->request('GET', 'http://88.99.171.85/showrooms/');
         $showrooms = json_decode((string) $res->getBody(), true);
         $places = [];
+        $_is_vip = $request->input('vip', false);
         $_country = $request->input('country', 'Россия');
         $_city = mb_convert_case(mb_strtolower($request->input('city', 'Москва')), MB_CASE_TITLE, 'UTF-8');
+        $_vip_places = [];
 
         foreach ($showrooms as $item) {
             if (!isset($places[$item['COUNTRY']]) || !is_array($places[$item['COUNTRY']])) {
@@ -33,21 +35,46 @@ class ShowroomsController extends Controller
             if (!in_array($item['CITY'], $places[$item['COUNTRY']])) {
                 $places[$item['COUNTRY']][] = trim($item['CITY']);
             }
+
+            if ($item['DISCOUNT'] >= 25) {
+                if (!in_array($item['CITY'], $_vip_places)) {
+                    $_vip_places['VIP '.$item['COUNTRY']][] = $item['CITY'];
+                }
+            }
+
             $places[$item['COUNTRY']] = array_unique($places[$item['COUNTRY']]);
         }
 
-        $showrooms = array_filter($showrooms, function ($item) use ($_city) {
-            if (mb_convert_case(mb_strtolower(trim($item['CITY'])), MB_CASE_TITLE, 'UTF-8') != $_city) {
-                return false;
-            }
+        if($_is_vip) {
+            $showrooms = array_filter($showrooms, function ($item) use ($_city) {
+                if(request()->has('city')) {
+                    if (mb_convert_case(mb_strtolower(trim($item['CITY'])), MB_CASE_TITLE, 'UTF-8') != $_city || $item['DISCOUNT'] < 25) {
+                        return false;
+                    }
+        
+                    return true;
+                } else {
+                    if ($item['DISCOUNT'] >= 25) {
+                        return true;
+                    }
+                
+                    return false;
+                }
+            });
+        } else {
+            $showrooms = array_filter($showrooms, function ($item) use ($_city) {
+                if (mb_convert_case(mb_strtolower(trim($item['CITY'])), MB_CASE_TITLE, 'UTF-8') != $_city) {
+                    return false;
+                }
+    
+                return true;
+            });
+        }
 
-            return true;
-        });
-
-        return view($this->getView('showrooms.index'), compact('showrooms', 'places', '_country', '_city'));
+        return view($this->getView('showrooms.index'), compact('showrooms', 'places', '_country', '_city', '_is_vip', '_vip_places'));
     }
 
-    public function show($showroom)
+    public function show(Request $request, $showroom)
     {
         $client = new Client();
         $res = $client->request('GET', 'http://88.99.171.85/showrooms/');
@@ -74,7 +101,8 @@ class ShowroomsController extends Controller
 
         $_country = reset($showrooms)['COUNTRY'];
         $_city = reset($showrooms)['CITY'];
+        $_is_vip = $request->input('vip', false);
 
-        return view($this->getView('showrooms.show'), compact('showrooms', 'places', '_country', '_city'));
+        return view($this->getView('showrooms.show'), compact('showrooms', 'places', '_country', '_city', '_is_vip'));
     }
 }

@@ -43,7 +43,8 @@
                                 <option value="65">RUB</option>
                                 <option value="1">USD</option>
                                 <option value="29.54">UAH</option>
-                                <option value="0.82">EUR</option>
+                                <option value="0.7">EUR</option>
+                                <option value="65">KGS</option>
                             </select>
                         </div>
                         <input type="text" id="sum_of_bill" value="390">
@@ -53,7 +54,8 @@
                 <p>1 y.e. = 65 RUB (@lang('рублей'))</p>
                 <p>1 y.e. = 1 USD (@lang('долларов'))</p>
                 <p>1 y.e. = 29.54 UAH (@lang('гривен'))</p>
-                <p>1 y.e. = 0.82 EUR (@lang('евро'))</p>	
+                <p>1 y.e. = 0.7 EUR (@lang('евро'))</p>
+                <p>1 y.e. = 65 KGS (@lang('кир. сомов'))</p>
             </div>
             <a href="#header_menu" class="toUp_btn"></a>
         </div>
