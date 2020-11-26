@@ -21,7 +21,7 @@
                     <div class="convert_box">
                         <div class="select_box">
                             <select name="" id="ex_rate">
-                                <option value="390">KZT</option>
+                                <option value="350">KZT</option>
                                 <option value="65">RUB</option>
                                 <option value="1">USD</option>
                                 <option value="29.54">UAH</option>
@@ -29,10 +29,10 @@
                                 <option value="65">KGS</option>
                             </select>
                         </div>
-                        <input type="text" id="sum_of_bill" value="390">
+                        <input type="text" id="sum_of_bill" value="350">
                     </div>
                 </form>
-                <p>1 y.e. = 390 KZT (@lang('тенге'))</p>
+                <p>1 y.e. = 350 KZT (@lang('тенге'))</p>
                 <p>1 y.e. = 65 RUB (@lang('рублей'))</p>
                 <p>1 y.e. = 1 USD (@lang('долларов'))</p>
                 <p>1 y.e. = 29.54 UAH (@lang('гривен'))</p>

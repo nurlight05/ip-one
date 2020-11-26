@@ -8676,7 +8676,7 @@ a {
     color: #134094;
     font-weight: 900; }
   .lang:hover {
-    max-height: 150px; }
+    max-height: fit-content; }
 
 @media screen and (max-width: 1500px) {
   .converter select,

@@ -27,6 +27,10 @@
         <link href="{{asset('css/style.css')}}?q={{rand()}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="{{asset('css/lightgallery.css')}}">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="{{asset('js/google-translate.js')}}"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
     </head>
     <body>
 

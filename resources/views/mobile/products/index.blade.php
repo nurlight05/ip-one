@@ -22,7 +22,7 @@
                             <div class="item" style="background-image: url('{{Voyager::image($item->img)}}')">
                                 <div class="desc">
                                     <div class="name">{{$item->name}}</div>
-                                    <div class="price">{{$item->price}} @lang('у.е.')</div>
+                                    <div class="price">{{App\Currency::parse($item->price)}}</div>
                                 </div>
                             </div>
                         </a>

@@ -52,10 +52,38 @@
                 </li>
                 <li class="nav-item" style="padding: 8px 0;">
                     <ul class="lang" style="top: 28px;">
-                        <li style="color: rgba(0, 0, 0, 0.5);">{{strtoupper(app()->getLocale())}}</li>
-                        <li><a href="{{url('/lang/ru')}}">RU</a></li>
+                        {{-- <li style="color: rgba(0, 0, 0, 0.5);">{{strtoupper(app()->getLocale())}}</li> --}}
+                        {{-- <li><a href="{{url('/lang/ru')}}">RU</a></li>
                         <li><a href="{{url('/lang/en')}}">EN</a></li>
-                        <li><a href="{{url('/lang/cn')}}">中文</a></li>
+                        <li><a href="{{url('/lang/cn')}}">中文</a></li> --}}
+                        <li style="color: rgba(0, 0, 0, 0.5);" data-google-current-lang="" class="notranslate"></li>
+                        <li><a href="#" data-google-lang="ru" class="notranslate">RU</a></li>
+                        <li><a href="#" data-google-lang="en" class="notranslate">EN</a></li>
+                        <li><a href="#" data-google-lang="zh-CN" class="notranslate">中文</a></li>
+                        <li><a href="#" data-google-lang="ar" class="notranslate">AR</a></li>
+                        <li><a href="#" data-google-lang="az" class="notranslate">AZ</a></li>
+                        <li><a href="#" data-google-lang="cs" class="notranslate">CS</a></li>
+                        <li><a href="#" data-google-lang="de" class="notranslate">DE</a></li>
+                        <li><a href="#" data-google-lang="el" class="notranslate">EL</a></li>
+                        <li><a href="#" data-google-lang="es" class="notranslate">ES</a></li>
+                        <li><a href="#" data-google-lang="et" class="notranslate">ET</a></li>
+                        <li><a href="#" data-google-lang="fi" class="notranslate">FI</a></li>
+                        <li><a href="#" data-google-lang="fr" class="notranslate">FR</a></li>
+                        <li><a href="#" data-google-lang="he" class="notranslate">HE</a></li>
+                        <li><a href="#" data-google-lang="hi" class="notranslate">HI</a></li>
+                        <li><a href="#" data-google-lang="hu" class="notranslate">HU</a></li>
+                        <li><a href="#" data-google-lang="hy" class="notranslate">HY</a></li>
+                        <li><a href="#" data-google-lang="it" class="notranslate">IT</a></li>
+                        <li><a href="#" data-google-lang="ka" class="notranslate">KA</a></li>
+                        <li><a href="#" data-google-lang="kk" class="notranslate">KK</a></li>
+                        <li><a href="#" data-google-lang="ky" class="notranslate">KY</a></li>
+                        <li><a href="#" data-google-lang="la" class="notranslate">LA</a></li>
+                        <li><a href="#" data-google-lang="lt" class="notranslate">LT</a></li>
+                        <li><a href="#" data-google-lang="pl" class="notranslate">PL</a></li>
+                        <li><a href="#" data-google-lang="ro" class="notranslate">RO</a></li>
+                        <li><a href="#" data-google-lang="tg" class="notranslate">TG</a></li>
+                        <li><a href="#" data-google-lang="uk" class="notranslate">UK</a></li>
+                        <li><a href="#" data-google-lang="uz" class="notranslate">UZ</a></li>
                     </ul>
                 </li>
             </ul>

@@ -12,7 +12,7 @@
 				{{$product->name}}
 			</div>
 			<div class="price mb-4">
-				<div>@lang('стоимость'): {{$product->price}} @lang('у.е.')</div>
+				<div>@lang('стоимость'): {{App\Currency::parse($product->price)}}</div>
 				<div>@lang('структура'): {{$product->points}} @lang('баллов')</div>
 			</div>
 			<div class="desc">

@@ -26,6 +26,10 @@
 
         <link href="{{asset('css/mobile-style.css')}}?q={{rand()}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="{{asset('js/google-translate.js')}}"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
     </head>
     <body>
 
@@ -98,11 +102,39 @@
                                 </form>
                             </div>
                             <div class="col-3 item">
-                                <span class="lang-change">{{strtoupper(app()->getLocale())}}</span>
+                                <!-- <span class="lang-change">{{strtoupper(app()->getLocale())}}</span> -->
+                                <span data-google-current-lang="" class="lang-change notranslate"></span>
                                 <ul class="lang" style="display: none;position: absolute;padding: 0 5px;background-color: #264796;z-index: 999;">
-                                    <li><a href="{{url('/lang/ru')}}">RU</a></li>
+                                    <li><a href="#" data-google-lang="ru" class="notranslate">RU</a></li>
+                                    <li><a href="#" data-google-lang="en" class="notranslate">EN</a></li>
+                                    <li><a href="#" data-google-lang="zh-CN" class="notranslate">中文</a></li>
+                                    <li><a href="#" data-google-lang="ar" class="notranslate">AR</a></li>
+                                    <li><a href="#" data-google-lang="az" class="notranslate">AZ</a></li>
+                                    <li><a href="#" data-google-lang="cs" class="notranslate">CS</a></li>
+                                    <li><a href="#" data-google-lang="de" class="notranslate">DE</a></li>
+                                    <li><a href="#" data-google-lang="el" class="notranslate">EL</a></li>
+                                    <li><a href="#" data-google-lang="es" class="notranslate">ES</a></li>
+                                    <li><a href="#" data-google-lang="et" class="notranslate">ET</a></li>
+                                    <li><a href="#" data-google-lang="fi" class="notranslate">FI</a></li>
+                                    <li><a href="#" data-google-lang="fr" class="notranslate">FR</a></li>
+                                    <li><a href="#" data-google-lang="he" class="notranslate">HE</a></li>
+                                    <li><a href="#" data-google-lang="hi" class="notranslate">HI</a></li>
+                                    <li><a href="#" data-google-lang="hu" class="notranslate">HU</a></li>
+                                    <li><a href="#" data-google-lang="hy" class="notranslate">HY</a></li>
+                                    <li><a href="#" data-google-lang="it" class="notranslate">IT</a></li>
+                                    <li><a href="#" data-google-lang="ka" class="notranslate">KA</a></li>
+                                    <li><a href="#" data-google-lang="kk" class="notranslate">KK</a></li>
+                                    <li><a href="#" data-google-lang="ky" class="notranslate">KY</a></li>
+                                    <li><a href="#" data-google-lang="la" class="notranslate">LA</a></li>
+                                    <li><a href="#" data-google-lang="lt" class="notranslate">LT</a></li>
+                                    <li><a href="#" data-google-lang="pl" class="notranslate">PL</a></li>
+                                    <li><a href="#" data-google-lang="ro" class="notranslate">RO</a></li>
+                                    <li><a href="#" data-google-lang="tg" class="notranslate">TG</a></li>
+                                    <li><a href="#" data-google-lang="uk" class="notranslate">UK</a></li>
+                                    <li><a href="#" data-google-lang="uz" class="notranslate">UZ</a></li>
+                                    <!-- <li><a href="{{url('/lang/ru')}}">RU</a></li>
                                     <li><a href="{{url('/lang/en')}}">EN</a></li>
-                                    <li><a href="{{url('/lang/cn')}}">中文</a></li>
+                                    <li><a href="{{url('/lang/cn')}}">中文</a></li> -->
                                 </ul>
                             </div>
                         </div>
